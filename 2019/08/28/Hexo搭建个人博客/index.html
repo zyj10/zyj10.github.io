@@ -16,14 +16,14 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="以Windows电脑为例1、本地部署步骤如下 安装Node.js  安装Git">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//hexo.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//valine1.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//valine2.png">
-<meta property="og:updated_time" content="2019-08-29T01:19:50.160Z">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/28/Hexo搭建个人博客/hexo.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/28/Hexo搭建个人博客/valine1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/28/Hexo搭建个人博客/valine2.png">
+<meta property="og:updated_time" content="2019-08-29T01:57:59.701Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建博客案例详解（使用Yilia主题）">
 <meta name="twitter:description" content="以Windows电脑为例1、本地部署步骤如下 安装Node.js  安装Git">
-<meta name="twitter:image" content="http://per-zyj.xyz/.xyz//hexo.png">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/28/Hexo搭建个人博客/hexo.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -219,7 +219,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动成功页面如下图所示</p>
-<p><img src="/.xyz//hexo.png" alt="hexo主页"></p>
+<p><img src="/2019/08/28/Hexo搭建个人博客/hexo.png" alt="hexo主页"></p>
 </li>
 </ul>
 <h4 id="2、更换主题及相关配置"><a href="#2、更换主题及相关配置" class="headerlink" title="2、更换主题及相关配置"></a>2、更换主题及相关配置</h4><p><strong>以yilia主题为例</strong></p>
@@ -261,10 +261,10 @@
 <li><p>Valine评论前提是需要注册Leancloud，网址为<a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="noopener">https://leancloud.cn/dashboard/login.html#/signup</a></p>
 </li>
 <li><p>登陆Leancloud后，新建应用，在存储菜单下创建两个class，起名分别为Comment和Counter，如下图所示</p>
-<p><img src="/.xyz//valine1.png" alt="valine应用创建class"></p>
+<p><img src="/2019/08/28/Hexo搭建个人博客/valine1.png" alt="valine应用创建class"></p>
 </li>
 <li><p>在设置菜单下应用Key栏目下，记住你的APP ID和APP KEY</p>
-<p><img src="/.xyz//valine2.png" alt="valine应用"></p>
+<p><img src="/2019/08/28/Hexo搭建个人博客/valine2.png" alt="valine应用"></p>
 </li>
 <li><p>在hexo\themes\yilia_config.yml中加入Valine的相关配置</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#6、Valine https://valine.js.org</span><br><span class="line">valine: </span><br><span class="line"> appid:  #Leancloud应用的appId</span><br><span class="line"> appkey:  #Leancloud应用的appKey</span><br><span class="line"> verify: false #验证码</span><br><span class="line"> notify: false #评论回复提醒</span><br><span class="line"> avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide</span><br><span class="line"> placeholder: Just go go #评论框占位符</span><br></pre></td></tr></table></figure>

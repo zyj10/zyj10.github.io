@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="1、使用JMeter组件JSR223 PreProcessor调用JS文件（1）将JavaScript文件test.js放置于JMeter安装目录\bin文件目录下，test.js内容如下：程序内容：将传入参数相乘并输出 1234function testJS(input1,input2) &amp;#123;    var output = input1 * input2;    return outp">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//1.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//2.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//3.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//4.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用javascript函数/1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用javascript函数/2.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用javascript函数/3.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用javascript函数/4.png">
 <meta property="og:updated_time" content="2019-08-29T01:22:46.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JMeter调用javascript函数">
 <meta name="twitter:description" content="1、使用JMeter组件JSR223 PreProcessor调用JS文件（1）将JavaScript文件test.js放置于JMeter安装目录\bin文件目录下，test.js内容如下：程序内容：将传入参数相乘并输出 1234function testJS(input1,input2) &amp;#123;    var output = input1 * input2;    return outp">
-<meta name="twitter:image" content="http://per-zyj.xyz/.xyz//1.png">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用javascript函数/1.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -199,7 +199,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function testJS(input1,input2) &#123;</span><br><span class="line">    var output = input1 * input2;</span><br><span class="line">    return output</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
-<p>（2）新建测试计划、线程组<br><img src="/.xyz//1.png" alt="1"><br>（3）新建JSR223 PreProcessor前置处理器，填写相关内容如下，<br>程序内容：（1）加载js文件；（2）运行testJS函数；（3）将函数返回结果存到jmeter变量key中，后面可以直接使用${key}调用<br><img src="/.xyz//2.png" alt="2"><br>（4）添加Debug Sampler和察看结果树<br><img src="/.xyz//3.png" alt="3"><br>（5）执行，察看响应数据<br><img src="/.xyz//4.png" alt="4"><br><strong>2、JMeter中JSR223 PreProcessor常用内置函数</strong><br>（1）log：用来记录日志文件，写入到jmeber.log文件，使用方法：a) log.info(“Test ABC!”)；<br>（2）vars：操作jmeter变量，提供读取/写入访问变量的方法，常用方法：a) vars.get(String key)：从jmeter中获得变量值；b) vars.put(String key，String value)：数据存到jmeter变量中；c) vars.putObject(“OBJ1”,new Object())；</p>
+<p>（2）新建测试计划、线程组<br><img src="/2019/08/19/JMeter调用javascript函数/1.png" alt="1"><br>（3）新建JSR223 PreProcessor前置处理器，填写相关内容如下，<br>程序内容：（1）加载js文件；（2）运行testJS函数；（3）将函数返回结果存到jmeter变量key中，后面可以直接使用${key}调用<br><img src="/2019/08/19/JMeter调用javascript函数/2.png" alt="2"><br>（4）添加Debug Sampler和察看结果树<br><img src="/2019/08/19/JMeter调用javascript函数/3.png" alt="3"><br>（5）执行，察看响应数据<br><img src="/2019/08/19/JMeter调用javascript函数/4.png" alt="4"><br><strong>2、JMeter中JSR223 PreProcessor常用内置函数</strong><br>（1）log：用来记录日志文件，写入到jmeber.log文件，使用方法：a) log.info(“Test ABC!”)；<br>（2）vars：操作jmeter变量，提供读取/写入访问变量的方法，常用方法：a) vars.get(String key)：从jmeter中获得变量值；b) vars.put(String key，String value)：数据存到jmeter变量中；c) vars.putObject(“OBJ1”,new Object())；</p>
 
       
       

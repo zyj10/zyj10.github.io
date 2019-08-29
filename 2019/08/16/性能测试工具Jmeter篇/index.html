@@ -16,22 +16,22 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="一、概念Apache JMeter是100%的Java桌面应用程序，用于对软件做压力测试。它最初被设计用于Web应用测试，但后来扩展到其他测试领域。另外，JMeter能够对应用程序做功能/回归测试，通过创建带有断言的脚本来验证被测程序返回了期望的结果。为了保证最大限度的灵活性，JMeter允许使用正则表达式创建断言。 Apache JMeter可以用于对静态和动态资源（文件、Servlet、Per">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//1.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//2.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//3.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//4.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//5.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//6.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//7.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//8.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//9.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//10.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//11.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/2.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/3.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/4.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/5.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/6.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/7.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/8.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/9.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/10.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/11.png">
 <meta property="og:updated_time" content="2019-08-29T01:21:36.688Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="性能测试工具篇--Jmeter">
 <meta name="twitter:description" content="一、概念Apache JMeter是100%的Java桌面应用程序，用于对软件做压力测试。它最初被设计用于Web应用测试，但后来扩展到其他测试领域。另外，JMeter能够对应用程序做功能/回归测试，通过创建带有断言的脚本来验证被测程序返回了期望的结果。为了保证最大限度的灵活性，JMeter允许使用正则表达式创建断言。 Apache JMeter可以用于对静态和动态资源（文件、Servlet、Per">
-<meta name="twitter:image" content="http://per-zyj.xyz/.xyz//1.png">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/16/性能测试工具Jmeter篇/1.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -215,7 +215,7 @@
 <p>（8）后置处理器（Post-Processors）：在后置处理器的作用范围内，任何采样器被执行后，都要执行对应的后置处理器。</p>
 <p>（9）测试计划（Test Plan）：测试计划是JMeter测试脚本的根节点，关于整个测试脚本的一些基础设置，可以在测试计划中设定，例如用户定义变量。</p>
 <p>（10）线程组（Thread Group）：线程组定义了一个虚拟用户池，其中每一个虚拟用户都使用同样的测试脚本。</p>
-<h5 id="三、JMeter脚本"><a href="#三、JMeter脚本" class="headerlink" title="三、JMeter脚本"></a>三、JMeter脚本</h5><p>1、通过Badboy来录制脚本<br>（1）打开BadBoy，默认处于录制状态，即如下图所示红色按钮亮。在地址栏输入测试网址地址，例如<a href="https://www.baidu.com/" target="_blank" rel="noopener">https://www.baidu.com/</a><br><img src="/.xyz//1.png" alt="1"><br>（2）执行所要录制的场景，待录制完成后点击红色按钮结束，变为紫色按钮。<br><img src="/.xyz//2.png" alt="2"><br>（3）输出为.jmx文件<br><img src="/.xyz//3.png" alt="3"><br>2、使用Jmeter自身的代理录制脚本<br>（1）新建一个HTTP代理服务器<br><img src="/.xyz//4.png" alt="4"><br>（2）填写相关重要信息，录制可排除图片等格式请求<br><img src="/.xyz//5.png" alt="5"><br><img src="/.xyz//6.png" alt="6"><br>（3）浏览器开代理<br><img src="/.xyz//7.png" alt="7"><br><img src="/.xyz//8.png" alt="8"><br>（4）点击启动按钮，打开网址进行录制，若有如下提示，点击OK按钮<br><img src="/.xyz//9.png" alt="9"><br><img src="/.xyz//10.png" alt="10"><br>（5）录制完成后点击停止按钮<br><img src="/.xyz//11.png" alt="11"></p>
+<h5 id="三、JMeter脚本"><a href="#三、JMeter脚本" class="headerlink" title="三、JMeter脚本"></a>三、JMeter脚本</h5><p>1、通过Badboy来录制脚本<br>（1）打开BadBoy，默认处于录制状态，即如下图所示红色按钮亮。在地址栏输入测试网址地址，例如<a href="https://www.baidu.com/" target="_blank" rel="noopener">https://www.baidu.com/</a><br><img src="/2019/08/16/性能测试工具Jmeter篇/1.png" alt="1"><br>（2）执行所要录制的场景，待录制完成后点击红色按钮结束，变为紫色按钮。<br><img src="/2019/08/16/性能测试工具Jmeter篇/2.png" alt="2"><br>（3）输出为.jmx文件<br><img src="/2019/08/16/性能测试工具Jmeter篇/3.png" alt="3"><br>2、使用Jmeter自身的代理录制脚本<br>（1）新建一个HTTP代理服务器<br><img src="/2019/08/16/性能测试工具Jmeter篇/4.png" alt="4"><br>（2）填写相关重要信息，录制可排除图片等格式请求<br><img src="/2019/08/16/性能测试工具Jmeter篇/5.png" alt="5"><br><img src="/2019/08/16/性能测试工具Jmeter篇/6.png" alt="6"><br>（3）浏览器开代理<br><img src="/2019/08/16/性能测试工具Jmeter篇/7.png" alt="7"><br><img src="/2019/08/16/性能测试工具Jmeter篇/8.png" alt="8"><br>（4）点击启动按钮，打开网址进行录制，若有如下提示，点击OK按钮<br><img src="/2019/08/16/性能测试工具Jmeter篇/9.png" alt="9"><br><img src="/2019/08/16/性能测试工具Jmeter篇/10.png" alt="10"><br>（5）录制完成后点击停止按钮<br><img src="/2019/08/16/性能测试工具Jmeter篇/11.png" alt="11"></p>
 
       
       

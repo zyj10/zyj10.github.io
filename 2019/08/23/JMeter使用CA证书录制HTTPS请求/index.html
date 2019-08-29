@@ -16,21 +16,21 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="1、客户端新增HTTP代理服务器 （1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（..(js|css|PNG|jpg|ico|png|gif).），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//1.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//2.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//3.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//4.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//5.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//6.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//7.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//8.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//9.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//10.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/2.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/3.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/4.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/5.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/6.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/7.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/8.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/9.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/10.png">
 <meta property="og:updated_time" content="2019-08-29T01:23:23.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JMeter使用CA证书录制HTTPS请求">
 <meta name="twitter:description" content="1、客户端新增HTTP代理服务器 （1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（..(js|css|PNG|jpg|ico|png|gif).），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt">
-<meta name="twitter:image" content="http://per-zyj.xyz/.xyz//1.png">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/1.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -202,17 +202,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="1、客户端新增HTTP代理服务器"><a href="#1、客户端新增HTTP代理服务器" class="headerlink" title="1、客户端新增HTTP代理服务器"></a>1、客户端新增HTTP代理服务器</h3><ul>
-<li>（1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（.<em>.(js|css|PNG|jpg|ico|png|gif).</em>），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt<br><img src="/.xyz//1.png" alt="1"></li>
+<li>（1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（.<em>.(js|css|PNG|jpg|ico|png|gif).</em>），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/1.png" alt="1"></li>
 </ul>
 <a id="more"></a>
 <ul>
-<li>（2）在jmeter选项菜单选择ssl管理器，导入jmeter/bin目录下的文件ApacheJMeterTemporaryRootCA.crt<br><img src="/.xyz//2.png" alt="2"></li>
+<li>（2）在jmeter选项菜单选择ssl管理器，导入jmeter/bin目录下的文件ApacheJMeterTemporaryRootCA.crt<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/2.png" alt="2"></li>
 </ul>
 <h3 id="2、浏览器导入CA证书并设置局域网连接"><a href="#2、浏览器导入CA证书并设置局域网连接" class="headerlink" title="2、浏览器导入CA证书并设置局域网连接"></a>2、浏览器导入CA证书并设置局域网连接</h3><ul>
-<li>（1）证书导入-若出现<br><img src="/.xyz//3.png" alt="3"><br>所示错误，则根据博客<a href="https://blog.csdn.net/lovedingd/article/details/97615215，即可导入成功" target="_blank" rel="noopener">https://blog.csdn.net/lovedingd/article/details/97615215，即可导入成功</a><br><img src="/.xyz//4.png" alt="4"><br><img src="/.xyz//5.png" alt="5"><br><img src="/.xyz//6.png" alt="6"></li>
-<li>（2）局域网设置如下<br><img src="/.xyz//7.png" alt="7"><br><img src="/.xyz//8.png" alt="8"></li>
-<li>（3）访问https网址后，会出现如下图所示对话框，初始密码为password<br><img src="/.xyz//9.png" alt="9"></li>
-<li>（4）结束录制后还原浏览器设置，查看脚本，即可发现已录制https请求<br><img src="/.xyz//10.png" alt="10"></li>
+<li>（1）证书导入-若出现<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/3.png" alt="3"><br>所示错误，则根据博客<a href="https://blog.csdn.net/lovedingd/article/details/97615215，即可导入成功" target="_blank" rel="noopener">https://blog.csdn.net/lovedingd/article/details/97615215，即可导入成功</a><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/4.png" alt="4"><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/5.png" alt="5"><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/6.png" alt="6"></li>
+<li>（2）局域网设置如下<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/7.png" alt="7"><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/8.png" alt="8"></li>
+<li>（3）访问https网址后，会出现如下图所示对话框，初始密码为password<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/9.png" alt="9"></li>
+<li>（4）结束录制后还原浏览器设置，查看脚本，即可发现已录制https请求<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/10.png" alt="10"></li>
 </ul>
 
       

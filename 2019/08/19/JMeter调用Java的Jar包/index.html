@@ -16,16 +16,16 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="1、Eclipse里写上测试代码helloworld（1）新建Java Project，新建类HelloWorld，填写测试代码如下 12345678910111213public class HelloWorld &amp;#123;   public String getHello()&amp;#123;      return &amp;quot;调用自定义函数getHello()&amp;quot;;   &amp;#125;">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//1.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//2.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//3.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//4.png">
-<meta property="og:image" content="http://per-zyj.xyz/.xyz//5.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/2.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/3.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/4.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/5.png">
 <meta property="og:updated_time" content="2019-08-29T01:22:25.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JMeter调用Java的Jar包">
 <meta name="twitter:description" content="1、Eclipse里写上测试代码helloworld（1）新建Java Project，新建类HelloWorld，填写测试代码如下 12345678910111213public class HelloWorld &amp;#123;   public String getHello()&amp;#123;      return &amp;quot;调用自定义函数getHello()&amp;quot;;   &amp;#125;">
-<meta name="twitter:image" content="http://per-zyj.xyz/.xyz//1.png">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/1.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -200,7 +200,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class HelloWorld &#123;</span><br><span class="line">   public String getHello()&#123;</span><br><span class="line">      return &quot;调用自定义函数getHello()&quot;;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   public String sayHello(String name)&#123;</span><br><span class="line">	   return &quot;Hello , &quot; + name;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line">      System.out.println(&quot;调用静态main函数成功啦&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
-<p>（2）把测试项目导出成jar，右键点击项目名称，选择export，选择JAR file<br><img src="/.xyz//1.png" alt="1"><br><strong>2、使用JMeter组件BeanShell取样器调用Jar文件</strong><br>（1）新建线程组，BeanShell取样器，查看结果树，在测试计划里添加上述导出的Jar包<br><img src="/.xyz//2.png" alt="2"><br>（2）在BeanShell取样器添加如下代码<br><img src="/.xyz//3.png" alt="3"><br>（3）点击启动按钮<img src="/.xyz//4.png" alt="4"><br>（4）日志里输出调用Jar包函数结果<br><img src="/.xyz//5.png" alt="5"></p>
+<p>（2）把测试项目导出成jar，右键点击项目名称，选择export，选择JAR file<br><img src="/2019/08/19/JMeter调用Java的Jar包/1.png" alt="1"><br><strong>2、使用JMeter组件BeanShell取样器调用Jar文件</strong><br>（1）新建线程组，BeanShell取样器，查看结果树，在测试计划里添加上述导出的Jar包<br><img src="/2019/08/19/JMeter调用Java的Jar包/2.png" alt="2"><br>（2）在BeanShell取样器添加如下代码<br><img src="/2019/08/19/JMeter调用Java的Jar包/3.png" alt="3"><br>（3）点击启动按钮<img src="/2019/08/19/JMeter调用Java的Jar包/4.png" alt="4"><br>（4）日志里输出调用Jar包函数结果<br><img src="/2019/08/19/JMeter调用Java的Jar包/5.png" alt="5"></p>
 
       
       

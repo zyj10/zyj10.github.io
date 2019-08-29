@@ -6,31 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>JMeter使用CA证书录制HTTPS请求 | 静静的博客</title>
+  <title>JMeter监控服务器CPU等信息 | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、客户端新增HTTP代理服务器 （1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（..(js|css|PNG|jpg|ico|png|gif).），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt">
-<meta name="keywords" content="性能测试,Jmeter,HTTPS">
+  <meta name="description" content="1、客户端安装PerfMon插件在options菜单下点击“plugins Manager”，在available plugins中，搜索PerfMon，点击apply changes andrestart jmeter即可。">
+<meta name="keywords" content="性能测试,Jmeter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JMeter使用CA证书录制HTTPS请求">
-<meta property="og:url" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/index.html">
+<meta property="og:title" content="JMeter监控服务器CPU等信息">
+<meta property="og:url" content="http://per-zyj.xyz/2019/08/26/JMeter监控服务器CPU等信息/index.html">
 <meta property="og:site_name" content="静静的博客">
-<meta property="og:description" content="1、客户端新增HTTP代理服务器 （1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（..(js|css|PNG|jpg|ico|png|gif).），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt">
+<meta property="og:description" content="1、客户端安装PerfMon插件在options菜单下点击“plugins Manager”，在available plugins中，搜索PerfMon，点击apply changes andrestart jmeter即可。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/1.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/2.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/3.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/4.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/5.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/6.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/7.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/8.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/9.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/10.png">
-<meta property="og:updated_time" content="2019-08-29T01:23:23.834Z">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/26/JMeter监控服务器CPU等信息/1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/26/JMeter监控服务器CPU等信息/2.png">
+<meta property="og:updated_time" content="2019-08-29T06:27:25.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JMeter使用CA证书录制HTTPS请求">
-<meta name="twitter:description" content="1、客户端新增HTTP代理服务器 （1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（..(js|css|PNG|jpg|ico|png|gif).），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt">
-<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/1.png">
+<meta name="twitter:title" content="JMeter监控服务器CPU等信息">
+<meta name="twitter:description" content="1、客户端安装PerfMon插件在options菜单下点击“plugins Manager”，在available plugins中，搜索PerfMon，点击apply changes andrestart jmeter即可。">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/26/JMeter监控服务器CPU等信息/1.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -70,6 +62,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives/">归档</a></li>
+	        
+				<li><a href="/categories/性能测试">性能测试</a></li>
 	        
 			</ul>
 		</nav>
@@ -123,6 +117,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -136,12 +132,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories/性能测试">性能测试</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,14 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JMeter使用CA证书录制HTTPS请求" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JMeter监控服务器CPU等信息" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JMeter使用CA证书录制HTTPS请求
+      JMeter监控服务器CPU等信息
     </h1>
   
 
@@ -173,8 +171,8 @@
     <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
     <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
 
-<a href="/2019/08/23/JMeter使用CA证书录制HTTPS请求/" class="archive-article-date">
-  	<time datetime="2019-08-23T00:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
+<a href="/2019/08/26/JMeter监控服务器CPU等信息/" class="archive-article-date">
+  	<time datetime="2019-08-26T01:09:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
 </a>
         
           <div style="margin-top:10px;">
@@ -182,7 +180,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">210字</span>
+        <span class="post-count">218字</span>
       </span>
     </span>
 
@@ -201,18 +199,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1、客户端新增HTTP代理服务器"><a href="#1、客户端新增HTTP代理服务器" class="headerlink" title="1、客户端新增HTTP代理服务器"></a>1、客户端新增HTTP代理服务器</h3><ul>
-<li>（1）JMeter新增线程组和HTTP代理服务器，设置端口号及录制域名（可不填），设置排除模式，排除录制一些静态资源（.<em>.(js|css|PNG|jpg|ico|png|gif).</em>），点击启动，在jmeter的bin目录下会生成一个文件：ApacheJMeterTemporaryRootCA.crt<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/1.png" alt="1"></li>
-</ul>
+        <h3 id="1、客户端安装PerfMon插件"><a href="#1、客户端安装PerfMon插件" class="headerlink" title="1、客户端安装PerfMon插件"></a>1、客户端安装PerfMon插件</h3><p>在options菜单下点击“plugins Manager”，在available plugins中，搜索PerfMon，点击apply changes andrestart jmeter即可。</p>
 <a id="more"></a>
-<ul>
-<li>（2）在jmeter选项菜单选择ssl管理器，导入jmeter/bin目录下的文件ApacheJMeterTemporaryRootCA.crt<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/2.png" alt="2"></li>
+
+<h3 id="2、服务器端安装SeverAgent（前提是服务器安装了jdk环境）"><a href="#2、服务器端安装SeverAgent（前提是服务器安装了jdk环境）" class="headerlink" title="2、服务器端安装SeverAgent（前提是服务器安装了jdk环境）"></a>2、服务器端安装SeverAgent（前提是服务器安装了jdk环境）</h3><ul>
+<li>（1）服务器为Linux系统：将此安装包解压，进入serverAgent文件中，然后运行startAgent.sh命令（./startAgent.sh），启动agent。<br>默认端口号为4444，一般不开放，可以修改端口命令为<br>(java -jar ./CMDRunner.jar –tool PerfMonAgent –udp-port 7879 –tcp-port 7879)</li>
+<li>（2）服务器为windows系统：将此安装包解压，进入serverAgent文件中，双击startAgent.bat，启动agent。</li>
 </ul>
-<h3 id="2、浏览器导入CA证书并设置局域网连接"><a href="#2、浏览器导入CA证书并设置局域网连接" class="headerlink" title="2、浏览器导入CA证书并设置局域网连接"></a>2、浏览器导入CA证书并设置局域网连接</h3><ul>
-<li>（1）证书导入-若出现<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/3.png" alt="3"><br>所示错误，则根据博客<a href="https://blog.csdn.net/lovedingd/article/details/97615215，即可导入成功" target="_blank" rel="noopener">https://blog.csdn.net/lovedingd/article/details/97615215，即可导入成功</a><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/4.png" alt="4"><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/5.png" alt="5"><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/6.png" alt="6"></li>
-<li>（2）局域网设置如下<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/7.png" alt="7"><br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/8.png" alt="8"></li>
-<li>（3）访问https网址后，会出现如下图所示对话框，初始密码为password<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/9.png" alt="9"></li>
-<li>（4）结束录制后还原浏览器设置，查看脚本，即可发现已录制https请求<br><img src="/2019/08/23/JMeter使用CA证书录制HTTPS请求/10.png" alt="10"></li>
+<h3 id="3、客户端添加监听器下的jp-gc-PerfMon-Metrics-Collector进行监控（前提是新增一个线程组和HTTP请求，线程组循环次数勾上永远）"><a href="#3、客户端添加监听器下的jp-gc-PerfMon-Metrics-Collector进行监控（前提是新增一个线程组和HTTP请求，线程组循环次数勾上永远）" class="headerlink" title="3、客户端添加监听器下的jp@gc - PerfMon Metrics Collector进行监控（前提是新增一个线程组和HTTP请求，线程组循环次数勾上永远）"></a>3、客户端添加监听器下的jp@gc - PerfMon Metrics Collector进行监控（前提是新增一个线程组和HTTP请求，线程组循环次数勾上永远）</h3><h3 id="4、最后成功监听客户端和服务端截图如下："><a href="#4、最后成功监听客户端和服务端截图如下：" class="headerlink" title="4、最后成功监听客户端和服务端截图如下："></a>4、最后成功监听客户端和服务端截图如下：</h3><ul>
+<li>（1）服务端<br><img src="/2019/08/26/JMeter监控服务器CPU等信息/1.png" alt="1"></li>
+<li>（2）客户端<br><img src="/2019/08/26/JMeter监控服务器CPU等信息/2.png" alt="2"></li>
 </ul>
 
       
@@ -225,7 +221,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/
+          http://per-zyj.xyz/2019/08/26/JMeter监控服务器CPU等信息/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -279,10 +275,6 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HTTPS</a>
         		</li>
       		
 		</ul>
@@ -349,7 +341,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/23/JMeter使用CA证书录制HTTPS请求/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/26/JMeter监控服务器CPU等信息/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -363,18 +355,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/23/LoadRunner参数化详解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/29/性能测试常见瓶颈分析及调优方法/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          LoadRunner参数化详解
+          性能测试常见瓶颈分析及调优方法
         
       </div>
     </a>
   
   
-    <a href="/2019/08/21/JMeter监控服务器CPU等信息/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JMeter监控服务器CPU等信息</div>
+    <a href="/2019/08/26/JMeter测试WebSocket实战/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JMeter测试WebSocket实战</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -393,6 +385,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、客户端安装PerfMon插件"><span class="toc-number">1.</span> <span class="toc-text">1、客户端安装PerfMon插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、服务器端安装SeverAgent（前提是服务器安装了jdk环境）"><span class="toc-number">2.</span> <span class="toc-text">2、服务器端安装SeverAgent（前提是服务器安装了jdk环境）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、客户端添加监听器下的jp-gc-PerfMon-Metrics-Collector进行监控（前提是新增一个线程组和HTTP请求，线程组循环次数勾上永远）"><span class="toc-number">3.</span> <span class="toc-text">3、客户端添加监听器下的jp@gc - PerfMon Metrics Collector进行监控（前提是新增一个线程组和HTTP请求，线程组循环次数勾上永远）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、最后成功监听客户端和服务端截图如下："><span class="toc-number">4.</span> <span class="toc-text">4、最后成功监听客户端和服务端截图如下：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -533,6 +538,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -557,23 +566,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">World</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能瓶颈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能调优</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,30 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>JMeter测试WebSocket实战 | 静静的博客</title>
+  <title>JMeter接收和发送JSON数据 | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、测试地址：ws://echo.websocket.org">
-<meta name="keywords" content="性能测试,Jmeter,WebSocket">
+  <meta name="description" content="1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下： Article类如下所示：">
+<meta name="keywords" content="性能测试,Jmeter,JSON">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JMeter测试WebSocket实战">
-<meta property="og:url" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/index.html">
+<meta property="og:title" content="JMeter接收和发送JSON数据">
+<meta property="og:url" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/index.html">
 <meta property="og:site_name" content="静静的博客">
-<meta property="og:description" content="1、测试地址：ws://echo.websocket.org">
+<meta property="og:description" content="1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下： Article类如下所示：">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/1.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/2.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/3.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/4.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/5.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/6.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/7.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/8.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/9.png">
-<meta property="og:updated_time" content="2019-08-29T01:24:42.295Z">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/2.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/3.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/4.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/5.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/6.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/7.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/8.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/9.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/10.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/11.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/12.png">
+<meta property="og:updated_time" content="2019-08-29T06:27:35.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JMeter测试WebSocket实战">
-<meta name="twitter:description" content="1、测试地址：ws://echo.websocket.org">
-<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/1.png">
+<meta name="twitter:title" content="JMeter接收和发送JSON数据">
+<meta name="twitter:description" content="1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下： Article类如下所示：">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/1.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -69,6 +72,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives/">归档</a></li>
+	        
+				<li><a href="/categories/性能测试">性能测试</a></li>
 	        
 			</ul>
 		</nav>
@@ -122,6 +127,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -135,12 +142,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories/性能测试">性能测试</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,14 +164,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JMeter测试WebSocket实战" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JMeter接收和发送JSON数据" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JMeter测试WebSocket实战
+      JMeter接收和发送JSON数据
     </h1>
   
 
@@ -172,8 +181,8 @@
     <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
     <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
 
-<a href="/2019/08/21/JMeter测试WebSocket实战/" class="archive-article-date">
-  	<time datetime="2019-08-21T01:08:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
+<a href="/2019/08/25/JMeter接收和发送JSON数据/" class="archive-article-date">
+  	<time datetime="2019-08-25T01:09:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
 </a>
         
           <div style="margin-top:10px;">
@@ -181,7 +190,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">83字</span>
+        <span class="post-count">131字</span>
       </span>
     </span>
 
@@ -200,17 +209,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1、测试地址：ws-echo-websocket-org"><a href="#1、测试地址：ws-echo-websocket-org" class="headerlink" title="1、测试地址：ws://echo.websocket.org"></a>1、测试地址：ws://echo.websocket.org</h3><p><img src="/2019/08/21/JMeter测试WebSocket实战/1.png" alt="1"></p>
-<a id="more"></a>
-<h3 id="2、JMeter新增线程组，新增WebSocket相关取样器"><a href="#2、JMeter新增线程组，新增WebSocket相关取样器" class="headerlink" title="2、JMeter新增线程组，新增WebSocket相关取样器"></a>2、JMeter新增线程组，新增WebSocket相关取样器</h3><p><img src="/2019/08/21/JMeter测试WebSocket实战/2.png" alt="2"><br>WebSocket相关取样器说明如下<br><img src="/2019/08/21/JMeter测试WebSocket实战/3.png" alt="3"></p>
-<ul>
-<li>（1）WebSocket Open Connection填写如下：<br><img src="/2019/08/21/JMeter测试WebSocket实战/4.png" alt="4"></li>
-<li>（2）WebSocket Ping/Pong填写如下：<br><img src="/2019/08/21/JMeter测试WebSocket实战/5.png" alt="5"></li>
-<li>（3）WebSocket request-response Sampler填写如下：<br><img src="/2019/08/21/JMeter测试WebSocket实战/6.png" alt="6"></li>
-<li>（4）WebSocket Single Write Sampler填写如下：<br><img src="/2019/08/21/JMeter测试WebSocket实战/7.png" alt="7"></li>
-<li>（5）WebSocket Single Read Sampler填写如下：<br><img src="/2019/08/21/JMeter测试WebSocket实战/8.png" alt="8"></li>
-<li>（6）WebSocket Close填写如下：<br><img src="/2019/08/21/JMeter测试WebSocket实战/9.png" alt="9"></li>
+        <h3 id="1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下："><a href="#1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下：" class="headerlink" title="1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下："></a>1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下：</h3><ul>
+<li>Article类如下所示：<br><img src="/2019/08/25/JMeter接收和发送JSON数据/1.png" alt="1"></li>
 </ul>
+<a id="more"></a>
+<ul>
+<li>（1）GET请求：<a href="http://localhost:8080/getArticle" target="_blank" rel="noopener">http://localhost:8080/getArticle</a><br><img src="/2019/08/25/JMeter接收和发送JSON数据/2.png" alt="2"><br>响应数据如下：<br><img src="/2019/08/25/JMeter接收和发送JSON数据/3.png" alt="3"></li>
+<li>（2）GET请求：<a href="http://localhost:8080/getString" target="_blank" rel="noopener">http://localhost:8080/getString</a><br><img src="/2019/08/25/JMeter接收和发送JSON数据/4.png" alt="4"><br>响应数据如下：<br><img src="/2019/08/25/JMeter接收和发送JSON数据/5.png" alt="5"></li>
+<li>（3）POST请求：<a href="http://localhost:8080/setArticle" target="_blank" rel="noopener">http://localhost:8080/setArticle</a> 消息体为一串JSON，注意需设置HTTP信息头管理器<br><img src="/2019/08/25/JMeter接收和发送JSON数据/6.png" alt="6"><br>HTTP信息头管理器设置如下：<br><img src="/2019/08/25/JMeter接收和发送JSON数据/7.png" alt="7"><br>响应数据如下：<br><img src="/2019/08/25/JMeter接收和发送JSON数据/8.png" alt="8"></li>
+</ul>
+<h3 id="2、使用后置处理器下的JSON提取器提取getJson里的title信息和getJson2里的Code信息"><a href="#2、使用后置处理器下的JSON提取器提取getJson里的title信息和getJson2里的Code信息" class="headerlink" title="2、使用后置处理器下的JSON提取器提取getJson里的title信息和getJson2里的Code信息"></a>2、使用后置处理器下的JSON提取器提取getJson里的title信息和getJson2里的Code信息</h3><p><img src="/2019/08/25/JMeter接收和发送JSON数据/9.png" alt="9"><br><img src="/2019/08/25/JMeter接收和发送JSON数据/10.png" alt="10"><br><img src="/2019/08/25/JMeter接收和发送JSON数据/11.png" alt="11"></p>
+<p>响应数据如下：<br><img src="/2019/08/25/JMeter接收和发送JSON数据/12.png" alt="12"></p>
 
       
       
@@ -222,7 +231,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/
+          http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -279,7 +288,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WebSocket</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JSON</a>
         		</li>
       		
 		</ul>
@@ -346,7 +355,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/21/JMeter测试WebSocket实战/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/25/JMeter接收和发送JSON数据/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -360,18 +369,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/21/JMeter接收和发送JSON数据/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/26/JMeter测试WebSocket实战/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JMeter接收和发送JSON数据
+          JMeter测试WebSocket实战
         
       </div>
     </a>
   
   
-    <a href="/2019/08/19/JMeter调用Java的Jar包/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JMeter调用Java的Jar包</div>
+    <a href="/2019/08/25/JMeter使用CA证书录制HTTPS请求/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JMeter使用CA证书录制HTTPS请求</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -390,6 +399,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下："><span class="toc-number">1.</span> <span class="toc-text">1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、使用后置处理器下的JSON提取器提取getJson里的title信息和getJson2里的Code信息"><span class="toc-number">2.</span> <span class="toc-text">2、使用后置处理器下的JSON提取器提取getJson里的title信息和getJson2里的Code信息</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -530,6 +552,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -554,23 +580,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">World</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能瓶颈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能调优</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">

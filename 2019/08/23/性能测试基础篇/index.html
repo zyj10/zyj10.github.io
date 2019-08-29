@@ -6,26 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>JMeter调用Java的Jar包 | 静静的博客</title>
+  <title>性能测试基础篇 | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、Eclipse里写上测试代码helloworld（1）新建Java Project，新建类HelloWorld，填写测试代码如下 12345678910111213public class HelloWorld &amp;#123;   public String getHello()&amp;#123;      return &amp;quot;调用自定义函数getHello()&amp;quot;;   &amp;#125;">
-<meta name="keywords" content="性能测试,Jmeter">
+  <meta name="description" content="1 性能性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。 2 性能测试性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。">
+<meta name="keywords" content="性能测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JMeter调用Java的Jar包">
-<meta property="og:url" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/index.html">
+<meta property="og:title" content="性能测试基础篇">
+<meta property="og:url" content="http://per-zyj.xyz/2019/08/23/性能测试基础篇/index.html">
 <meta property="og:site_name" content="静静的博客">
-<meta property="og:description" content="1、Eclipse里写上测试代码helloworld（1）新建Java Project，新建类HelloWorld，填写测试代码如下 12345678910111213public class HelloWorld &amp;#123;   public String getHello()&amp;#123;      return &amp;quot;调用自定义函数getHello()&amp;quot;;   &amp;#125;">
+<meta property="og:description" content="1 性能性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。 2 性能测试性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/1.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/2.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/3.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/4.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/5.png">
-<meta property="og:updated_time" content="2019-08-29T01:22:25.448Z">
+<meta property="og:updated_time" content="2019-08-29T06:28:40.119Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JMeter调用Java的Jar包">
-<meta name="twitter:description" content="1、Eclipse里写上测试代码helloworld（1）新建Java Project，新建类HelloWorld，填写测试代码如下 12345678910111213public class HelloWorld &amp;#123;   public String getHello()&amp;#123;      return &amp;quot;调用自定义函数getHello()&amp;quot;;   &amp;#125;">
-<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/1.png">
+<meta name="twitter:title" content="性能测试基础篇">
+<meta name="twitter:description" content="1 性能性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。 2 性能测试性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -65,6 +59,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives/">归档</a></li>
+	        
+				<li><a href="/categories/性能测试">性能测试</a></li>
 	        
 			</ul>
 		</nav>
@@ -118,6 +114,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -131,12 +129,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories/性能测试">性能测试</a></li>
 		        
 				</ul>
 			</nav>
@@ -151,14 +151,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JMeter调用Java的Jar包" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-性能测试基础篇" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JMeter调用Java的Jar包
+      性能测试基础篇
     </h1>
   
 
@@ -168,8 +168,8 @@
     <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
     <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
 
-<a href="/2019/08/19/JMeter调用Java的Jar包/" class="archive-article-date">
-  	<time datetime="2019-08-19T09:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
+<a href="/2019/08/23/性能测试基础篇/" class="archive-article-date">
+  	<time datetime="2019-08-23T03:18:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
 </a>
         
           <div style="margin-top:10px;">
@@ -177,7 +177,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">182字</span>
+        <span class="post-count">1k字</span>
       </span>
     </span>
 
@@ -186,7 +186,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -196,11 +196,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1、Eclipse里写上测试代码helloworld</strong><br>（1）新建Java Project，新建类HelloWorld，填写测试代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class HelloWorld &#123;</span><br><span class="line">   public String getHello()&#123;</span><br><span class="line">      return &quot;调用自定义函数getHello()&quot;;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   public String sayHello(String name)&#123;</span><br><span class="line">	   return &quot;Hello , &quot; + name;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line">      System.out.println(&quot;调用静态main函数成功啦&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h4 id="1-性能"><a href="#1-性能" class="headerlink" title="1 性能"></a>1 性能</h4><p>性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。</p>
+<h4 id="2-性能测试"><a href="#2-性能测试" class="headerlink" title="2 性能测试"></a>2 性能测试</h4><p>性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。</p>
 <a id="more"></a>
-<p>（2）把测试项目导出成jar，右键点击项目名称，选择export，选择JAR file<br><img src="/2019/08/19/JMeter调用Java的Jar包/1.png" alt="1"><br><strong>2、使用JMeter组件BeanShell取样器调用Jar文件</strong><br>（1）新建线程组，BeanShell取样器，查看结果树，在测试计划里添加上述导出的Jar包<br><img src="/2019/08/19/JMeter调用Java的Jar包/2.png" alt="2"><br>（2）在BeanShell取样器添加如下代码<br><img src="/2019/08/19/JMeter调用Java的Jar包/3.png" alt="3"><br>（3）点击启动按钮<img src="/2019/08/19/JMeter调用Java的Jar包/4.png" alt="4"><br>（4）日志里输出调用Jar包函数结果<br><img src="/2019/08/19/JMeter调用Java的Jar包/5.png" alt="5"></p>
+
+<blockquote>
+<p>性能测试（Performance Testing）:在一定的负载情况下，系统的响应时间、吞吐量等特性是否满足特定的性能需求</p>
+</blockquote>
+<h4 id="3-测试种类：负载测试、压力测试、容量测试、基准测试等"><a href="#3-测试种类：负载测试、压力测试、容量测试、基准测试等" class="headerlink" title="3 测试种类：负载测试、压力测试、容量测试、基准测试等"></a>3 测试种类：负载测试、压力测试、容量测试、基准测试等</h4><h5 id="3-1-负载测试（Load-Testing）"><a href="#3-1-负载测试（Load-Testing）" class="headerlink" title="3.1 负载测试（Load Testing）"></a>3.1 负载测试（Load Testing）</h5><p>在一定的软件、硬件及网络环境下，在不同虚拟用户数量的情况下运行一种或者多种业务，测试服务器的性能指标是否在用户的要求范围内，用于确定系统所能承载的最大用户数、最大有效用户数以及不同用户数下的系统响应时间和服务器的资源利用率</p>
+<h5 id="3-2-压力-强度测试（Stress-Testing）"><a href="#3-2-压力-强度测试（Stress-Testing）" class="headerlink" title="3.2 压力/强度测试（Stress Testing）"></a>3.2 压力/强度测试（Stress Testing）</h5><p>在一定的软件、硬件及网络环境下，通过模拟大量的虚拟用户向服务器产生负载，使服务器的资源处于极限状态下长时间连续运行，以测试服务器在高负载情况下是否能够稳定工作</p>
+<h5 id="3-3-容量测试（Volume-Testing）"><a href="#3-3-容量测试（Volume-Testing）" class="headerlink" title="3.3 容量测试（Volume Testing）"></a>3.3 容量测试（Volume Testing）</h5><p>在一定的软件、硬件及网络环境下，向数据库中构造不同数量级别的数据记录，在一定虚拟用户数量的情况下运行一种或多种业务，获取不同数量级别的服务器性能指标，以确定数据库的最佳容量。</p>
+<h5 id="3-4-基准测试（Benchmark-Testing）"><a href="#3-4-基准测试（Benchmark-Testing）" class="headerlink" title="3.4 基准测试（Benchmark Testing）"></a>3.4 基准测试（Benchmark Testing）</h5><p>在一定的软件、硬件及网络环境下，模拟一定数量虚拟用户运行一种或多种业务，将测试结果作为基线数据，在系统调优或者系统评测过程中，通过运行相同的业务场景并比较测试结果，确定调优是否达到效果或者为系统的选择提供决策数据。</p>
+<h4 id="4-性能测试常见工具"><a href="#4-性能测试常见工具" class="headerlink" title="4 性能测试常见工具"></a>4 性能测试常见工具</h4><p>LoadRunner,SoapUI,Apache Bench,Jmeter</p>
+<h4 id="5-性能测试常见术语"><a href="#5-性能测试常见术语" class="headerlink" title="5 性能测试常见术语"></a>5 性能测试常见术语</h4><p>事务（Transaction）响应时间（Response Time）吞吐量（Throughoutput）TPS（Transaction Per Second）并发用户￥&amp;在线用户数 集合点（Rendezvous）思考时间（Think Time）缓存（Cache）</p>
+<h5 id="5-1-事务"><a href="#5-1-事务" class="headerlink" title="5.1 事务"></a>5.1 事务</h5><p>事务是指做某件事情的操作，事务函数会记录开始做这件事情和该事情做完之间的时间差，使用Transaction Response Time 这个词来说明，也称为事务响应时间。</p>
+<h5 id="5-2-响应时间"><a href="#5-2-响应时间" class="headerlink" title="5.2 响应时间"></a>5.2 响应时间</h5><p>响应时间是指应用系统从发出请求开始到客户端接收到所有数据消耗的时间。该定义强调所有数据都已经被呈现到客户端所花费的时间。</p>
+<h5 id="5-3-吞吐量"><a href="#5-3-吞吐量" class="headerlink" title="5.3 吞吐量"></a>5.3 吞吐量</h5><p>在性能测试中，吞吐量是指单位时间内服务器处理的字节数，吞吐量的公式为B/s,吞吐量的大小直接的体现服务器的承载能力。</p>
+<h5 id="5-4-并发用户数"><a href="#5-4-并发用户数" class="headerlink" title="5.4 并发用户数"></a>5.4 并发用户数</h5><p>并发用户数是指同一时刻与服务器进行数据交互的所有用户数量。</p>
+<h5 id="5-5-TPS（Transaction-Per-Second-每秒事务数）"><a href="#5-5-TPS（Transaction-Per-Second-每秒事务数）" class="headerlink" title="5.5 TPS（Transaction Per Second,每秒事务数）"></a>5.5 TPS（Transaction Per Second,每秒事务数）</h5><p>TPS表示服务器每秒处理的事务数，是衡量系统处理能力的重要指标。</p>
+<p><strong>并发用户数 约= TPS * （思考时间 + 响应时间）</strong><br>1、并发用户数的大小与TPS、（思考时间+响应时间）有关系<br>2、在没有瓶颈的情况下，TPS越大，响应时间是固定的，那么系统能支持的并发用户数也就越大<br>3、在有瓶颈的情况下，TPS会维持一个值或者下降，此时如果模拟更多的并发用户数，只会导致响应时间增加<br>4、模拟了思考时间，系统能支持的并发用户数也会比不模拟的时候多</p>
 
       
       
@@ -212,7 +226,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/
+          http://per-zyj.xyz/2019/08/23/性能测试基础篇/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -262,10 +276,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
         		</li>
       		
 		</ul>
@@ -332,7 +342,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/19/JMeter调用Java的Jar包/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/23/性能测试基础篇/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -346,18 +356,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/21/JMeter测试WebSocket实战/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/23/LoadRunner参数化详解/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JMeter测试WebSocket实战
+          LoadRunner参数化详解
         
       </div>
     </a>
   
   
-    <a href="/2019/08/19/JMeter调用javascript函数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JMeter调用javascript函数</div>
+    <a href="/2019/08/23/Hexo搭建个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo搭建博客案例详解（使用Yilia主题）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -376,6 +386,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-性能"><span class="toc-number">1.</span> <span class="toc-text">1 性能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-性能测试"><span class="toc-number">2.</span> <span class="toc-text">2 性能测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-测试种类：负载测试、压力测试、容量测试、基准测试等"><span class="toc-number">3.</span> <span class="toc-text">3 测试种类：负载测试、压力测试、容量测试、基准测试等</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-负载测试（Load-Testing）"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 负载测试（Load Testing）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-压力-强度测试（Stress-Testing）"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 压力/强度测试（Stress Testing）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-容量测试（Volume-Testing）"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 容量测试（Volume Testing）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-基准测试（Benchmark-Testing）"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 基准测试（Benchmark Testing）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-性能测试常见工具"><span class="toc-number">4.</span> <span class="toc-text">4 性能测试常见工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-性能测试常见术语"><span class="toc-number">5.</span> <span class="toc-text">5 性能测试常见术语</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1-事务"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 事务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-2-响应时间"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 响应时间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-3-吞吐量"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 吞吐量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-4-并发用户数"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 并发用户数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-5-TPS（Transaction-Per-Second-每秒事务数）"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 TPS（Transaction Per Second,每秒事务数）</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -516,6 +539,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -540,23 +567,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">World</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能瓶颈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能调优</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">

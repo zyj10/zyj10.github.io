@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>性能测试基础篇 | 静静的博客</title>
+  <title>性能测试工具篇--LoadRunner | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1 性能性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。 2 性能测试性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。">
-<meta name="keywords" content="性能测试">
+  <meta name="description" content="1  LoadRunner包含以下组件： Virtual User Generator 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。  Controller 组织、驱动、管理并监控负载测试。  Load Generator 通过运行Vuser产生负载。  Analysis 用于查看、剖析和比较性能结果。  Launcher 使您可以从单个访问点访问所有LoadRunner组件。">
+<meta name="keywords" content="性能测试,LoadRunner">
 <meta property="og:type" content="article">
-<meta property="og:title" content="性能测试基础篇">
-<meta property="og:url" content="http://per-zyj.xyz/2019/08/16/性能测试基础篇/index.html">
+<meta property="og:title" content="性能测试工具篇--LoadRunner">
+<meta property="og:url" content="http://per-zyj.xyz/2019/08/23/性能测试工具LoadRunner篇/index.html">
 <meta property="og:site_name" content="静静的博客">
-<meta property="og:description" content="1 性能性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。 2 性能测试性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。">
+<meta property="og:description" content="1  LoadRunner包含以下组件： Virtual User Generator 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。  Controller 组织、驱动、管理并监控负载测试。  Load Generator 通过运行Vuser产生负载。  Analysis 用于查看、剖析和比较性能结果。  Launcher 使您可以从单个访问点访问所有LoadRunner组件。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-23T01:00:33.803Z">
+<meta property="og:updated_time" content="2019-08-29T06:28:29.422Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="性能测试基础篇">
-<meta name="twitter:description" content="1 性能性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。 2 性能测试性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。">
+<meta name="twitter:title" content="性能测试工具篇--LoadRunner">
+<meta name="twitter:description" content="1  LoadRunner包含以下组件： Virtual User Generator 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。  Controller 组织、驱动、管理并监控负载测试。  Load Generator 通过运行Vuser产生负载。  Analysis 用于查看、剖析和比较性能结果。  Launcher 使您可以从单个访问点访问所有LoadRunner组件。">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -59,6 +59,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives/">归档</a></li>
+	        
+				<li><a href="/categories/性能测试">性能测试</a></li>
 	        
 			</ul>
 		</nav>
@@ -112,6 +114,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -125,12 +129,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories/性能测试">性能测试</a></li>
 		        
 				</ul>
 			</nav>
@@ -145,14 +151,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-性能测试基础篇" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-性能测试工具LoadRunner篇" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      性能测试基础篇
+      性能测试工具篇--LoadRunner
     </h1>
   
 
@@ -162,8 +168,8 @@
     <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
     <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
 
-<a href="/2019/08/16/性能测试基础篇/" class="archive-article-date">
-  	<time datetime="2019-08-16T03:18:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
+<a href="/2019/08/23/性能测试工具LoadRunner篇/" class="archive-article-date">
+  	<time datetime="2019-08-23T09:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
 </a>
         
           <div style="margin-top:10px;">
@@ -171,7 +177,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1k字</span>
+        <span class="post-count">1.9k字</span>
       </span>
     </span>
 
@@ -180,7 +186,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">7分</span>
       </span>
     </span>
 </div>
@@ -190,25 +196,93 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-性能"><a href="#1-性能" class="headerlink" title="1 性能"></a>1 性能</h4><p>性能是一个很大的概念，覆盖面非常广泛，包括执行效率、资源占用、系统稳定性、安全性、兼容性、可靠性、可扩展性等。</p>
-<h4 id="2-性能测试"><a href="#2-性能测试" class="headerlink" title="2 性能测试"></a>2 性能测试</h4><p>性能测试是为描述这些指标而进行的一类测试。性能测试主要是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。</p>
+        <h5 id="1-LoadRunner包含以下组件："><a href="#1-LoadRunner包含以下组件：" class="headerlink" title="1  LoadRunner包含以下组件："></a>1  LoadRunner包含以下组件：</h5><ul>
+<li><p><strong>Virtual User Generator</strong> 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。</p>
+</li>
+<li><p><strong>Controller</strong> 组织、驱动、管理并监控负载测试。</p>
+</li>
+<li><p><strong>Load Generator</strong> 通过运行Vuser产生负载。</p>
+</li>
+<li><p><strong>Analysis</strong> 用于查看、剖析和比较性能结果。</p>
+</li>
+<li><p><strong>Launcher</strong> 使您可以从单个访问点访问所有LoadRunner组件。</p>
 <a id="more"></a>
 
+</li>
+</ul>
+<h5 id="2-术语"><a href="#2-术语" class="headerlink" title="2 术语"></a>2 术语</h5><ul>
+<li><strong>场景</strong> 场景文件根据性能要求定义每次测试期间发生的事件</li>
+<li><strong>Vuser</strong> 在场景中，LoadRunner用虚拟用户（或称Vuser）代替真实用户。Vuser模拟真实用户的操作来使用应用系统。一个场景可以包含数十、数百万乃数千个Vuser。</li>
+<li><strong>Vuser脚本</strong> Vuser脚本描述Vuser在场景中执行的操作</li>
+<li><strong>事务</strong> 要评测服务器性能，需要定义事务。事务代表要评测的终端用户业务流程</li>
+</ul>
 <blockquote>
-<p>性能测试（Performance Testing）:在一定的负载情况下，系统的响应时间、吞吐量等特性是否满足特定的性能需求</p>
+<p>事务是指用户在客户端做一种或多种业务所需的操作集，通过事务函数可以标记完成该业务所需要的操作内容；另一方面事务可以用来统计用户操作的响应时间，事务响应时间是通过记录用户请求的开始时间和服务器返回内容到客户时间的差值来计算用户操作响应时间的<br>对于软件来说，通过事务得到的<strong>系统响应时间</strong>也是由非常多的部分组成的，一般来说响应时间由网络时间、服务器处理时间、网络延迟三大部分组成。</p>
 </blockquote>
-<h4 id="3-测试种类：负载测试、压力测试、容量测试、基准测试等"><a href="#3-测试种类：负载测试、压力测试、容量测试、基准测试等" class="headerlink" title="3 测试种类：负载测试、压力测试、容量测试、基准测试等"></a>3 测试种类：负载测试、压力测试、容量测试、基准测试等</h4><h5 id="3-1-负载测试（Load-Testing）"><a href="#3-1-负载测试（Load-Testing）" class="headerlink" title="3.1 负载测试（Load Testing）"></a>3.1 负载测试（Load Testing）</h5><p>在一定的软件、硬件及网络环境下，在不同虚拟用户数量的情况下运行一种或者多种业务，测试服务器的性能指标是否在用户的要求范围内，用于确定系统所能承载的最大用户数、最大有效用户数以及不同用户数下的系统响应时间和服务器的资源利用率</p>
-<h5 id="3-2-压力-强度测试（Stress-Testing）"><a href="#3-2-压力-强度测试（Stress-Testing）" class="headerlink" title="3.2 压力/强度测试（Stress Testing）"></a>3.2 压力/强度测试（Stress Testing）</h5><p>在一定的软件、硬件及网络环境下，通过模拟大量的虚拟用户向服务器产生负载，使服务器的资源处于极限状态下长时间连续运行，以测试服务器在高负载情况下是否能够稳定工作</p>
-<h5 id="3-3-容量测试（Volume-Testing）"><a href="#3-3-容量测试（Volume-Testing）" class="headerlink" title="3.3 容量测试（Volume Testing）"></a>3.3 容量测试（Volume Testing）</h5><p>在一定的软件、硬件及网络环境下，向数据库中构造不同数量级别的数据记录，在一定虚拟用户数量的情况下运行一种或多种业务，获取不同数量级别的服务器性能指标，以确定数据库的最佳容量。</p>
-<h5 id="3-4-基准测试（Benchmark-Testing）"><a href="#3-4-基准测试（Benchmark-Testing）" class="headerlink" title="3.4 基准测试（Benchmark Testing）"></a>3.4 基准测试（Benchmark Testing）</h5><p>在一定的软件、硬件及网络环境下，模拟一定数量虚拟用户运行一种或多种业务，将测试结果作为基线数据，在系统调优或者系统评测过程中，通过运行相同的业务场景并比较测试结果，确定调优是否达到效果或者为系统的选择提供决策数据。</p>
-<h4 id="4-性能测试常见工具"><a href="#4-性能测试常见工具" class="headerlink" title="4 性能测试常见工具"></a>4 性能测试常见工具</h4><p>LoadRunner,SoapUI,Apache Bench,Jmeter</p>
-<h4 id="5-性能测试常见术语"><a href="#5-性能测试常见术语" class="headerlink" title="5 性能测试常见术语"></a>5 性能测试常见术语</h4><p>事务（Transaction）响应时间（Response Time）吞吐量（Throughoutput）TPS（Transaction Per Second）并发用户￥&amp;在线用户数 集合点（Rendezvous）思考时间（Think Time）缓存（Cache）</p>
-<h5 id="5-1-事务"><a href="#5-1-事务" class="headerlink" title="5.1 事务"></a>5.1 事务</h5><p>事务是指做某件事情的操作，事务函数会记录开始做这件事情和该事情做完之间的时间差，使用Transaction Response Time 这个词来说明，也称为事务响应时间。</p>
-<h5 id="5-2-响应时间"><a href="#5-2-响应时间" class="headerlink" title="5.2 响应时间"></a>5.2 响应时间</h5><p>响应时间是指应用系统从发出请求开始到客户端接收到所有数据消耗的时间。该定义强调所有数据都已经被呈现到客户端所花费的时间。</p>
-<h5 id="5-3-吞吐量"><a href="#5-3-吞吐量" class="headerlink" title="5.3 吞吐量"></a>5.3 吞吐量</h5><p>在性能测试中，吞吐量是指单位时间内服务器处理的字节数，吞吐量的公式为B/s,吞吐量的大小直接的体现服务器的承载能力。</p>
-<h5 id="5-4-并发用户数"><a href="#5-4-并发用户数" class="headerlink" title="5.4 并发用户数"></a>5.4 并发用户数</h5><p>并发用户数是指同一时刻与服务器进行数据交互的所有用户数量。</p>
-<h5 id="5-5-TPS（Transaction-Per-Second-每秒事务数）"><a href="#5-5-TPS（Transaction-Per-Second-每秒事务数）" class="headerlink" title="5.5 TPS（Transaction Per Second,每秒事务数）"></a>5.5 TPS（Transaction Per Second,每秒事务数）</h5><p>TPS表示服务器每秒处理的事务数，是衡量系统处理能力的重要指标。</p>
-<p><strong>并发用户数 约= TPS * （思考时间 + 响应时间）</strong><br>1、并发用户数的大小与TPS、（思考时间+响应时间）有关系<br>2、在没有瓶颈的情况下，TPS越大，响应时间是固定的，那么系统能支持的并发用户数也就越大<br>3、在有瓶颈的情况下，TPS会维持一个值或者下降，此时如果模拟更多的并发用户数，只会导致响应时间增加<br>4、模拟了思考时间，系统能支持的并发用户数也会比不模拟的时候多</p>
+<h5 id="3-负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。"><a href="#3-负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。" class="headerlink" title="3 负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。"></a>3 负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。</h5><ul>
+<li><strong>规划负载测试</strong>：定义性能测试要求，例如并发用户数量、典型业务流程和要求的响应时间。</li>
+<li><strong>创建Vuser脚本</strong>：在自动化脚本中录制最终用户活动。</li>
+<li><strong>定义场景</strong>：使用LoadRunner Controller设置负载测试环境。</li>
+<li><strong>运行场景</strong>：使用LoadRunner Controller驱动、管理并监控负载测试。</li>
+<li><strong>分析结果</strong>：使用LoadRunner Analysis创建图和报告并评估性能。<h5 id="4-主要函数"><a href="#4-主要函数" class="headerlink" title="4  主要函数"></a>4  主要函数</h5></li>
+<li><strong>web_url()函数</strong>：可以模拟用户请求，它也是在脚本中最常使用的函数之一；<br> 基本语法为：web_url（“在测试结果中显示的名称”，“URL=需要访问的超链地址”，LAST）；</li>
+<li><strong>web_link()函数</strong>：用来模拟用户单机一个超链接的操作；<br>  基本语法为：web_link（“在测试结果中显示的名称”，“TEXT=需要单击的超链接名”，LAST）；<pre><code>如果一个页面中有多个同名的链接，使用Ord关键词，例如：Ord=2，单击页面上的第二个链接</code></pre></li>
+<li><strong>web_submit_form()函数</strong>：会自动检测在当前页面上是否存在form，然后将后面的ITEMDATA数据进行传送；</li>
+<li><strong>web_submit_data()函数</strong>：无须前面的页面支持，直接发送给对应页面相关数据即可；</li>
+<li><strong>Web_add_cookie()函数</strong>：主要负责为Vuser脚本添加一个cookie信息；</li>
+<li><strong>web_custom_request()函数</strong>：用来自定义HTTP请求规则；</li>
+<li><strong>lr_output_message()函数</strong>：将内容输出到Replay Log中，例如// 输出整数型的内容<br>  lr_output_message(“%d”,x);// 输出字符串的内容 lr_output_message(“%s”,x)</li>
+<li><strong>lr_eval_string()函数</strong>：可以从参数中取得对应的值，并转换成一个字符串<br>  基本语法为：lr_eval_string(“{参数名}”)<pre><code>例如获得一个字符串的第一个字母的ASCII码：Lr_eval_string(&quot;{param}&quot;)[0]</code></pre></li>
+<li><strong>atoi()函数</strong>：将字符串转换为整数</li>
+<li><strong>lr_advance_param()函数</strong>：手工将参数的值下移一位</li>
+<li><strong>lr_load_dll()函数</strong>：用来实现调用外部dll扩展脚本的功能<br>  参数和变量的最大区别在于：参数必须在双引号中才能应用，而变量如果使用双引号则变成了一个字符串，所以使用lr_eval_string()函数的时候也是使用双引号来调用的</li>
+<li><strong>lr_save_string(“<a href="http://www,51testing.com&quot;,&quot;website&quot;)函数" target="_blank" rel="noopener">http://www,51testing.com&quot;,&quot;website&quot;)函数</a></strong>：将一个字符串保存为一个参数</li>
+<li><strong>lr_save_init()和lr_save_datetime()函数</strong>：把数字和日期写入一个参数</li>
+</ul>
+<h6 id="4-1-参数数组函数"><a href="#4-1-参数数组函数" class="headerlink" title="4.1 参数数组函数"></a>4.1 参数数组函数</h6><pre><code>创建一个访问网站的参数数组，可以编写一下代码：
+lr_save_string(&quot;www.google.com&quot;,&quot;website_1&quot;);
+lr_save_string(&quot;www.baidu.com&quot;,&quot;website_2&quot;);
+lr_save_string(&quot;www.163.com&quot;,&quot;website_3&quot;);
+lr_save_string(&quot;www.sina.com&quot;,&quot;website_4&quot;);
+lr_save_string(&quot;4&quot;,&quot;website_count&quot;);</code></pre><ul>
+<li><strong>lr_paramarr_idx()函数</strong>：可以取出参数数组中某个编号的值<br>  例如char * siteval;<pre><code>sitaval = lr_paramarr_idx(&quot;website&quot;, 2);得出结果www.baidu.com,
+也可以使用lr_eval_string(&quot;{website_2}&quot;);得出结果www.baidu.com，</code></pre></li>
+<li><strong>lr_paramarr_len()函数</strong>：可以获取整个参数数组的长度</li>
+<li><strong>lr_paramarr_random()函数</strong>：是从参数列表中随机选择一个参数</li>
+</ul>
+<p>例如：遍历整个参数数组中的所有内容</p>
+<pre><code>int arrid;
+for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
+{
+    lr_output_message( lr_paramarr_idx(&quot;website&quot;,arrid));
+}</code></pre><h6 id="4-2-关联函数"><a href="#4-2-关联函数" class="headerlink" title="4.2 关联函数"></a>4.2 关联函数</h6><ul>
+<li><strong>web_reg_save_param()函数</strong>：可以完成对服务器返回的保存操作<br>  关联函数的作用是通过一种规则将服务器的返回保存在一个参数中</li>
+<li><strong>web_set_max_html_param_len()函数</strong>：可以自定义关联返回值存放的参数的最大长度</li>
+<li><strong>lr_save_var()函数</strong>：可以对一个参数值进行偏移和长度设置<br>  lr_save_string(“I come from shanghai”,”city”);<pre><code>lr_save_var(lr_eval_string(&quot;{city}&quot;),6,0,&quot;result&quot;);//从city这个参数中取6位长度的内容保存到result参数中
+lr_save_var(lr_eval_string(&quot;{city}&quot;)+7,4,0,&quot;result&quot;);//从city这个参数的第7位开始取4个长度的内容保存到result参数中</code></pre></li>
+<li><strong>strtok()函数</strong>：作用是通过某个分隔符来切分内容</li>
+<li><strong>web_reg_find()文本检查点函数</strong>：提供了一种对服务器返回内容进行查询的功能，和关联的不同之处在于检查点函数只能返回检索到内容的次数。</li>
+<li><strong>web_image_check()函数</strong>：可以检查页面上的图片，例如web_image_check(“函数标题”)</li>
+</ul>
+<h6 id="4-3-事务相关函数"><a href="#4-3-事务相关函数" class="headerlink" title="4.3 事务相关函数"></a>4.3 事务相关函数</h6><ul>
+<li><strong>lr_start_transaction(“mainpage”)函数</strong>：插入事务函数</li>
+<li><strong>lr_end_transaction(“mainpage”,LR_AUTO)函数</strong>：结束事务函数<br>  子事务<pre><code>**Lr_start_sub_transaction(&quot;子事务名&quot;，&quot;父事务名&quot;)**；
+**Lr_end_sub_transaction(&quot;子事务名&quot;，&quot;子事务状态&quot;)**；</code></pre></li>
+</ul>
+<blockquote>
+<p>事务状态有以下4种：<br><strong>LR_AUTO</strong>:LR_AUTO是指事务的状态由系统自动根据默认规则来判断，结果为PASS/FAIL/STOP。<br><strong>LR_PASS</strong>:LR_PASS是指事务是以PASS状态通过的，说明事务正确地完成了，并且记录下对应的时间，这个时间就是指做这件事情所需要消耗的响应时间。<br><strong>LR_FAIL</strong>:LR_FAIL是指事务以FAIL状态结束，该事务是一个失败的事务，没有完成事务中脚本应该达到的效果，得到的时间不是正确操作的时间，这个时间在后期的统计中将被独立统计。<br><strong>LR_STOP</strong>:LR_STOP将事务以STOP状态停止。</p>
+</blockquote>
+<p><em>事务的PASS和FAIL状态会在场景的对应计数器中记录，包括通过的次数和事务的响应时间，方便后期分析该事务的吞吐量以及响应时间的变化情况。</em></p>
+<ul>
+<li><strong>lr_get_transcation_duration(“事务名”)</strong>：获得对应事务达到该函数运行位置时持续的时间，返回double类型</li>
+<li><strong>lr_get_transcation_wasted_time(“事务名”)</strong>：获得对应事务达到该函数运行位置时的wasted时间，返回double类型</li>
+<li><strong>lr_wasted_time（毫秒）</strong>：为一个事务添加wasted时间，无返回</li>
+<li><strong>lr_stop_transaction(“事务名”)</strong>：将一个事务暂停，该函数后的操作都不会被记入事务时间</li>
+<li><strong>lr_resume_transaction（”事务名”）</strong>：将暂停的事务恢复</li>
+<li><strong>wen_get_int_property()函数</strong>：获得一个下载操作的响应时间</li>
+<li><strong>lr_think_time()函数</strong>：提供一种模拟用户等待的方式</li>
+<li><strong>lr_rendezvous()函数</strong>：是集合点函数</li>
+</ul>
 
       
       
@@ -220,7 +294,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://per-zyj.xyz/2019/08/16/性能测试基础篇/
+          http://per-zyj.xyz/2019/08/23/性能测试工具LoadRunner篇/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -263,11 +337,6 @@
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
@@ -275,6 +344,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LoadRunner</a>
         		</li>
       		
 		</ul>
@@ -341,7 +414,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/16/性能测试基础篇/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/23/性能测试工具LoadRunner篇/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -355,15 +428,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/16/性能测试工具LoadRunner篇/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/23/性能测试工具Jmeter篇/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          性能测试工具篇--LoadRunner
+          性能测试工具篇--Jmeter
         
       </div>
     </a>
   
+  
+    <a href="/2019/08/23/LoadRunner参数化详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LoadRunner参数化详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -380,6 +458,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-LoadRunner包含以下组件："><span class="toc-number">1.</span> <span class="toc-text">1  LoadRunner包含以下组件：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-术语"><span class="toc-number">2.</span> <span class="toc-text">2 术语</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。"><span class="toc-number">3.</span> <span class="toc-text">3 负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-主要函数"><span class="toc-number">4.</span> <span class="toc-text">4  主要函数</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-1-参数数组函数"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 参数数组函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-关联函数"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 关联函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-事务相关函数"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 事务相关函数</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -520,6 +611,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -544,23 +639,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">World</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能瓶颈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能调优</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">

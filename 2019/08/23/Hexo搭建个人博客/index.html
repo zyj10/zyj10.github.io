@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>性能测试工具篇--LoadRunner | 静静的博客</title>
+  <title>Hexo搭建博客案例详解（使用Yilia主题） | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1  LoadRunner包含以下组件： Virtual User Generator 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。  Controller 组织、驱动、管理并监控负载测试。  Load Generator 通过运行Vuser产生负载。  Analysis 用于查看、剖析和比较性能结果。  Launcher 使您可以从单个访问点访问所有LoadRunner组件。">
-<meta name="keywords" content="性能测试,LoadRunner">
+  <meta name="description" content="以Windows电脑为例1、本地部署步骤如下 安装Node.js  安装Git">
+<meta name="keywords" content="Hexo,Yilia">
 <meta property="og:type" content="article">
-<meta property="og:title" content="性能测试工具篇--LoadRunner">
-<meta property="og:url" content="http://per-zyj.xyz/2019/08/16/性能测试工具LoadRunner篇/index.html">
+<meta property="og:title" content="Hexo搭建博客案例详解（使用Yilia主题）">
+<meta property="og:url" content="http://per-zyj.xyz/2019/08/23/Hexo搭建个人博客/index.html">
 <meta property="og:site_name" content="静静的博客">
-<meta property="og:description" content="1  LoadRunner包含以下组件： Virtual User Generator 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。  Controller 组织、驱动、管理并监控负载测试。  Load Generator 通过运行Vuser产生负载。  Analysis 用于查看、剖析和比较性能结果。  Launcher 使您可以从单个访问点访问所有LoadRunner组件。">
+<meta property="og:description" content="以Windows电脑为例1、本地部署步骤如下 安装Node.js  安装Git">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-29T01:21:12.529Z">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/Hexo搭建个人博客/hexo.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/Hexo搭建个人博客/valine1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/23/Hexo搭建个人博客/valine2.png">
+<meta property="og:updated_time" content="2019-08-29T06:18:10.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="性能测试工具篇--LoadRunner">
-<meta name="twitter:description" content="1  LoadRunner包含以下组件： Virtual User Generator 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。  Controller 组织、驱动、管理并监控负载测试。  Load Generator 通过运行Vuser产生负载。  Analysis 用于查看、剖析和比较性能结果。  Launcher 使您可以从单个访问点访问所有LoadRunner组件。">
+<meta name="twitter:title" content="Hexo搭建博客案例详解（使用Yilia主题）">
+<meta name="twitter:description" content="以Windows电脑为例1、本地部署步骤如下 安装Node.js  安装Git">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/23/Hexo搭建个人博客/hexo.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -59,6 +63,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives/">归档</a></li>
+	        
+				<li><a href="/categories/性能测试">性能测试</a></li>
 	        
 			</ul>
 		</nav>
@@ -112,6 +118,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -125,12 +133,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories/性能测试">性能测试</a></li>
 		        
 				</ul>
 			</nav>
@@ -145,14 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-性能测试工具LoadRunner篇" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hexo搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      性能测试工具篇--LoadRunner
+      Hexo搭建博客案例详解（使用Yilia主题）
     </h1>
   
 
@@ -162,8 +172,8 @@
     <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
     <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
 
-<a href="/2019/08/16/性能测试工具LoadRunner篇/" class="archive-article-date">
-  	<time datetime="2019-08-16T09:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
+<a href="/2019/08/23/Hexo搭建个人博客/" class="archive-article-date">
+  	<time datetime="2019-08-23T02:36:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
 </a>
         
           <div style="margin-top:10px;">
@@ -171,7 +181,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.9k字</span>
+        <span class="post-count">2.6k字</span>
       </span>
     </span>
 
@@ -180,7 +190,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6分</span>
+        <span class="post-count">13分</span>
       </span>
     </span>
 </div>
@@ -190,89 +200,173 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1-LoadRunner包含以下组件："><a href="#1-LoadRunner包含以下组件：" class="headerlink" title="1  LoadRunner包含以下组件："></a>1  LoadRunner包含以下组件：</h5><ul>
-<li><p><strong>Virtual User Generator</strong> 录制最终用户业务流程并创建自动化性能测试脚本，即Vuser脚本。</p>
+        <h4 id="以Windows电脑为例"><a href="#以Windows电脑为例" class="headerlink" title="以Windows电脑为例"></a>以Windows电脑为例</h4><h4 id="1、本地部署步骤如下"><a href="#1、本地部署步骤如下" class="headerlink" title="1、本地部署步骤如下"></a>1、本地部署步骤如下</h4><ul>
+<li><p>安装Node.js</p>
 </li>
-<li><p><strong>Controller</strong> 组织、驱动、管理并监控负载测试。</p>
+<li><p>安装Git</p>
 </li>
-<li><p><strong>Load Generator</strong> 通过运行Vuser产生负载。</p>
-</li>
-<li><p><strong>Analysis</strong> 用于查看、剖析和比较性能结果。</p>
-</li>
-<li><p><strong>Launcher</strong> 使您可以从单个访问点访问所有LoadRunner组件。</p>
+</ul>
 <a id="more"></a>
+
+<ul>
+<li><p>打开电脑cmd，安装Hexo</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建本地文件，初始化项目（cmd命令指定到某一目录下）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>初始化目录后，目录结构如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成静态文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动成功页面如下图所示</p>
+<p><img src="/2019/08/23/Hexo搭建个人博客/hexo.png" alt="hexo主页"></p>
+</li>
+</ul>
+<h4 id="2、更换主题及相关配置"><a href="#2、更换主题及相关配置" class="headerlink" title="2、更换主题及相关配置"></a>2、更换主题及相关配置</h4><p><strong>以yilia主题为例</strong></p>
+<ul>
+<li><p>安装主题（cmd命令指定到某一目录下）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="comment">//github.com/litten/hexo-theme-yilia.git themes/yilia</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改hexo配置文件_config.yml（根目录下的文件，更改时注意空格）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#更改主题</span><br><span class="line">theme: yilia</span><br><span class="line"></span><br><span class="line">#更改主页显示菜单</span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  归档: /archives/</span><br><span class="line">  </span><br><span class="line">#更改菜单下图标链接(以github地址和知乎地址为例)</span><br><span class="line">subnav:</span><br><span class="line">  github: <span class="string">"https://github.com/xxx"</span></span><br><span class="line">  #weibo: "#"</span><br><span class="line">  #rss: "#"</span><br><span class="line">  zhihu: <span class="string">"https://www.zhihu.com/"</span></span><br><span class="line">  </span><br><span class="line">#添加打赏图片</span><br><span class="line">alipay: /img/支付宝.png</span><br><span class="line">weixin: /img/微信.png</span><br><span class="line"></span><br><span class="line">#添加头像图片</span><br><span class="line">avatar: /img/head.jpg</span><br><span class="line"></span><br><span class="line">#添加网站图标图片</span><br><span class="line">favicon: /img/head.jpg</span><br><span class="line"></span><br><span class="line">#友链网址更改</span><br><span class="line">friends:</span><br><span class="line">  站长工具: http:<span class="comment">//tool.chinaz.com/tools/urlencode.aspx</span></span><br><span class="line">  bejson.com: http:<span class="comment">//www.bejson.com/</span></span><br><span class="line">  CSDN博客: https:<span class="comment">//www.csdn.net</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增归档和标签菜单项</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#归档</span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"categories"</span></span><br><span class="line">#标签</span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+
+<p>执行成功后在根目录下source文件夹下新增”tags”和”categories”目录及两篇index.md文档，更改两篇index.md文档</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"categories"</span>目录下index.md</span><br><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: <span class="number">2019</span>-<span class="number">08</span>-<span class="number">23</span> <span class="number">17</span>:<span class="number">16</span>:<span class="number">55</span></span><br><span class="line">type: categories</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="string">"tags"</span>目录下index.md</span><br><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: <span class="number">2019</span>-<span class="number">08</span>-<span class="number">23</span> <span class="number">17</span>:<span class="number">17</span>:<span class="number">44</span></span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>博客所有文章模块缺失办法（直接根据提示来）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#在hexo根目录下执行以下命令</span><br><span class="line">npm i hexo-generator-json-content --save</span><br><span class="line"></span><br><span class="line">#在hexo的配置文件_config.yml中末尾添加以下代码（注意空格）</span><br><span class="line">jsonContent:</span><br><span class="line">    meta: <span class="keyword">false</span></span><br><span class="line">    pages: <span class="keyword">false</span></span><br><span class="line">    posts:</span><br><span class="line">      title: <span class="keyword">true</span></span><br><span class="line">      date: <span class="keyword">true</span></span><br><span class="line">      path: <span class="keyword">true</span></span><br><span class="line">      text: <span class="keyword">false</span></span><br><span class="line">      raw: <span class="keyword">false</span></span><br><span class="line">      content: <span class="keyword">false</span></span><br><span class="line">      slug: <span class="keyword">false</span></span><br><span class="line">      updated: <span class="keyword">false</span></span><br><span class="line">      comments: <span class="keyword">false</span></span><br><span class="line">      link: <span class="keyword">false</span></span><br><span class="line">      permalink: <span class="keyword">false</span></span><br><span class="line">      excerpt: <span class="keyword">false</span></span><br><span class="line">      categories: <span class="keyword">false</span></span><br><span class="line">      tags: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h5 id="2-术语"><a href="#2-术语" class="headerlink" title="2 术语"></a>2 术语</h5><ul>
-<li><strong>场景</strong> 场景文件根据性能要求定义每次测试期间发生的事件</li>
-<li><strong>Vuser</strong> 在场景中，LoadRunner用虚拟用户（或称Vuser）代替真实用户。Vuser模拟真实用户的操作来使用应用系统。一个场景可以包含数十、数百万乃数千个Vuser。</li>
-<li><strong>Vuser脚本</strong> Vuser脚本描述Vuser在场景中执行的操作</li>
-<li><strong>事务</strong> 要评测服务器性能，需要定义事务。事务代表要评测的终端用户业务流程</li>
+<h4 id="3、hexo博客上传至GitHub"><a href="#3、hexo博客上传至GitHub" class="headerlink" title="3、hexo博客上传至GitHub"></a>3、hexo博客上传至GitHub</h4><ul>
+<li><p>Github新建仓库（前提是有Github账号），注意库的名字要和账户名一致，例如账户名为zyj，仓库名为zyj.github.io</p>
+</li>
+<li><p>在Hexo博客根目录下执行以下命令</p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改hexo配置文件_config.yml</p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/xxx/xxx.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在hexo博客根目录下执行以下命令</p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#生成静态资源</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">#上传至github(前提是电脑配置好github账户密码之类的，详情查看博客https://blog.csdn.net/weixin_38648597/article/details/78953833)</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>等待一段时间后（本人一般经过一晚时间在看），网址栏输入xxx.github.io即可看见博客</p>
+</li>
 </ul>
-<blockquote>
-<p>事务是指用户在客户端做一种或多种业务所需的操作集，通过事务函数可以标记完成该业务所需要的操作内容；另一方面事务可以用来统计用户操作的响应时间，事务响应时间是通过记录用户请求的开始时间和服务器返回内容到客户时间的差值来计算用户操作响应时间的<br>对于软件来说，通过事务得到的<strong>系统响应时间</strong>也是由非常多的部分组成的，一般来说响应时间由网络时间、服务器处理时间、网络延迟三大部分组成。</p>
-</blockquote>
-<h5 id="3-负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。"><a href="#3-负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。" class="headerlink" title="3 负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。"></a>3 负载测试一般包括5个阶段：规划、创建脚本、定义场景、执行场景和分析结果。</h5><ul>
-<li><strong>规划负载测试</strong>：定义性能测试要求，例如并发用户数量、典型业务流程和要求的响应时间。</li>
-<li><strong>创建Vuser脚本</strong>：在自动化脚本中录制最终用户活动。</li>
-<li><strong>定义场景</strong>：使用LoadRunner Controller设置负载测试环境。</li>
-<li><strong>运行场景</strong>：使用LoadRunner Controller驱动、管理并监控负载测试。</li>
-<li><strong>分析结果</strong>：使用LoadRunner Analysis创建图和报告并评估性能。<h5 id="4-主要函数"><a href="#4-主要函数" class="headerlink" title="4  主要函数"></a>4  主要函数</h5></li>
-<li><strong>web_url()函数</strong>：可以模拟用户请求，它也是在脚本中最常使用的函数之一；<br> 基本语法为：web_url（“在测试结果中显示的名称”，“URL=需要访问的超链地址”，LAST）；</li>
-<li><strong>web_link()函数</strong>：用来模拟用户单机一个超链接的操作；<br>基本语法为：web_link（“在测试结果中显示的名称”，“TEXT=需要单击的超链接名”，LAST）；<br>如果一个页面中有多个同名的链接，使用Ord关键词，例如：Ord=2，单击页面上的第二个链接</li>
-<li><strong>web_submit_form()函数</strong>：会自动检测在当前页面上是否存在form，然后将后面的ITEMDATA数据进行传送；</li>
-<li><strong>web_submit_data()函数</strong>：无须前面的页面支持，直接发送给对应页面相关数据即可；</li>
-<li><strong>Web_add_cookie()函数</strong>：主要负责为Vuser脚本添加一个cookie信息；</li>
-<li><strong>web_custom_request()函数</strong>：用来自定义HTTP请求规则；</li>
-<li><strong>lr_output_message()函数</strong>：将内容输出到Replay Log中，例如// 输出整数型的内容<br>lr_output_message(“%d”,x);// 输出字符串的内容 lr_output_message(“%s”,x)</li>
-<li><strong>lr_eval_string()函数</strong>：可以从参数中取得对应的值，并转换成一个字符串<br>基本语法为：lr_eval_string(“{参数名}”)<br>例如获得一个字符串的第一个字母的ASCII码：Lr_eval_string(“{param}”)[0]</li>
-<li><strong>atoi()函数</strong>：将字符串转换为整数</li>
-<li><strong>lr_advance_param()函数</strong>：手工将参数的值下移一位</li>
-<li><strong>lr_load_dll()函数</strong>：用来实现调用外部dll扩展脚本的功能<br>参数和变量的最大区别在于：参数必须在双引号中才能应用，而变量如果使用双引号则变成了一个字符串，所以使用lr_eval_string()函数的时候也是使用双引号来调用的</li>
-<li><strong>lr_save_string(“<a href="http://www,51testing.com&quot;,&quot;website&quot;)函数" target="_blank" rel="noopener">http://www,51testing.com&quot;,&quot;website&quot;)函数</a></strong>：将一个字符串保存为一个参数</li>
-<li><strong>lr_save_init()和lr_save_datetime()函数</strong>：把数字和日期写入一个参数</li>
-</ul>
-<h6 id="4-1-参数数组函数"><a href="#4-1-参数数组函数" class="headerlink" title="4.1 参数数组函数"></a>4.1 参数数组函数</h6><pre><code>创建一个访问网站的参数数组，可以编写一下代码：
-lr_save_string(&quot;www.google.com&quot;,&quot;website_1&quot;);
-lr_save_string(&quot;www.baidu.com&quot;,&quot;website_2&quot;);
-lr_save_string(&quot;www.163.com&quot;,&quot;website_3&quot;);
-lr_save_string(&quot;www.sina.com&quot;,&quot;website_4&quot;);
-lr_save_string(&quot;4&quot;,&quot;website_count&quot;);</code></pre><ul>
-<li><strong>lr_paramarr_idx()函数</strong>：可以取出参数数组中某个编号的值<br>例如char * siteval;<br>sitaval = lr_paramarr_idx(“website”, 2);得出结果<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>,<br>也可以使用lr_eval_string(“{website_2}”);得出结果<a href="http://www.baidu.com，" target="_blank" rel="noopener">www.baidu.com，</a></li>
-<li><strong>lr_paramarr_len()函数</strong>：可以获取整个参数数组的长度</li>
-<li><strong>lr_paramarr_random()函数</strong>：是从参数列表中随机选择一个参数</li>
-</ul>
-<p>例如：遍历整个参数数组中的所有内容</p>
-<pre><code>int arrid;
-for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
-{
-    lr_output_message( lr_paramarr_idx(&quot;website&quot;,arrid));
-}</code></pre><h6 id="4-2-关联函数"><a href="#4-2-关联函数" class="headerlink" title="4.2 关联函数"></a>4.2 关联函数</h6><ul>
-<li><strong>web_reg_save_param()函数</strong>：可以完成对服务器返回的保存操作<br>关联函数的作用是通过一种规则将服务器的返回保存在一个参数中</li>
-<li><strong>web_set_max_html_param_len()函数</strong>：可以自定义关联返回值存放的参数的最大长度</li>
-<li><strong>lr_save_var()函数</strong>：可以对一个参数值进行偏移和长度设置<br>lr_save_string(“I come from shanghai”,”city”);<br>lr_save_var(lr_eval_string(“{city}”),6,0,”result”);//从city这个参数中取6位长度的内容保存到result参数中<br>lr_save_var(lr_eval_string(“{city}”)+7,4,0,”result”);//从city这个参数的第7位开始取4个长度的内容保存到result参数中</li>
-<li><strong>strtok()函数</strong>：作用是通过某个分隔符来切分内容</li>
-<li><strong>web_reg_find()文本检查点函数</strong>：提供了一种对服务器返回内容进行查询的功能，和关联的不同之处在于检查点函数只能返回检索到内容的次数。</li>
-<li><strong>web_image_check()函数</strong>：可以检查页面上的图片，例如web_image_check(“函数标题”)</li>
-</ul>
-<h6 id="4-3-事务相关函数"><a href="#4-3-事务相关函数" class="headerlink" title="4.3 事务相关函数"></a>4.3 事务相关函数</h6><ul>
-<li><strong>lr_start_transaction(“mainpage”)函数</strong>：插入事务函数</li>
-<li><strong>lr_end_transaction(“mainpage”,LR_AUTO)函数</strong>：结束事务函数<br>子事务<br><strong>Lr_start_sub_transaction(“子事务名”，”父事务名”)</strong>；<br><strong>Lr_end_sub_transaction(“子事务名”，”子事务状态”)</strong>；</li>
-</ul>
-<blockquote>
-<p>事务状态有以下4种：<br><strong>LR_AUTO</strong>:LR_AUTO是指事务的状态由系统自动根据默认规则来判断，结果为PASS/FAIL/STOP。<br><strong>LR_PASS</strong>:LR_PASS是指事务是以PASS状态通过的，说明事务正确地完成了，并且记录下对应的时间，这个时间就是指做这件事情所需要消耗的响应时间。<br><strong>LR_FAIL</strong>:LR_FAIL是指事务以FAIL状态结束，该事务是一个失败的事务，没有完成事务中脚本应该达到的效果，得到的时间不是正确操作的时间，这个时间在后期的统计中将被独立统计。<br><strong>LR_STOP</strong>:LR_STOP将事务以STOP状态停止。</p>
-</blockquote>
-<p><em>事务的PASS和FAIL状态会在场景的对应计数器中记录，包括通过的次数和事务的响应时间，方便后期分析该事务的吞吐量以及响应时间的变化情况。</em></p>
+<h4 id="4、hexo博客添加评论"><a href="#4、hexo博客添加评论" class="headerlink" title="4、hexo博客添加评论"></a>4、hexo博客添加评论</h4><p>以Valine评论为例</p>
 <ul>
-<li><strong>lr_get_transcation_duration(“事务名”)</strong>：获得对应事务达到该函数运行位置时持续的时间，返回double类型</li>
-<li><strong>lr_get_transcation_wasted_time(“事务名”)</strong>：获得对应事务达到该函数运行位置时的wasted时间，返回double类型</li>
-<li><strong>lr_wasted_time（毫秒）</strong>：为一个事务添加wasted时间，无返回</li>
-<li><strong>lr_stop_transaction(“事务名”)</strong>：将一个事务暂停，该函数后的操作都不会被记入事务时间</li>
-<li><strong>lr_resume_transaction（”事务名”）</strong>：将暂停的事务恢复</li>
-<li><strong>wen_get_int_property()函数</strong>：获得一个下载操作的响应时间</li>
-<li><strong>lr_think_time()函数</strong>：提供一种模拟用户等待的方式</li>
-<li><strong>lr_rendezvous()函数</strong>：是集合点函数</li>
+<li><p>Valine评论前提是需要注册Leancloud，网址为<a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="noopener">https://leancloud.cn/dashboard/login.html#/signup</a></p>
+</li>
+<li><p>登陆Leancloud后，新建应用，在存储菜单下创建两个class，起名分别为Comment和Counter，如下图所示</p>
+<p><img src="/2019/08/23/Hexo搭建个人博客/valine1.png" alt="valine应用创建class"></p>
+</li>
+<li><p>在设置菜单下应用Key栏目下，记住你的APP ID和APP KEY</p>
+<p><img src="/2019/08/23/Hexo搭建个人博客/valine2.png" alt="valine应用"></p>
+</li>
+<li><p>在hexo\themes\yilia_config.yml中加入Valine的相关配置</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#6、Valine https://valine.js.org</span><br><span class="line">valine: </span><br><span class="line"> appid:  #Leancloud应用的appId</span><br><span class="line"> appkey:  #Leancloud应用的appKey</span><br><span class="line"> verify: false #验证码</span><br><span class="line"> notify: false #评论回复提醒</span><br><span class="line"> avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide</span><br><span class="line"> placeholder: Just go go #评论框占位符</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在hexo\themes\yilia\layout_partial\article.ejs中加入Valine</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#添加代码位置示意如下</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span>)&#123; %&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 添加代码位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.duoshuo</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">duoshuo</span>', &#123;</span></span><br><span class="line"><span class="tag">      <span class="attr">key:</span> <span class="attr">post.slug</span>,</span></span><br><span class="line"><span class="tag">      <span class="attr">title:</span> <span class="attr">post.title</span>,</span></span><br><span class="line"><span class="tag">      <span class="attr">url:</span> <span class="attr">config.url</span>+<span class="attr">url_for</span>(<span class="attr">post.path</span>)</span></span><br><span class="line"><span class="tag">    &#125;) %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"></span><br><span class="line">#需要添加的代码</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.valine</span> &amp;&amp; <span class="attr">theme.valine.appid</span> &amp;&amp; <span class="attr">theme.valine.appkey</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span> <span class="attr">class</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    .comments&#123;margin:30px;padding:10px;background:#fff&#125;</span><br><span class="line">    @media screen and (max-width:800px)&#123;.comments&#123;margin:auto;padding:10px;background:#fff&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">valine</span>', &#123;</span></span><br><span class="line"><span class="tag">    <span class="attr">key:</span> <span class="attr">post.slug</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">title:</span> <span class="attr">post.title</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">url:</span> <span class="attr">config.url</span>+<span class="attr">url_for</span>(<span class="attr">post.path</span>)</span></span><br><span class="line"><span class="tag">    &#125;) %&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在hexo\themes\yilia\layout_partial\post中，新增valine.ejs，代码如下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"vcomment"</span> <span class="attr">class</span>=<span class="string">"comment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//unpkg.com/valine/dist/Valine.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> notify = <span class="string">'&lt;%= theme.valine.notify %&gt;'</span> == <span class="literal">true</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> verify = <span class="string">'&lt;%= theme.valine.verify %&gt;'</span> == <span class="literal">true</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">new</span> Valine(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'.comment'</span>,</span></span><br><span class="line">            notify: notify,</span><br><span class="line">            verify: verify,</span><br><span class="line"><span class="javascript">            app_id: <span class="string">"&lt;%= theme.valine.appid %&gt;"</span>,</span></span><br><span class="line"><span class="javascript">            app_key: <span class="string">"&lt;%= theme.valine.appkey %&gt;"</span>,</span></span><br><span class="line"><span class="javascript">            placeholder: <span class="string">"&lt;%= theme.valine.placeholder %&gt;"</span>,</span></span><br><span class="line"><span class="javascript">            avatar:<span class="string">"&lt;%= theme.valine.avatar %&gt;"</span></span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5、hexo博客添加字数统计和阅读时长功能"><a href="#5、hexo博客添加字数统计和阅读时长功能" class="headerlink" title="5、hexo博客添加字数统计和阅读时长功能"></a>5、hexo博客添加字数统计和阅读时长功能</h4><ul>
+<li>在hexo根目录下执行以下命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i –save hexo-wordcount</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在<code>theme\yilia\layout\_partial\post</code>下创建<code>word.ejs</code>文件，代码如下</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"margin-top:10px;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-keyboard-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span>&gt;</span>  字数统计: <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-count"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">wordcount</span>(<span class="attr">post.content</span>) %&gt;</span>字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span></span><br><span class="line">      &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-hourglass-half"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span>&gt;</span>  阅读时长: <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-count"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">min2read</span>(<span class="attr">post.content</span>) %&gt;</span>分<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在 <code>themes/yilia/layout/_partial/article.ejs</code>中添加代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#添加代码位置示意如下</span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">date</span>', &#123;<span class="attr">class_name:</span> '<span class="attr">archive-article-date</span>', <span class="attr">date_format:</span> <span class="attr">null</span>&#125;) %&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 添加代码位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"></span><br><span class="line">#需要添加的代码</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">theme.word_count</span> &amp;&amp; !<span class="attr">post.no_word_count</span>)&#123;%&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">word</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在站点的<code>_config.yml</code>中添加下面代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启字数统计</span><br><span class="line">#不需要使用，直接设置值为false，或注释掉</span><br><span class="line">word_count: True</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、hexo博客添加鼠标点击爱心动画"><a href="#6、hexo博客添加鼠标点击爱心动画" class="headerlink" title="6、hexo博客添加鼠标点击爱心动画"></a>6、hexo博客添加鼠标点击爱心动画</h4><ul>
+<li><p>在<code>theme\yilia\source</code>下创建<code>love.js</code>文件，代码如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()&#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>)):(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">"left:"</span>+d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span>+d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> t=<span class="string">"function"</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX<span class="number">-5</span>,<span class="attr">y</span>:e.clientY<span class="number">-5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;<span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;<span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">"rgb("</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">")"</span>&#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;setTimeout(e,<span class="number">1e3</span>/<span class="number">60</span>)&#125;&#125;(),n()&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 <code>themes/yilia/layout/_partial/footer.ejs</code>末尾添加代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--页面点击小红心--&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/love.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7、hexo博客添加不蒜子统计阅读量功能"><a href="#7、hexo博客添加不蒜子统计阅读量功能" class="headerlink" title="7、hexo博客添加不蒜子统计阅读量功能"></a>7、hexo博客添加不蒜子统计阅读量功能</h4><ul>
+<li>在<code>themes/yilia/_config.yml</code>添加属性</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启访问量统计功能(不蒜子)</span><br><span class="line">busuanzi:</span><br><span class="line">enable: true</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在<code>themes/yilia/layout/_partial/footer.ejs</code>添加如下代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#添加代码位置示意如下</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer-left"</span>&gt;</span></span><br><span class="line">  		&amp;copy; <span class="tag">&lt;<span class="name">%=</span> <span class="attr">date</span>(<span class="attr">new</span> <span class="attr">Date</span>(), '<span class="attr">YYYY</span>') %&gt;</span> <span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.author</span> || <span class="attr">config.title</span> %&gt;</span></span><br><span class="line">  	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 添加代码位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer-right"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">#需要添加的代码</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.busuanzi</span> &amp;&amp; <span class="attr">theme.busuanzi.enable</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 不蒜子统计 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span>本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span> <span class="attr">style</span>=<span class="string">'display:none'</span>&gt;</span>本站访客数<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在<code>themes/yilia/layout/_partial/post/date.ejs</code>开头添加如下代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.busuanzi</span> &amp;&amp; <span class="attr">theme.busuanzi.enable</span> &amp;&amp; !<span class="attr">index</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 不蒜子统计 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span> <span class="attr">style</span>=<span class="string">'display:none'</span> <span class="attr">class</span>=<span class="string">"&lt;%= class_name %&gt;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon-smile icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> 阅读数：<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="8、hexo博客为Yilia主题增加版权声明"><a href="#8、hexo博客为Yilia主题增加版权声明" class="headerlink" title="8、hexo博客为Yilia主题增加版权声明"></a>8、hexo博客为Yilia主题增加版权声明</h4><ul>
+<li>在<code>themes/yilia/layout/_partial/article.ejs</code>中添加代码</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#添加代码位置示意如下</span><br><span class="line">		<span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.content</span> %&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 添加代码位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> ((<span class="attr">theme.reward_type</span> === <span class="string">2</span> || (<span class="attr">theme.reward_type</span> === <span class="string">1</span> &amp;&amp; <span class="attr">post.reward</span>)) &amp;&amp; !<span class="attr">index</span>)&#123; %&gt;</span></span><br><span class="line"></span><br><span class="line">#需要添加的代码</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">  <span class="attr">var</span> <span class="attr">sUrl</span> = <span class="string">url.replace(/index\.html$/,</span> '');</span></span><br><span class="line"><span class="tag">  <span class="attr">sUrl</span> = <span class="string">/^(http:|https:)\/\//.test(sUrl)</span> ? <span class="attr">sUrl</span> <span class="attr">:</span> '<span class="attr">https:</span>' + <span class="attr">sUrl</span>;</span></span><br><span class="line"><span class="tag">%&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> ((<span class="attr">theme.declare_type</span> === <span class="string">2</span> || (<span class="attr">theme.declare_type</span> === <span class="string">1</span> &amp;&amp; <span class="attr">post.declare</span>)) &amp;&amp; !<span class="attr">index</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"declare"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>本文作者：<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">config.author</span> != <span class="string">undefined)&#123;</span> %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.author</span>%&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> &#125;<span class="attr">else</span>&#123;%&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"red"</span>&gt;</span>请在博客根目录“_config.yml”中填入正确的“author”<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%&#125;%</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>本文链接：<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%=</span> <span class="attr">sUrl</span>%&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>版权声明：<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">    本作品采用</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">"license"</span> <span class="attr">href</span>=<span class="string">"&lt;%= theme.licensee_url%&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.licensee_name</span>%&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    进行许可。转载请注明出处！</span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">theme.licensee_img</span> != <span class="string">undefined)&#123;</span> %&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">"license"</span> <span class="attr">href</span>=<span class="string">"&lt;%= theme.licensee_url%&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">"知识共享许可协议"</span> <span class="attr">style</span>=<span class="string">"border-width:0"</span> <span class="attr">src</span>=<span class="string">"&lt;%= theme.licensee_img%&gt;"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; <span class="attr">else</span> &#123;%&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"declare"</span> <span class="attr">hidden</span>=<span class="string">"hidden"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建新文件<code>themes/yilia/source-src/css/declare.scss</code>，添加如下CSS代码</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.declare</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#eaeaea</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">3px</span> solid <span class="number">#ff1700</span>;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">5em</span> <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在<code>themes/yilia/source-src/css/main.scss</code>添加如下代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;./declare&quot;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果你之前没有修改过Yilia，请先使用以下命令安装依赖，生成新代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#cmd命令进入根目录下，执行以下命令</span><br><span class="line">cd themes/yilia</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br><span class="line">npm run dist</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>themes/yilia/_config.yml</code>，代码如下(licensee_img)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">declare_type: <span class="number">1</span></span><br><span class="line">licensee_url: https:<span class="comment">//creativecommons.org/licenses/by-nc-sa/4.0/</span></span><br><span class="line">licensee_name: <span class="string">'知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议'</span></span><br><span class="line">licensee_img: https:<span class="comment">//i.creativecommons.org/l/by-nc-sa/4.0/88x31.png</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="9、hexo博客添加图片"><a href="#9、hexo博客添加图片" class="headerlink" title="9、hexo博客添加图片"></a>9、hexo博客添加图片</h4><ul>
+<li><p>修改配置站点配置文件_config.yml</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在根目录下安装上传本地图片插件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建博客后，在/source/_posts路径下会生成一个xxx.md和xxx文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"xxx"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在md文件中引入图片，将你的图片放入xxx文件夹中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![你想输入的替代文字](xxxx/图片名.jpg)</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
 </ul>
 
       
@@ -285,7 +379,7 @@ for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
           
           <br>
           <strong>本文链接：</strong>
-          http://per-zyj.xyz/2019/08/16/性能测试工具LoadRunner篇/
+          http://per-zyj.xyz/2019/08/23/Hexo搭建个人博客/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -334,28 +428,17 @@ for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LoadRunner</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Yilia</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -405,7 +488,7 @@ for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/16/性能测试工具LoadRunner篇/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/08/23/Hexo搭建个人博客/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -419,18 +502,18 @@ for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
   
 <nav id="article-nav">
   
-    <a href="/2019/08/16/性能测试工具Jmeter篇/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/23/性能测试基础篇/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          性能测试工具篇--Jmeter
+          性能测试基础篇
         
       </div>
     </a>
   
   
-    <a href="/2019/08/16/性能测试基础篇/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">性能测试基础篇</div>
+    <a href="/2019/08/23/Hexo基本操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo基本操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -449,6 +532,19 @@ for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#以Windows电脑为例"><span class="toc-number">1.</span> <span class="toc-text">以Windows电脑为例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1、本地部署步骤如下"><span class="toc-number">2.</span> <span class="toc-text">1、本地部署步骤如下</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、更换主题及相关配置"><span class="toc-number">3.</span> <span class="toc-text">2、更换主题及相关配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、hexo博客上传至GitHub"><span class="toc-number">4.</span> <span class="toc-text">3、hexo博客上传至GitHub</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、hexo博客添加评论"><span class="toc-number">5.</span> <span class="toc-text">4、hexo博客添加评论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、hexo博客添加字数统计和阅读时长功能"><span class="toc-number">6.</span> <span class="toc-text">5、hexo博客添加字数统计和阅读时长功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、hexo博客添加鼠标点击爱心动画"><span class="toc-number">7.</span> <span class="toc-text">6、hexo博客添加鼠标点击爱心动画</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、hexo博客添加不蒜子统计阅读量功能"><span class="toc-number">8.</span> <span class="toc-text">7、hexo博客添加不蒜子统计阅读量功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8、hexo博客为Yilia主题增加版权声明"><span class="toc-number">9.</span> <span class="toc-text">8、hexo博客为Yilia主题增加版权声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9、hexo博客添加图片"><span class="toc-number">10.</span> <span class="toc-text">9、hexo博客添加图片</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -589,6 +685,10 @@ for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -613,23 +713,11 @@ for(arrid = 1;arrid &lt;= lr_paramarr_len(&quot;website&quot;);arrid++)
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">World</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能瓶颈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能调优</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">

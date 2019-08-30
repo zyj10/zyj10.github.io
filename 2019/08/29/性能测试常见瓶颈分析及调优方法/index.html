@@ -16,20 +16,20 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="1、LoadRunner中Analysis分析​    分析器就是对测试结果数据进行分析的组件，它是LR三大组件之一，保存着大量用来分析性能测试结果的数据图，但并不一定要对每个视图进行分析，可以根据实际情况选择相关的数据视图进行分析，分析结果可以生成一些不同格式的测试报告。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E6%A6%82%E8%A6%81%E9%83%A8%E5%88%86.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E7%BB%9F%E8%AE%A1%E9%83%A8%E5%88%86.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E4%BA%8B%E5%8A%A1%E7%BB%9F%E8%AE%A1%E9%83%A8%E5%88%86.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cgaiyao.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Ctongji.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cshiwutongji.png">
 <meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5CSLA.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5CHTTP%E5%93%8D%E5%BA%94%E7%BB%9F%E8%AE%A1.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cvuser%E5%9B%BE.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E7%82%B9%E5%87%BB%E7%8E%87%E5%9B%BE.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E5%B9%B3%E5%9D%87%E4%BA%8B%E5%8A%A1%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E5%9B%BE.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E5%90%9E%E5%90%90%E9%87%8F%E5%9B%BE.png">
-<meta property="og:updated_time" content="2019-08-29T08:51:08.184Z">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5CHTTP.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cvuser.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cdianjilv.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cshiwu.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Ctuntuliang.png">
+<meta property="og:updated_time" content="2019-08-30T01:29:40.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="性能测试常见瓶颈分析及调优方法">
 <meta name="twitter:description" content="1、LoadRunner中Analysis分析​    分析器就是对测试结果数据进行分析的组件，它是LR三大组件之一，保存着大量用来分析性能测试结果的数据图，但并不一定要对每个视图进行分析，可以根据实际情况选择相关的数据视图进行分析，分析结果可以生成一些不同格式的测试报告。">
-<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E6%A6%82%E8%A6%81%E9%83%A8%E5%88%86.png">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cgaiyao.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -241,13 +241,13 @@
 <li><p>摘要报告</p>
 <ol>
 <li><p>概要部分</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E6%A6%82%E8%A6%81%E9%83%A8%E5%88%86.png" alt="概要部分"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cgaiyao.png" alt="概要部分"></p>
 </li>
 <li><p>统计部分</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E7%BB%9F%E8%AE%A1%E9%83%A8%E5%88%86.png" alt="统计部分"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Ctongji.png" alt="统计部分"></p>
 </li>
 <li><p>事务统计部分</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E4%BA%8B%E5%8A%A1%E7%BB%9F%E8%AE%A1%E9%83%A8%E5%88%86.png" alt="事务统计部分"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cshiwutongji.png" alt="事务统计部分"></p>
 <p>第一行统计场景运行时所有事务通过、失败、停止的数量。而表格里则是显示了所有事务执行时的详细信息</p>
 <p>1）transaction name（事务名）；</p>
 <p>2）minimum（事务运行的最短时间）；</p>
@@ -268,7 +268,7 @@
 <p>c.no data：表示SLA未获得该项测试数据，所以无法确定是通过还是失败</p>
 </li>
 <li><p>HTTP响应统计</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5CHTTP%E5%93%8D%E5%BA%94%E7%BB%9F%E8%AE%A1.png" alt="HTTP响应统计"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5CHTTP.png" alt="HTTP响应统计"></p>
 <p>HTTP是一种通信协议，它允许将超文本标记语言（HTML）文档从web服务器传送到web浏览器。HTML是一种用于创建文档的标记语言，这些文档包含到相关信息的链接。可以单击一个链接来访问其他文档、图像或多媒体对象，并获得关于链接项的附加信息。</p>
 </li>
 </ol>
@@ -278,20 +278,20 @@
 <li><p>vuser图</p>
 <p>它显示vuser状态和完成脚本的vuser的数量。<strong>将这些图与事务图结合使用可以确定vuser的数量对事务响应时间产生的影响。</strong></p>
 <p>X轴表示从方案开始运行以来已用的时间，Y轴表示方案中的vuser数，vuser图显示在测试期间的每一秒内执行vuser脚本的vuser数量及其状态。可以帮助确定任何给定环境中服务器上的vuser负载。默认情况下，此图仅显示为running的vuser。</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cvuser%E5%9B%BE.png" alt="vuser图"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cvuser.png" alt="vuser图"></p>
 </li>
 <li><p>点击率图</p>
 <p>显示在方案运行过程中vuser每秒钟向web服务器提交的HTTP请求数。<strong>借助此图可以依据点击次数来评估vuser产生和负载量。一般会将此图与平均事务响应时间图放在一起进行查看，观察点击数对事务性能产生的影响</strong>。X轴表示方案从开始运行以来所用的时间，Y轴表示服务器上的点击数。</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E7%82%B9%E5%87%BB%E7%8E%87%E5%9B%BE.png" alt="点击率图"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cdianjilv.png" alt="点击率图"></p>
 </li>
 <li><p>平均事务响应时间图</p>
 <p>显示方案在运行期间执行事务所用的平均时间。X轴表示从方案开始运行以来已用的时间，Y轴表示执行每个事务所用的平均时间（s）。<strong>平均事务响应时间最直接地反映了事务的性能情况，一般会将平均事务响应时间图与vuser图对照着看，来观察vuser运行对事务性能的影响。</strong>可以右键选择show transaction breakdown tree查看子事务或者所有的事务每个页面所花费的时间。</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E5%B9%B3%E5%9D%87%E4%BA%8B%E5%8A%A1%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E5%9B%BE.png" alt="平均事务响应时间图"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Cshiwu.png" alt="平均事务响应时间图"></p>
 </li>
 <li><p>吞吐量图</p>
 <p>显示方案运行过程中服务器上每秒的吞吐量。吞吐量的单位为字节，表示 vuser在一秒时间内从服务器获得的数据量。<strong>借助此图可以依据服务器吞吐量来评估vuser产生的负载量，可以和平均事务各应时间图对照观察，以查看吞吐量对事务性能产生的影响。</strong></p>
 <p>X轴表示 方案从开始运行以来已用的时间，Y轴表示服务器的吞吐量（以字节为单位）。吞吐量直接反映了服务器的处理能力，如果服务器处理的吞吐量的值越大，说明服务器处理业务的能力越强，但是在测试过程中不可能一次就测试出服务器吞吐量的值，必须经过多次测试才能找到吞吐量的值，即测试过程中一定要找到吞吐量的拐点，这样才能找到服务器处理业务时的最大吞吐量，亦即服务器处理的最大能力。</p>
-<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5C%E5%90%9E%E5%90%90%E9%87%8F%E5%9B%BE.png" alt="吞吐量图"></p>
+<p><img src="/2019/08/29/性能测试常见瓶颈分析及调优方法/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E7%93%B6%E9%A2%88%E5%88%86%E6%9E%90%E5%8F%8A%E8%B0%83%E4%BC%98%E6%96%B9%E6%B3%95%5Ctuntuliang.png" alt="吞吐量图"></p>
 </li>
 <li><p>Web Page Diagnostics（网页分析）</p>
 <p>添加该图先会得到整个场景运行后虚拟用户访问的Page列表，也就是所有页面下载时间列表。描述（在注册用户事务进行分析，整个负载由三个页面请求组成，其中有一个请求始终在多少秒以内，而另外几个请求时间较长并且有上升趋势，然后通过Select Page to Break Down命令选择具体的Page来获得每个请求的相关详细信息</p>
@@ -673,11 +673,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
+                <a href="javascript:void(0)" class="js-tag color5">JSON</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JSON</a>
+                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
               </li>
              
               <li class="article-tag-list-item">

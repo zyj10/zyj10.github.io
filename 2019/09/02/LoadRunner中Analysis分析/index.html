@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>Archives: 2019/8 | 静静的博客</title>
+  <title>LoadRunner中Analysis分析 | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="静静的博客">
-<meta property="og:url" content="http://per-zyj.xyz/archives/2019/08/index.html">
+  <meta name="description" content="LoadRunner中Analysis分析​    分析器就是对测试结果数据进行分析的组件，它是LR三大组件之一，保存着大量用来分析性能测试结果的数据图，但并不一定要对每个视图进行分析，可以根据实际情况选择相关的数据视图进行分析，分析结果可以生成一些不同格式的测试报告。">
+<meta name="keywords" content="性能测试,LoadRunner,Analysis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LoadRunner中Analysis分析">
+<meta property="og:url" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/index.html">
 <meta property="og:site_name" content="静静的博客">
+<meta property="og:description" content="LoadRunner中Analysis分析​    分析器就是对测试结果数据进行分析的组件，它是LR三大组件之一，保存着大量用来分析性能测试结果的数据图，但并不一定要对每个视图进行分析，可以根据实际情况选择相关的数据视图进行分析，分析结果可以生成一些不同格式的测试报告。">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/gaiyao.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/tongji.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/shiwutongji.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/SLA.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/HTTP.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/vuser.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/dianjilv.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/shiwu.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/tuntuliang.png">
+<meta property="og:updated_time" content="2019-09-02T02:26:32.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="静静的博客">
+<meta name="twitter:title" content="LoadRunner中Analysis分析">
+<meta name="twitter:description" content="LoadRunner中Analysis分析​    分析器就是对测试结果数据进行分析的组件，它是LR三大组件之一，保存着大量用来分析性能测试结果的数据图，但并不一定要对每个视图进行分析，可以根据实际情况选择相关的数据视图进行分析，分析结果可以生成一些不同格式的测试报告。">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/gaiyao.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -146,427 +161,229 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LoadRunner中Analysis分析" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LoadRunner中Analysis分析
+    </h1>
+  
+
+        
+        
+    <!-- 不蒜子统计 -->
+    <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+    <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
+
+<a href="/2019/09/02/LoadRunner中Analysis分析/" class="archive-article-date">
+  	<time datetime="2019-09-02T02:12:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">3.1k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">11分</span>
+      </span>
+    </span>
+</div>
+          
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="LoadRunner中Analysis分析"><a href="#LoadRunner中Analysis分析" class="headerlink" title="LoadRunner中Analysis分析"></a>LoadRunner中Analysis分析</h4><p>​    分析器就是对测试结果数据进行分析的组件，它是LR三大组件之一，保存着大量用来分析性能测试结果的数据图，但并不一定要对每个视图进行分析，可以根据实际情况选择相关的数据视图进行分析，分析结果可以生成一些不同格式的测试报告。</p>
+<a id="more"></a>
+
+<h5 id="分析图"><a href="#分析图" class="headerlink" title="分析图"></a>分析图</h5><ul>
+<li><p>vusers图</p>
+<p>在方案执行过程中，vuser在执行事务时生成数据。使用vusers图可以确定方案执行期间vuser的整体行为。它显示vuser状态和完成脚本的vuser的数量。主要包括正在运行的vuser图和vuser摘要图</p>
+</li>
+</ul>
+<ul>
+<li><p>错误图</p>
+<p>主要统计方案执行时的错误信息。主要包括error statistics(by description)、error per second(by description)、error statistics和error per second四种图</p>
+</li>
+</ul>
+<ul>
+<li><p>事务图</p>
+<p>描述了整个脚本执行过程中的事务性能和状态。主要包括平均事务响应时间图、每秒事务数图、每秒事务总数、事务摘要图、事务性能摘要图、事务响应时间（负载下）图、事务响应时间（百分比）图和事务响应时间（分布）图</p>
+</li>
+</ul>
+<ul>
+<li><p>web资源图</p>
+<p>主要提供有关web服务器性能的一些信息。使用web资源图可以分析方案运行期间每秒点击次数、服务器的吞吐量、从服务器返回的HTTP状态代码、每秒HTTP响应数、每秒页面下载数、每秒服务器重试次数、服务器重试摘要、连接数和每秒连接数</p>
+</li>
+</ul>
+<ul>
+<li><p>网页细分图</p>
+<p>主要提供一些信息来评估页面是否影响事务响应时间。包括网页细分、页面组件细分、页面组件细分（随时间变化）、页面下载时间细分、页面下载时间细分（随时间变化）和已下载组件图</p>
+</li>
+</ul>
+<ul>
+<li><p>系统资源图</p>
+<p>主要监控场景运行期间系统资源使用率的情况。可以监控windows资源、UNIX资源、SNMP资源、Antara Flame Thrower资源和SiteScope资源</p>
+</li>
+</ul>
+<ul>
+<li><p>web服务器资源图</p>
+<p>主要用来捕捉场景运行时web服务器的信息。主要用来分析microsoft IIS服务器、apache服务器、iplanet/netscape服务器和iplanet(SNMP)服务器</p>
+</li>
+</ul>
+<ul>
+<li><p>数据库服务器资源图</p>
+<p>主要显示数据库服务器的统计信息。目前支持DB2、oracle、sql server和sybase数据库</p>
+</li>
+</ul>
+<h5 id="摘要报告"><a href="#摘要报告" class="headerlink" title="摘要报告"></a>摘要报告</h5><ul>
+<li><p>概要部分</p>
+<p><img src="/2019/09/02/LoadRunner中Analysis分析/gaiyao.png" alt="概要部分"></p>
+</li>
+<li><p>统计部分</p>
+<p><img src="/2019/09/02/LoadRunner中Analysis分析/tongji.png" alt="统计部分"></p>
+</li>
+<li><p>事务统计部分</p>
+<p><img src="/2019/09/02/LoadRunner中Analysis分析/shiwutongji.png" alt="事务统计部分"></p>
+<p>第一行统计场景运行时所有事务通过、失败、停止的数量。而表格里则是显示了所有事务执行时的详细信息</p>
+<p>1）transaction name（事务名）；</p>
+<p>2）minimum（事务运行的最短时间）；</p>
+<p>3）average（事务运行的平均时间）；</p>
+<p>4）maximum（事务运行的最长时间）；</p>
+<p>5）std.deviation（标准方差）：方差描述一组数据偏离其平均值的情况，方差值越大，说明这组数据就越离散，波动性也就越强；反之，则说明这组数据就越聚合，波动性也就越小；</p>
+<p>6）90 percent：在controller运行场景时，并不会显示这个值，因为它是对整个一系列数据统计的结果。表示一个事务在执行过程中的90%所花费的时间，比如，一个事务执行了100次，对这100次事务响应时间进行升序排序，第90%即90次事务运行时间；</p>
+<p>7）pass（通过的事务个数）；</p>
+<p>8）fail（失败的事务个数）；</p>
+<p>9）stop（停止的事务个数）：在执行场景时，若用户手工停止场景的执行，事务没有自己的状态，那么就是停止状态。</p>
+<p>注：事务的通过率一定要大于95%，也即失败率应该小于5%，因为如果事务失败率过高，就说明客户在使用系统时很容易出现错误，这样无论事务响应时间多么短也是不符合要求的，因为客户最基本的需求都没有被满足，功能都不能正确的处理，那么更无法谈性能了。</p>
+</li>
+<li><p>SLA</p>
+<p><img src="/2019/09/02/LoadRunner中Analysis分析/SLA.png" alt="SLA"></p>
+<p>SLA（service level agreement，服务水平协议）可在性能测试过程中，定义性能测试的目标和度量性能，在性能测试过程中LR会收集和保存性能的相关数据，在分析运行结果时，分析器分将收集的数据与SLA中定义的度量数据进行比较，并将分析结果显示在分析器中，SLA三种状态分别是：</p>
+<p>a.pass：表示SLA获得该项测试数据，并且该数据达到目标要求；</p>
+<p>b.fail：表示SLA获得该项测试数据，但是测试结果未达到目标要求；</p>
+<p>c.no data：表示SLA未获得该项测试数据，所以无法确定是通过还是失败</p>
+</li>
+<li><p>HTTP响应统计</p>
+<p><img src="/2019/09/02/LoadRunner中Analysis分析/HTTP.png" alt="HTTP响应统计"></p>
+<p>HTTP是一种通信协议，它允许将超文本标记语言（HTML）文档从web服务器传送到web浏览器。HTML是一种用于创建文档的标记语言，这些文档包含到相关信息的链接。可以单击一个链接来访问其他文档、图像或多媒体对象，并获得关于链接项的附加信息。</p>
+</li>
+</ul>
+<h5 id="Analysis常见图分析"><a href="#Analysis常见图分析" class="headerlink" title="Analysis常见图分析"></a>Analysis常见图分析</h5><ul>
+<li><p>vuser图</p>
+<p> 它显示vuser状态和完成脚本的vuser的数量。<strong>将这些图与事务图结合使用可以确定vuser的数量对事务响应时间产生的影响。</strong></p>
+<p> X轴表示从方案开始运行以来已用的时间，Y轴表示方案中的vuser数，vuser图显示在测试期间的每一秒内执行vuser脚本的vuser数量及其状态。可以帮助确定任何给定环境中服务器上的vuser负载。默认情况下，此图仅显示为running的vuser。</p>
+<p> <img src="/2019/09/02/LoadRunner中Analysis分析/vuser.png" alt="vuser图"></p>
+</li>
+<li><p>点击率图</p>
+<p> 显示在方案运行过程中vuser每秒钟向web服务器提交的HTTP请求数。<strong>借助此图可以依据点击次数来评估vuser产生和负载量。一般会将此图与平均事务响应时间图放在一起进行查看，观察点击数对事务性能产生的影响</strong>。X轴表示方案从开始运行以来所用的时间，Y轴表示服务器上的点击数。</p>
+<p> <img src="/2019/09/02/LoadRunner中Analysis分析/dianjilv.png" alt="点击率图"></p>
+</li>
+<li><p>平均事务响应时间图</p>
+<p> 显示方案在运行期间执行事务所用的平均时间。X轴表示从方案开始运行以来已用的时间，Y轴表示执行每个事务所用的平均时间（s）。<strong>平均事务响应时间最直接地反映了事务的性能情况，一般会将平均事务响应时间图与vuser图对照着看，来观察vuser运行对事务性能的影响。</strong>可以右键选择show transaction breakdown tree查看子事务或者所有的事务每个页面所花费的时间。</p>
+<p> <img src="/2019/09/02/LoadRunner中Analysis分析/shiwu.png" alt="平均事务响应时间图"></p>
+</li>
+<li><p>吞吐量图</p>
+<p> 显示方案运行过程中服务器上每秒的吞吐量。吞吐量的单位为字节，表示 vuser在一秒时间内从服务器获得的数据量。<strong>借助此图可以依据服务器吞吐量来评估vuser产生的负载量，可以和平均事务各应时间图对照观察，以查看吞吐量对事务性能产生的影响。</strong></p>
+<p> X轴表示 方案从开始运行以来已用的时间，Y轴表示服务器的吞吐量（以字节为单位）。吞吐量直接反映了服务器的处理能力，如果服务器处理的吞吐量的值越大，说明服务器处理业务的能力越强，但是在测试过程中不可能一次就测试出服务器吞吐量的值，必须经过多次测试才能找到吞吐量的值，即测试过程中一定要找到吞吐量的拐点，这样才能找到服务器处理业务时的最大吞吐量，亦即服务器处理的最大能力。</p>
+<p> <img src="/2019/09/02/LoadRunner中Analysis分析/tuntuliang.png" alt="吞吐量图"></p>
+</li>
+<li><p>Web Page Diagnostics（网页分析）</p>
+<p> 添加该图先会得到整个场景运行后虚拟用户访问的Page列表，也就是所有页面下载时间列表。描述（在注册用户事务进行分析，整个负载由三个页面请求组成，其中有一个请求始终在多少秒以内，而另外几个请求时间较长并且有上升趋势，然后通过Select Page to Break Down命令选择具体的Page来获得每个请求的相关详细信息</p>
+<p> （1）Download Time下载时间分析—-可以看到组成该操作的请求和请求的下载时间。这张图里我们可以关注消耗时间的地方到底在于操作本身用的时间多还是页面跳转等其他因素消耗的时间</p>
+<p> （2）Component（Over time）各模块的时间变化——通过这个功能可以分析响应时间变长是因为页面生成慢，还是因为图片资源下载慢。</p>
+<p> （3）Download Time（Over time）模块下载时间——针对每个组成页面元素的时间组成部分分析，方便确认该元素的处理时间组成部分。</p>
+<p> （4）Time to Buffer（Over time）模块时间分类——列出该元素所使用的时间分配比例，是受Network Time影响的多还是Server Time影响的多。Server Time是服务器对该页面的处理时间；Network Time是指网络上的时间消耗。</p>
+</li>
+<li><p>Page Download Time Breakdown（页面响应时间组成分析）</p>
+<p> 显示每个页面响应时间的组成分析，一个页面的响应时间一般由以下内容组成：</p>
+<p> （1）Client Time客户端浏览接收所需要使用的时间，可以不用考虑。</p>
+<p> （2）Connections Time连接服务器所需要的时间，越小越好。</p>
+<p> （3）DNS Resolution Time通过DNS服务器解析域名所需要的时间，解析受到DNS服务器的影响，越小越好。</p>
+<p> （4）Error Time服务器返回错误响应时间，这个时间反映了服务器处理错误的速度，一般是Web服务器直接返回的，包含了网络时间和Web服务器返回错误的时间，该时间越小越好。</p>
+<p> （5）First Buffer Time连接到服务器，服务器返回第一个字节所需要的时间，反映了系统对于正常请求的处理时间开销，包含网络时间和服务器正常处理的时间，该时间越小越好。</p>
+<p> （6）FTP Authentication Time FTP认证时间，这是进行FTP登录等操作所需要消耗的认证时间，越短越好。</p>
+<p> （7）Receive Time接受数据的时间，这个时间反映了带宽的大小，带宽越大，下载时间越短。</p>
+<p> （8）SSL Handshaking Time SSL加密握手的时间，而Analysis在这里会分析得到页面请求的组成比例图，便于分析页面时间浪费在哪些过程中。</p>
+</li>
+<li><p>Page Download Time Breakdown（Over time）（页面组成部分时间）</p>
+<p> 随着时间的变化所有请求的响应时间变化过程。这里会将整个负载过程中每个页面的每个时间组成部分都做成单独的时间线，以便分析再不同的时间点上组成该页面的各个请求时间是如何变化的。看到大多数页面的响应时间是比较稳定的，其中首页刷新变动较大——首先找到变化最明显或者响应时间最高的页面，随后在针对这个页面进行进一步的分析了解时间偏长或者变化较快的原因。</p>
+</li>
+<li><p>Time to First Buffer Breakdown（页面请求组成时间）</p>
+<p> 组成页面时间请求的比例说明（客户端时间/服务器时间），通过这个图，我们可以直接地了解到整个页面的处理是在服务器端消耗的时间长，还是在客户端消耗的时间长，从而分析得到系统的性能问题是在前端还是在后端。</p>
+</li>
+<li><p>Time to First Buffer Breakdown（Over time）（基于时间的页面请求组成分析）</p>
+<p> 在整个负载过程中，每一个请求的Server Time和Client Time随着时间变化的趋势，可以方便定位响应时间随着时间变化的原因到底是由于客户端变化导致的还是由于服务器端变化导致的。</p>
+</li>
+</ul>
+
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/26/JMeter监控服务器CPU等信息/" class="archive-article-date">
-  	<time datetime="2019-08-26T01:09:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JMeter监控服务器CPU等信息/">JMeter监控服务器CPU等信息</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
+      
+        <div class="declare">
+          <strong>本文作者：</strong>
           
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
+            ZYJ
           
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+          <br>
+          <strong>本文链接：</strong>
+          http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+          进行许可。转载请注明出处！
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/26/JMeter测试WebSocket实战/" class="archive-article-date">
-  	<time datetime="2019-08-26T01:08:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
+      
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JMeter测试WebSocket实战/">JMeter测试WebSocket实战</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WebSocket</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/25/JMeter接收和发送JSON数据/" class="archive-article-date">
-  	<time datetime="2019-08-25T01:09:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/JMeter接收和发送JSON数据/">JMeter接收和发送JSON数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JSON</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/25/JMeter使用CA证书录制HTTPS请求/" class="archive-article-date">
-  	<time datetime="2019-08-25T00:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/JMeter使用CA证书录制HTTPS请求/">JMeter使用CA证书录制HTTPS请求</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HTTPS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/24/JMeter调用Java的Jar包/" class="archive-article-date">
-  	<time datetime="2019-08-24T09:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/JMeter调用Java的Jar包/">JMeter调用Java的Jar包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/24/JMeter调用javascript函数/" class="archive-article-date">
-  	<time datetime="2019-08-24T09:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/JMeter调用javascript函数/">JMeter调用javascript函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/性能测试工具Jmeter篇/" class="archive-article-date">
-  	<time datetime="2019-08-23T09:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/性能测试工具Jmeter篇/">性能测试工具篇--Jmeter</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/性能测试工具LoadRunner篇/" class="archive-article-date">
-  	<time datetime="2019-08-23T09:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/性能测试工具LoadRunner篇/">性能测试工具篇--LoadRunner</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -578,141 +395,162 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LoadRunner</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/LoadRunner参数化详解/" class="archive-article-date">
-  	<time datetime="2019-08-23T03:22:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/LoadRunner参数化详解/">LoadRunner参数化详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LoadRunner</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Analysis</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/09/02/LoadRunner中Analysis分析/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/性能测试基础篇/" class="archive-article-date">
-  	<time datetime="2019-08-23T03:18:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/09/02/性能测试常见瓶颈及优化方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          性能测试常见瓶颈及优化方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/26/JMeter监控服务器CPU等信息/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JMeter监控服务器CPU等信息</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/性能测试基础篇/">性能测试基础篇</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/性能测试//" class="article-tag-list-link color5">性能测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#LoadRunner中Analysis分析"><span class="toc-number">1.</span> <span class="toc-text">LoadRunner中Analysis分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#分析图"><span class="toc-number">1.1.</span> <span class="toc-text">分析图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#摘要报告"><span class="toc-number">1.2.</span> <span class="toc-text">摘要报告</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Analysis常见图分析"><span class="toc-number">1.3.</span> <span class="toc-text">Analysis常见图分析</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+  
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "uMHRh4Gg16NGNqwp9PofJKbQ-gzGzoHsz",
+            app_key: "xXvlG7bwP1xfj3er6XDB9eXp",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/08/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/08/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -745,8 +583,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

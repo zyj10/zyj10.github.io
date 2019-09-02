@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>Archives: 2019/8 | 静静的博客</title>
+  <title>LoadRunner脚本录制方式详解 | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="静静的博客">
-<meta property="og:url" content="http://per-zyj.xyz/archives/2019/08/page/2/index.html">
+  <meta name="description" content="LoadRunner脚本录制方式LoadRunner脚本录制设置有两种，为HTML-based Script与URL-based Script">
+<meta name="keywords" content="LoadRunner,脚本录制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LoadRunner脚本录制方式详解">
+<meta property="og:url" content="http://per-zyj.xyz/2019/09/02/LoadRunner脚本录制方式详解/index.html">
 <meta property="og:site_name" content="静静的博客">
+<meta property="og:description" content="LoadRunner脚本录制方式LoadRunner脚本录制设置有两种，为HTML-based Script与URL-based Script">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-02T06:12:35.567Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="静静的博客">
+<meta name="twitter:title" content="LoadRunner脚本录制方式详解">
+<meta name="twitter:description" content="LoadRunner脚本录制方式LoadRunner脚本录制设置有两种，为HTML-based Script与URL-based Script">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -158,129 +163,296 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LoadRunner脚本录制方式详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/Hexo搭建个人博客/" class="archive-article-date">
-  	<time datetime="2019-08-23T02:36:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/Hexo搭建个人博客/">Hexo搭建博客案例详解（使用Yilia主题）</a>
+    <h1 class="article-title" itemprop="name">
+      LoadRunner脚本录制方式详解
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        
+    <!-- 不蒜子统计 -->
+    <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+    <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
+
+<a href="/2019/09/02/LoadRunner脚本录制方式详解/" class="archive-article-date">
+  	<time datetime="2019-09-02T03:14:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">872字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">3分</span>
+      </span>
+    </span>
+</div>
           
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="LoadRunner脚本录制方式"><a href="#LoadRunner脚本录制方式" class="headerlink" title="LoadRunner脚本录制方式"></a>LoadRunner脚本录制方式</h3><p>LoadRunner脚本录制设置有两种，为<strong>HTML-based Script</strong>与<strong>URL-based Script</strong></p>
+<a id="more"></a>
+
+<h4 id="HTML-based-Script"><a href="#HTML-based-Script" class="headerlink" title="HTML-based Script"></a>HTML-based Script</h4><p>针对 Web (HTTP/HTML)虚拟用户的缺省录制级别。它指示VuGen录制当前web页面上下文中的HTML action。录制会话期间并不录制所有资源，但是在回放期间会下载资源。推荐在带有applet应用小程序及VB脚本的浏览器应用使用这个选项。</p>
+<p>详细设置<strong>HTML Advanced</strong>如下</p>
+<h5 id="1、Script-type"><a href="#1、Script-type" class="headerlink" title="1、Script type"></a><strong>1、Script type</strong></h5><p><strong>A script describing user actions</strong></p>
+<p>生成与所用户操作直接对应的函数，即基于用户操作进行模拟，注重用户到底做了什么操作，浅显易懂.它创建URL函数 (web_url), link函数(web_link), image函数(web_image), 和表单提交函数(web_submit_form)</p>
+<p><strong>A script constaining explicit URLS only</strong></p>
+<p>录制所有链接,图片和URL作为web_url语句, 或以表单的形式，正如web_submit_data函数,不生成web_link(), web_image(), web_submit_form()函数,生成的脚本比较不直观。对于拥有许多具备相同文本链接的网站实例来说很有用。如果使用“A script describing user actions”来录制，会为链接录制一个有序的实例，但是如果用这个脚本类型则，每个链接都通过它的URL陈列出来，这有利于为那个step进行参数化和关联，即该录制方式不考虑任何用户操作，只考虑客户端发送的请求，注重系统实际做了什么</p>
+<h5 id="2、Non-HTML-generated-elements"><a href="#2、Non-HTML-generated-elements" class="headerlink" title="2、Non HTML-generated elements"></a><strong>2、Non HTML-generated elements</strong></h5><p>许多网站页面包含非HTML元素，比如applet, XML, ActiveX或 JavaScript元素。这些非html元素通常包含或检索它们自己的资源。</p>
+<p><strong>Record within the current script step</strong></p>
+<p>不为每个非HTML资源生成一个新函数。它列出所有资源作为相关函数如web_url, web_link, and web_submit_data的参数。资源-web函数的参数由EXTRARES进行标识。</p>
+<p> <strong>Record in separate steps and use concurrent groups</strong></p>
+<p>为每个生成的非HTML资源创建一个新函数，并且不把它们作为功能项包含在页面函数中（如web_url和web_link)。所有为某个资源生成的web_url函数都被放在当前组(被web_concurrent_start和web_concurrent_end包围) </p>
+<p><strong>Do not record</strong></p>
+<p>不录制任何非HTML生成资源。</p>
+<h4 id="URL-based-Script"><a href="#URL-based-Script" class="headerlink" title="URL-based Script"></a><strong>URL-based Script</strong></h4><p>从服务器录制所有的请求和资源。自动化录制每个HTTP资源为URL setp(web_url 语句),或者以表单的形式，如web_submit_data。不生成web_link,web_image,和web_submit_form 函数，也不录制框架。推荐用于非浏览器应用。</p>
+<h5 id="1、URL-Advanced"><a href="#1、URL-Advanced" class="headerlink" title="1、URL Advanced"></a><strong>1、URL Advanced</strong></h5><p><strong>Create concurrent groups for resources after their source HTML page</strong></p>
+<p>在一个同步组中(由web_concurrent_start和web_concurrent_end语句包围)录制跟随在URL后的资源,资源包括文件，如图像和js文件。如果你禁止该选项，资源以单独的web_url显示,但不被标记为一个同步组。</p>
+<p><strong>Use web_custom_request only</strong></p>
+<p>记录所有HTTP请求作为客户端请求。VuGen为所有请求生成web_custom_request函数，不管它们的内容。 推荐用于非浏览器应用程序。</p>
+<h4 id="选择哪种方式录制，可参考以下原则："><a href="#选择哪种方式录制，可参考以下原则：" class="headerlink" title="选择哪种方式录制，可参考以下原则："></a><strong>选择哪种方式录制，可参考以下原则：</strong></h4><p>1、基于浏览器的应用程序，推荐使用HTML-based Script</p>
+<p>2、基于非浏览器的应用程序，推荐使用URL-based Script</p>
+<p>3、基于浏览器的应用程序中使用了HTTPS安全协议，推荐使用URL-based Script</p>
+<p>4、基于浏览器的应用程序中包含了JavaScript并且该脚本向服务器产生了请求，比如 DataGrid 的分页按钮等，也要使用 URL-based Script方式录制</p>
+
+      
+      
+      
+        <div class="declare">
+          <strong>本文作者：</strong>
+          
+            ZYJ
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://per-zyj.xyz/2019/09/02/LoadRunner脚本录制方式详解/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+          进行许可。转载请注明出处！
+        </div>
+      
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LoadRunner</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Yilia</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">脚本录制</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        			<a href="/categories/LoadRunner//" class="article-tag-list-link color1">LoadRunner</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2019/09/02/LoadRunner脚本录制方式详解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/Hexo基本操作/" class="archive-article-date">
-  	<time datetime="2019-08-23T02:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/02/性能测试常见瓶颈及优化方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">性能测试常见瓶颈及优化方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/Hexo基本操作/">Hexo基本操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#LoadRunner脚本录制方式"><span class="toc-number">1.</span> <span class="toc-text">LoadRunner脚本录制方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-based-Script"><span class="toc-number">1.1.</span> <span class="toc-text">HTML-based Script</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、Script-type"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、Script type</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、Non-HTML-generated-elements"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、Non HTML-generated elements</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#URL-based-Script"><span class="toc-number">1.2.</span> <span class="toc-text">URL-based Script</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、URL-Advanced"><span class="toc-number">1.2.1.</span> <span class="toc-text">1、URL Advanced</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#选择哪种方式录制，可参考以下原则："><span class="toc-number">1.3.</span> <span class="toc-text">选择哪种方式录制，可参考以下原则：</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+  
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "uMHRh4Gg16NGNqwp9PofJKbQ-gzGzoHsz",
+            app_key: "xXvlG7bwP1xfj3er6XDB9eXp",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/08/">&laquo; Prev</a><a class="page-number" href="/archives/2019/08/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -313,8 +485,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

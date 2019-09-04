@@ -166,6 +166,120 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-物理内存和虚拟内存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/04/物理内存和虚拟内存/">物理内存和虚拟内存</a>
+    </h1>
+  
+
+        
+        
+<a href="/2019/09/04/物理内存和虚拟内存/" class="archive-article-date">
+  	<time datetime="2019-09-04T02:29:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+</a>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">3.6k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">12分</span>
+      </span>
+    </span>
+</div>
+          
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="名词解释（根据百度百科）"><a href="#名词解释（根据百度百科）" class="headerlink" title="名词解释（根据百度百科）"></a>名词解释（根据百度百科）</h3><blockquote>
+<p>物理内存：<a href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86" target="_blank" rel="noopener">物理</a><a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98" target="_blank" rel="noopener">内存</a>（Physical memory）是相对于虚拟内存而言的。物理内存指通过物理内存条而获得的内存空间，而虚拟内存则是指将硬盘的一块区域划分来作为内存。内存主要作用是在计算机运行时为操作系统和各种程序提供临时储存。常见的物理内存规格有256M、512M、1G、2G等，现如今随着计算机硬件的发展，已经出现4G、8G甚至更高容量的内存规格。当物理内存不足时，可以用虚拟内存代替。在应用中，自然是顾名思义，<a href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86/127205" target="_blank" rel="noopener">物理</a>上，真实存在的插在<a href="https://baike.baidu.com/item/%E4%B8%BB%E6%9D%BF/104636" target="_blank" rel="noopener">主板</a>内存槽上的<a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98/103614" target="_blank" rel="noopener">内存</a>条的<a href="https://baike.baidu.com/item/%E5%AE%B9%E9%87%8F/6067331" target="_blank" rel="noopener">容量</a>的大小。看<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338" target="_blank" rel="noopener">计算机</a>配置的时候，主要看的就是这个<a href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86" target="_blank" rel="noopener">物理</a><a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98" target="_blank" rel="noopener">内存</a>。</p>
+</blockquote>
+<blockquote>
+<p>虚拟内存：虚拟<a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98" target="_blank" rel="noopener">内存</a>是<a href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/7210959" target="_blank" rel="noopener">计算机系统</a><a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/5633616" target="_blank" rel="noopener">内存管理</a>的一种技术。它使得<a href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/5985445" target="_blank" rel="noopener">应用程序</a>认为它拥有连续的可用的<a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98/103614" target="_blank" rel="noopener">内存</a>（一个连续完整的<a href="https://baike.baidu.com/item/%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/1423980" target="_blank" rel="noopener">地址空间</a>），而实际上，它通常是被分隔成多个<a href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98/2502263" target="_blank" rel="noopener">物理内存</a>碎片，还有部分暂时存储在外部<a href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E5%AD%98%E5%82%A8%E5%99%A8/2386684" target="_blank" rel="noopener">磁盘存储器</a>上，在需要时进行<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2/1586256" target="_blank" rel="noopener">数据交换</a>。目前，大多数<a href="https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192" target="_blank" rel="noopener">操作系统</a>都使用了虚拟内存，如Windows家族的“虚拟内存”；Linux的“交换空间”等。</p>
+</blockquote>
+        
+      
+      
+      
+        <div class="declare" hidden="hidden"></div>
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">内存</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/性能调优//" class="article-tag-list-link color5">性能调优</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/04/物理内存和虚拟内存/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-每日一摘" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -401,7 +515,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">659字</span>
+        <span class="post-count">1.5k字</span>
       </span>
     </span>
 
@@ -410,7 +524,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">5分</span>
       </span>
     </span>
 </div>
@@ -1200,120 +1314,6 @@
 
 
   
-    <article id="post-JMeter调用javascript函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/24/JMeter调用javascript函数/">JMeter调用javascript函数</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/08/24/JMeter调用javascript函数/" class="archive-article-date">
-  	<time datetime="2019-08-24T09:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">245字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1、使用JMeter组件JSR223 PreProcessor调用JS文件</strong><br>（1）将JavaScript文件test.js放置于JMeter安装目录\bin文件目录下，test.js内容如下：<br>程序内容：将传入参数相乘并输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function testJS(input1,input2) &#123;</span><br><span class="line">    var output = input1 * input2;</span><br><span class="line">    return output</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Jmeter//" class="article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/JMeter调用javascript函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1429,10 +1429,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
               </li>
              
@@ -1449,6 +1445,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能瓶颈</a>
               </li>
              
@@ -1462,6 +1462,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">内存</a>
               </li>
             
             <div class="clearfix"></div>

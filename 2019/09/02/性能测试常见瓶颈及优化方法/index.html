@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="1、常见性能瓶颈问题 硬件上的瓶颈 一般指的是cpu \RAM的问题，分为服务器硬件瓶颈、网络瓶颈（对局域网可以不考虑）、服务器操作系统瓶颈（参数配置）、中间件瓶颈（参数配置、数据库、web服务器等），应用瓶颈（数据库设计、SQL语句、业务逻辑、算法等） 例如：确定了在服务器数据库上需要6个CPU、12GB内存，但是在测试时发现，CPU的持续利用率超过95%，这时可以认为在硬件上出现了性能瓶颈。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-02T02:44:24.228Z">
+<meta property="og:updated_time" content="2019-09-04T07:21:37.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="性能测试常见瓶颈及优化方法">
 <meta name="twitter:description" content="1、常见性能瓶颈问题 硬件上的瓶颈 一般指的是cpu \RAM的问题，分为服务器硬件瓶颈、网络瓶颈（对局域网可以不考虑）、服务器操作系统瓶颈（参数配置）、中间件瓶颈（参数配置、数据库、web服务器等），应用瓶颈（数据库设计、SQL语句、业务逻辑、算法等） 例如：确定了在服务器数据库上需要6个CPU、12GB内存，但是在测试时发现，CPU的持续利用率超过95%，这时可以认为在硬件上出现了性能瓶颈。">
@@ -195,7 +195,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">659字</span>
+        <span class="post-count">1.5k字</span>
       </span>
     </span>
 
@@ -204,7 +204,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">5分</span>
       </span>
     </span>
 </div>
@@ -238,6 +238,39 @@
 <li><p><strong>网络设备上的性能瓶颈</strong></p>
 <p>一般指的是防火墙、动态负载生成器、交换机等设备。</p>
 <p>例如：在动态负载均衡器上设置了动态分发负载的机制，当发现某个应用服务器上的硬件资源已经达到极限时，动态负载均衡器将后续的交易请求分发到其他负载较轻的应用服务器上，在测试时发现，动态负载均衡机制没有起到相应的作用，这时可以认为在网络设备上出现了性能瓶颈。</p>
+</li>
+</ul>
+<h4 id="2、性能分析方法"><a href="#2、性能分析方法" class="headerlink" title="2、性能分析方法"></a>2、性能分析方法</h4><ul>
+<li>自底向上：通过监控硬件及操作系统性能指标（CPU、内存、磁盘、网络等硬件资源的性能指标）来分析性能问题（配置、程序等问题）。因为用户请求最终是由计算机硬件设备来完成的，做事的是CPU。</li>
+<li>自顶向下：通过生成负载来观察被测试的系统性能，比如响应时间、吞吐量；然后从请求起点由外及里一层一层地分析，从而找到性能问题所在。</li>
+</ul>
+<p>####3、性能优化方法</p>
+<ul>
+<li><p>程序优化</p>
+<p>1、系统框架选择优化</p>
+<p>2、程序代码优化</p>
+<ul>
+<li>表单压缩：压缩表单，减少网络的传输量达到提高响应速度的效果</li>
+<li>局部刷新：页面中采取局部内容获取的方式，减少向服务器的请求，服务器由于负载小当然就能更快地响应，或者说客户的体验会更好</li>
+<li>仅取所需：只向服务器请求必要的内容，只向客户端发送必要的表单内容，减少网络传输，减轻服务器负担</li>
+<li>逻辑清晰：程序逻辑清晰方便维护，方便分析问题；不做错误及多余调用，资源请求后能够释放</li>
+<li>谨慎继承：开发过程中要对系统架构了解，特别是一些基类、公共组件，合理利用，减少大对象产生的可能。</li>
+<li>程序算法优化：试着分析程序，是否需要用算法来提高程序效率，比如我们可以用二分法来做物料计划</li>
+<li>批处理：对于大批量的数据处理，最好能够做成批处理，不会因为单次操作而影响系统的正常使用</li>
+<li>延迟加载：对大对象的展示可以采用延迟加载的方式，层层递进的显示明细。比如我们分页显示列表内容，往往我们只显示主表的内容，附表的内容在查看明细时才去请求。</li>
+<li>防止内存泄漏：内存泄漏是由于对象无法回收造成的，特别是一些长生命周期的对象风险较大。</li>
+<li>防止争用死锁：一般出现在线程同步的场景，不同线程对同一资源的争用通常会导致等待，处理不当会导致死锁。可以适当采用监听器、观察者模式来处理这类场景，核心思想就是同步向异步转化。</li>
+<li>索引：编写合理的SQL，尽量利用索引</li>
+<li>并行：使用多个进程或者线程来处理任务，比如Oracle中的并行查询，Tomcat的线程池</li>
+<li>异步：比如用MQ（消息中间件）来解耦系统之间的依赖关系，减少堵塞</li>
+</ul>
+<p>3、配置优化</p>
+<ul>
+<li>JVM配置优化：合理地分配堆与非堆的内存，配置合适的内存回收算法，提供系统服务能力</li>
+<li>连接池：数据库连接池可以节省建立连接与关闭连接的资源消耗</li>
+<li>线程池：通过缓存线程的状态来减少新建线程与关闭线程的开销，一般是在中间件中进行配置，比如在Tomcat的Server.xml文件中进行配置</li>
+<li>缓存机制：通过数据的缓存来减少磁盘的读写压力，缩小存储与CPU的效率差</li>
+</ul>
 </li>
 </ul>
 
@@ -427,7 +460,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、常见性能瓶颈问题"><span class="toc-number">1.</span> <span class="toc-text">1、常见性能瓶颈问题</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、常见性能瓶颈问题"><span class="toc-number">1.</span> <span class="toc-text">1、常见性能瓶颈问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、性能分析方法"><span class="toc-number">2.</span> <span class="toc-text">2、性能分析方法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -584,10 +617,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
               </li>
              
@@ -604,6 +633,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能瓶颈</a>
               </li>
              
@@ -617,6 +650,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">内存</a>
               </li>
             
             <div class="clearfix"></div>

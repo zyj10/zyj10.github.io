@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="1、常见性能瓶颈问题 硬件上的瓶颈 一般指的是cpu \RAM的问题，分为服务器硬件瓶颈、网络瓶颈（对局域网可以不考虑）、服务器操作系统瓶颈（参数配置）、中间件瓶颈（参数配置、数据库、web服务器等），应用瓶颈（数据库设计、SQL语句、业务逻辑、算法等） 例如：确定了在服务器数据库上需要6个CPU、12GB内存，但是在测试时发现，CPU的持续利用率超过95%，这时可以认为在硬件上出现了性能瓶颈。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-04T07:21:37.310Z">
+<meta property="og:updated_time" content="2019-09-04T07:27:31.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="性能测试常见瓶颈及优化方法">
 <meta name="twitter:description" content="1、常见性能瓶颈问题 硬件上的瓶颈 一般指的是cpu \RAM的问题，分为服务器硬件瓶颈、网络瓶颈（对局域网可以不考虑）、服务器操作系统瓶颈（参数配置）、中间件瓶颈（参数配置、数据库、web服务器等），应用瓶颈（数据库设计、SQL语句、业务逻辑、算法等） 例如：确定了在服务器数据库上需要6个CPU、12GB内存，但是在测试时发现，CPU的持续利用率超过95%，这时可以认为在硬件上出现了性能瓶颈。">
@@ -244,8 +244,7 @@
 <li>自底向上：通过监控硬件及操作系统性能指标（CPU、内存、磁盘、网络等硬件资源的性能指标）来分析性能问题（配置、程序等问题）。因为用户请求最终是由计算机硬件设备来完成的，做事的是CPU。</li>
 <li>自顶向下：通过生成负载来观察被测试的系统性能，比如响应时间、吞吐量；然后从请求起点由外及里一层一层地分析，从而找到性能问题所在。</li>
 </ul>
-<p>####3、性能优化方法</p>
-<ul>
+<h4 id="3、性能优化方法"><a href="#3、性能优化方法" class="headerlink" title="3、性能优化方法"></a>3、性能优化方法</h4><ul>
 <li><p>程序优化</p>
 <p>1、系统框架选择优化</p>
 <p>2、程序代码优化</p>
@@ -460,7 +459,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、常见性能瓶颈问题"><span class="toc-number">1.</span> <span class="toc-text">1、常见性能瓶颈问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、性能分析方法"><span class="toc-number">2.</span> <span class="toc-text">2、性能分析方法</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、常见性能瓶颈问题"><span class="toc-number">1.</span> <span class="toc-text">1、常见性能瓶颈问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、性能分析方法"><span class="toc-number">2.</span> <span class="toc-text">2、性能分析方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、性能优化方法"><span class="toc-number">3.</span> <span class="toc-text">3、性能优化方法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -617,11 +616,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
+                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JSON</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -630,10 +633,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">脚本录制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
               </li>
              
               <li class="article-tag-list-item">

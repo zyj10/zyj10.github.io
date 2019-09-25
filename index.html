@@ -166,6 +166,146 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-磁盘I-O性能监控" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/17/磁盘I-O性能监控/">磁盘I/O性能监控</a>
+    </h1>
+  
+
+        
+        
+<a href="/2019/09/17/磁盘I-O性能监控/" class="archive-article-date">
+  	<time datetime="2019-09-17T07:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+</a>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.3k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">4分</span>
+      </span>
+    </span>
+</div>
+          
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="名词解释（根据百度百科）"><a href="#名词解释（根据百度百科）" class="headerlink" title="名词解释（根据百度百科）"></a>名词解释（根据百度百科）</h3><blockquote>
+<p>磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。</p>
+</blockquote>
+<ul>
+<li><p>磁盘与硬盘</p>
+<p>磁盘，是计算机的<a href="https://www.baidu.com/s?wd=外部存储器&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">外部存储器</a>中类似磁带的装置，将圆形的磁性盘片装在一个方的密封盒子里，这样做的目的是为了防止磁盘表面划伤，导致数据丢失。磁盘有软磁盘，硬磁盘。硬磁盘就是<a href="https://www.baidu.com/s?wd=机械硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">机械硬盘</a>。<br>硬盘是电脑主要的存储媒介之一，由一个或者多个铝制或者玻璃制的碟片组成。碟片外覆盖有铁磁性材料。硬盘有<a href="https://www.baidu.com/s?wd=固态硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">固态硬盘</a>（SSD 盘，新式硬盘）、<a href="https://www.baidu.com/s?wd=机械硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">机械硬盘</a>（HDD 传统硬盘）、<a href="https://www.baidu.com/s?wd=混合硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">混合硬盘</a>（HHD 一块基于传统<a href="https://www.baidu.com/s?wd=机械硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">机械硬盘</a>诞生出来的新硬盘）。SSD采用闪存颗粒来存储，HDD采用磁性碟片来存储，<a href="https://www.baidu.com/s?wd=混合硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">混合硬盘</a>(HHD: Hybrid Hard Disk)是把磁性硬盘和闪存集成到一起的一种硬盘。绝大多数硬盘都是固定硬盘，被永久性地密封固定在硬盘驱动器中。</p>
+</li>
+<li><p>读写IO（Read/Write IO）操作</p>
+<p>磁盘是用来给我们存取数据用的，因此当说到IO操作的时候，，就会存在两种相对应的操作，<strong>存数据时候对应的是写IO操作，取数据的时候对应的是读IO操作</strong>。</p>
+</li>
+<li><p>单个IO操作</p>
+<p>当控制磁盘的控制器接到操作系统的读IO操作指令的时候，控制器就会给磁盘发出一个读数据的指令，并同时将要读取的数据块的地址传递给磁盘，然后磁盘会将读取到的数据传给控制器，并由控制器返回给操作系统，完成一个写IO的操作；同样的，一个写IO的操作也类似，控制器接到写的IO操作的指令和要写入的数据，并将其传递给磁盘，磁盘在数据写入完成之后将操作结果传递回控制器，再由控制器返回给操作系统，完成一个写IO的操作。单个IO操作指的就是完成一个写IO或者是读IO的操作。</p>
+</li>
+<li><p>随机访问(Random Access)与连续访问(Sequential Access)</p>
+<p>随机访问指的是本次IO所给出的扇区地址和上次IO给出扇区地址相差比较大，这样的话磁头在两次IO操作之间需要作比较大的移动动作才能重新开始读/写数据。相反的，如果当次IO给出的扇区地址与上次IO结束的扇区地址一致或者是接近的话，那磁头就能很快的开始这次IO操作，这样的多个IO操作称为连续访问。因此尽管相邻的两次IO操作在同一时刻发出，但如果它们的请求的扇区地址相差很大的话也只能称为随机访问，而非连续访问。</p>
+</li>
+<li><p>顺序IO模式(Queue Mode)/并发IO模式(BurstMode)</p>
+<p>磁盘控制器可能会一次对磁盘组发出一连串的IO命令，如果磁盘组一次只能执行一个IO命令时称为顺序IO；当磁盘组能同时执行多个IO命令时，称为并发IO。并发IO只能发生在由多个磁盘组成的磁盘组上，单块磁盘只能一次处理一个IO命令。</p>
+</li>
+<li><p>单个IO的大小(IO ChunkSize)</p>
+<p>熟悉数据库的人都会有这么一个概念，那就是数据库存储有个基本的块大小(Block Size)，不管是SQL Server还是Oracle，默认的块大小都是<strong>8KB</strong>，就是数据库每次读写都是以8k为单位的。那么对于数据库应用发出的固定8k大小的单次读写到了写磁盘这个层面会是怎么样的呢，就是对于读写磁盘来说单个IO操作操作数据的大小是多少呢，是不是也是一个固定的值？答案是不确定。</p>
+</li>
+<li><p>IOPS(IO per Second)</p>
+<p><strong>IOPS，IO系统每秒所执行IO操作的次数</strong>，是一个重要的用来衡量系统IO能力的一个参数。</p>
+</li>
+<li><p>传输速度(Transfer Rate)/吞吐率(Throughput)</p>
+<p><strong>传输速度（另一个常见的说法是吞吐率）</strong>是磁盘在实际使用的时候从磁盘系统总线上流过的数据量</p>
+</li>
+<li><p>IO响应时间(IOResponse Time)</p>
+<p>IO响应时间也被称为IO延时(IOLatency)，IO响应时间就是从操作系统内核发出的一个读或者写的IO命令到操作系统内核接收到IO回应的时间</p>
+</li>
+</ul>
+
+      
+      
+      
+        <div class="declare" hidden="hidden"></div>
+      
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">磁盘</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/性能调优//" class="article-tag-list-link color5">性能调优</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/17/磁盘I-O性能监控/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-性能测试知识积累" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -539,7 +679,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">7.6k字</span>
+        <span class="post-count">9.8k字</span>
       </span>
     </span>
 
@@ -548,7 +688,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">25分</span>
+        <span class="post-count">32分</span>
       </span>
     </span>
 </div>
@@ -1199,125 +1339,6 @@
 
 
   
-    <article id="post-JMeter接收和发送JSON数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/25/JMeter接收和发送JSON数据/">JMeter接收和发送JSON数据</a>
-    </h1>
-  
-
-        
-        
-<a href="/2019/08/25/JMeter接收和发送JSON数据/" class="archive-article-date">
-  	<time datetime="2019-08-25T01:09:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">131字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下："><a href="#1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下：" class="headerlink" title="1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下："></a>1、Java编写接口，用于接收和发送JSON数据，具体HTTP请求如下：</h3><ul>
-<li>Article类如下所示：<br><img src="/2019/08/25/JMeter接收和发送JSON数据/1.png" alt="1"></li>
-</ul>
-        
-      
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JSON</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Jmeter//" class="article-tag-list-link color2">Jmeter</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/25/JMeter接收和发送JSON数据/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1421,6 +1442,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -1429,11 +1454,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JSON</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1441,7 +1462,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
+                <a href="javascript:void(0)" class="js-tag color5">JSON</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1466,6 +1487,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能调优</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">磁盘</a>
               </li>
              
               <li class="article-tag-list-item">

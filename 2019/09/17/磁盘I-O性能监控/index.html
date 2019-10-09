@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
   <title>磁盘I/O性能监控 | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="名词解释（根据百度百科） 磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。   磁盘与硬盘 磁盘，是计算机的外部存储器中类似磁带的装置，将圆形的磁性盘片装在一个方的密封盒子里，这样做的目的是为了">
+  <meta name="description" content="名词解释（根据百度百科） 磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。">
 <meta name="keywords" content="磁盘">
 <meta property="og:type" content="article">
 <meta property="og:title" content="磁盘I&#x2F;O性能监控">
 <meta property="og:url" content="http://per-zyj.xyz/2019/09/17/磁盘I-O性能监控/index.html">
 <meta property="og:site_name" content="静静的博客">
-<meta property="og:description" content="名词解释（根据百度百科） 磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。   磁盘与硬盘 磁盘，是计算机的外部存储器中类似磁带的装置，将圆形的磁性盘片装在一个方的密封盒子里，这样做的目的是为了">
+<meta property="og:description" content="名词解释（根据百度百科） 磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-18T05:33:53.098Z">
+<meta property="og:updated_time" content="2019-10-09T00:38:19.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="磁盘I&#x2F;O性能监控">
-<meta name="twitter:description" content="名词解释（根据百度百科） 磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。   磁盘与硬盘 磁盘，是计算机的外部存储器中类似磁带的装置，将圆形的磁性盘片装在一个方的密封盒子里，这样做的目的是为了">
+<meta name="twitter:description" content="名词解释（根据百度百科） 磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -217,6 +217,8 @@
         <h3 id="名词解释（根据百度百科）"><a href="#名词解释（根据百度百科）" class="headerlink" title="名词解释（根据百度百科）"></a>名词解释（根据百度百科）</h3><blockquote>
 <p>磁盘（disk）是指利用磁记录技术存储数据的存储器。磁盘是计算机主要的存储介质，可以存储大量的二进制数据，并且断电后也能保持数据不丢失。早期计算机使用的磁盘是软磁盘（soft disk，简称软盘），如今常用的磁盘是硬磁盘（hard disk，简称硬盘）。</p>
 </blockquote>
+<a id="more"></a>
+
 <ul>
 <li><p>磁盘与硬盘</p>
 <p>磁盘，是计算机的<a href="https://www.baidu.com/s?wd=外部存储器&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">外部存储器</a>中类似磁带的装置，将圆形的磁性盘片装在一个方的密封盒子里，这样做的目的是为了防止磁盘表面划伤，导致数据丢失。磁盘有软磁盘，硬磁盘。硬磁盘就是<a href="https://www.baidu.com/s?wd=机械硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">机械硬盘</a>。<br>硬盘是电脑主要的存储媒介之一，由一个或者多个铝制或者玻璃制的碟片组成。碟片外覆盖有铁磁性材料。硬盘有<a href="https://www.baidu.com/s?wd=固态硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">固态硬盘</a>（SSD 盘，新式硬盘）、<a href="https://www.baidu.com/s?wd=机械硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">机械硬盘</a>（HDD 传统硬盘）、<a href="https://www.baidu.com/s?wd=混合硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">混合硬盘</a>（HHD 一块基于传统<a href="https://www.baidu.com/s?wd=机械硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">机械硬盘</a>诞生出来的新硬盘）。SSD采用闪存颗粒来存储，HDD采用磁性碟片来存储，<a href="https://www.baidu.com/s?wd=混合硬盘&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">混合硬盘</a>(HHD: Hybrid Hard Disk)是把磁性硬盘和闪存集成到一起的一种硬盘。绝大多数硬盘都是固定硬盘，被永久性地密封固定在硬盘驱动器中。</p>
@@ -386,6 +388,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/10/08/LoadRunner常见报错整合/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          LoadRunner常见报错整合
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/09/性能测试知识积累/" id="article-nav-older" class="article-nav-link-wrap">
@@ -573,11 +584,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
+                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
+                <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -586,18 +597,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">LoadRunner</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Ant</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">脚本录制</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -610,6 +609,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">磁盘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">脚本录制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Ant</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
               </li>
              
               <li class="article-tag-list-item">

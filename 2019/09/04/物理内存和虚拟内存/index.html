@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://per-zyj.xyz/2019/09/04/物理内存和虚拟内存/free-h.png">
 <meta property="og:image" content="http://per-zyj.xyz/2019/09/04/物理内存和虚拟内存/free-s.png">
 <meta property="og:image" content="http://per-zyj.xyz/2019/09/04/物理内存和虚拟内存/top.png">
-<meta property="og:updated_time" content="2019-09-04T07:22:22.615Z">
+<meta property="og:updated_time" content="2019-10-11T01:38:43.544Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="物理内存和虚拟内存">
 <meta name="twitter:description" content="名词解释（根据百度百科） 物理内存：物理内存（Physical memory）是相对于虚拟内存而言的。物理内存指通过物理内存条而获得的内存空间，而虚拟内存则是指将硬盘的一块区域划分来作为内存。内存主要作用是在计算机运行时为操作系统和各种程序提供临时储存。常见的物理内存规格有256M、512M、1G、2G等，现如今随着计算机硬件的发展，已经出现4G、8G甚至更高容量的内存规格。当物理内存不足时，可以">
@@ -206,7 +206,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">3.6k字</span>
+        <span class="post-count">3.7k字</span>
       </span>
     </span>
 
@@ -215,7 +215,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">12分</span>
+        <span class="post-count">13分</span>
       </span>
     </span>
 </div>
@@ -286,11 +286,14 @@
 <li><p><strong>free命令</strong>：显示当前系统未使用的和已使用的内存数目，还可以显示被内核使用的内存缓冲区</p>
 <p><img src="/2019/09/04/物理内存和虚拟内存/free.png" alt="free命令"></p>
 <ul>
-<li>total：表示总计物理内存的大小</li>
-<li>used：表示已使用多少</li>
-<li>free：表示可用内存多少</li>
-<li>Shared：表示多个进程共享的内存总额</li>
-<li>Buffers/cached：表示磁盘缓存的大小</li>
+<li><strong>Mem</strong> 行(第二行)是内存的使用情况。</li>
+<li><strong>Swap</strong> 行(第三行)是交换空间的使用情况。</li>
+<li><strong>total</strong> 列显示系统总的可用物理内存和交换空间大小。</li>
+<li><strong>used</strong> 列显示已经被使用的物理内存和交换空间。</li>
+<li><strong>free</strong> 列显示还有多少物理内存和交换空间可用使用。</li>
+<li><strong>shared</strong> 列显示被共享使用的物理内存大小。</li>
+<li><strong>buff/cache</strong> 列显示被 buffer 和 cache 使用的物理内存大小。</li>
+<li><strong>available</strong> 列显示还可以被应用程序使用的物理内存大小。</li>
 </ul>
 </li>
 <li><p><strong>free -m</strong>：以m为单位来显示内存的信息</p>
@@ -601,7 +604,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 ZYJ
+    		&copy; 2020 ZYJ
     	</div>
       
       <!-- 不蒜子统计 -->
@@ -694,6 +697,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -714,15 +721,19 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">LoadRunner</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Ant</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">LoadRunner</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -738,19 +749,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">磁盘</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">内存</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">磁盘</a>
               </li>
             
             <div class="clearfix"></div>

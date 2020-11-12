@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="LoadRunner中文乱码情况1.录制后出现中文乱码录制后，脚本中出现的乱码，修改设置：Tools &amp;gt; Recording Options，如截图所示； 找到 Advanced，勾选Support charset，并选择UTF-8（如果不勾选，则是默认的编码，如果默认是乱码就使用UTF-8试试，一般都能解决）。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/11/lr中文乱码/lr%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%5C%E5%BD%95%E5%88%B6%E8%AE%BE%E7%BD%AE.jpg">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/11/lr中文乱码/lr%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%5C%E8%AE%BE%E7%BD%AE2.jpg">
-<meta property="og:updated_time" content="2020-11-11T09:11:47.242Z">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/11/lr中文乱码/%E5%BD%95%E5%88%B6%E8%AE%BE%E7%BD%AE.jpg">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/11/lr中文乱码/%E8%AE%BE%E7%BD%AE2.jpg">
+<meta property="og:updated_time" content="2020-11-12T00:33:13.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lr中文乱码">
 <meta name="twitter:description" content="LoadRunner中文乱码情况1.录制后出现中文乱码录制后，脚本中出现的乱码，修改设置：Tools &amp;gt; Recording Options，如截图所示； 找到 Advanced，勾选Support charset，并选择UTF-8（如果不勾选，则是默认的编码，如果默认是乱码就使用UTF-8试试，一般都能解决）。">
-<meta name="twitter:image" content="http://per-zyj.xyz/2020/11/11/lr中文乱码/lr%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%5C%E5%BD%95%E5%88%B6%E8%AE%BE%E7%BD%AE.jpg">
+<meta name="twitter:image" content="http://per-zyj.xyz/2020/11/11/lr中文乱码/%E5%BD%95%E5%88%B6%E8%AE%BE%E7%BD%AE.jpg">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -221,11 +221,11 @@
 <p>找到 Advanced，勾选Support charset，并选择UTF-8（如果不勾选，则是默认的编码，如果默认是乱码就使用UTF-8试试，一般都能解决）。</p>
 <a id="more"></a>
 
-<p><img src="/2020/11/11/lr中文乱码/lr%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%5C%E5%BD%95%E5%88%B6%E8%AE%BE%E7%BD%AE.jpg" alt></p>
+<p><img src="/2020/11/11/lr中文乱码/%E5%BD%95%E5%88%B6%E8%AE%BE%E7%BD%AE.jpg" alt></p>
 <p>PS：要特别说明的一点是，UTF-8不一定是对的，更不是万能的，<strong>只有网页的实际编码和你的设置相同，那么才不会出现中文的乱码</strong>，否则很可能就是把对的改成错的了。比如：百度首页是UTF-8编码，但百度新闻是GB编码，也就是中文系统中的ANSI编码，设置与其不匹配，脚本必然会导致乱码的产生，除非脚本中没有任何中文字。</p>
 <h3 id="情况2-响应消息中出现中文乱码"><a href="#情况2-响应消息中出现中文乱码" class="headerlink" title="情况2.响应消息中出现中文乱码"></a>情况2.响应消息中出现中文乱码</h3><p>运行后，响应消息中出现的乱码，修改设置：Vuser &gt; Run-Time Settings，如截图所示；</p>
 <p>找到 Preferences &gt;&gt; Option &gt;&gt; Convert form/to UTF-8，按需选择，YES代表使用UTF-8，NO代表系统默认的ANSI。</p>
-<p><img src="/2020/11/11/lr中文乱码/lr%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%5C%E8%AE%BE%E7%BD%AE2.jpg" alt></p>
+<p><img src="/2020/11/11/lr中文乱码/%E8%AE%BE%E7%BD%AE2.jpg" alt></p>
 <h3 id="情况3-使用lr-convert-string-encoding函数解决乱码"><a href="#情况3-使用lr-convert-string-encoding函数解决乱码" class="headerlink" title="情况3.使用lr_convert_string_encoding函数解决乱码"></a>情况3.使用lr_convert_string_encoding函数解决乱码</h3><p>LR录制的时候可以通过在VuGen的Tools-Recoding Options-Advanced—Support charset—UTF-8设置，但是只是部分规避。因此可以试用<strong>lr_convert_string_encoding</strong>函数来对中文进行UTF-8转码。</p>
 <blockquote>
 <p>int lr_convert_string_encoding ( const char *sourceString, const char *fromEncoding, const char *toEncoding, const char *paramName);</p>
@@ -627,15 +627,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
               </li>
              
               <li class="article-tag-list-item">

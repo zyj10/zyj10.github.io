@@ -16,23 +16,23 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="Nginx的基本功能介绍Nginx几个常用的基本功能：正向代理、反向代理、负载均衡、动静分离和高可用，并且使用一个简单案例进行演示。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.jpg">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.jpg">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.jpg">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB.jpg">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E9%AB%98%E5%8F%AF%E7%94%A8.jpg">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C8080.png">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C8081.png">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AE%BE%E7%BD%AE.png">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A11.png">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A12.png">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5Cnginx%E9%85%8D%E7%BD%AE.png">
-<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5Cnginx%E7%9B%91%E6%8E%A7.png">
-<meta property="og:updated_time" content="2020-11-11T09:15:16.721Z">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.jpg">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.jpg">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.jpg">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB.jpg">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E9%AB%98%E5%8F%AF%E7%94%A8.jpg">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/8080.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/8081.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A11.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A12.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/nginx%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/nginx%E7%9B%91%E6%8E%A7.png">
+<meta property="og:updated_time" content="2020-11-12T00:36:38.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx、Tomcat配置优化研究学习">
 <meta name="twitter:description" content="Nginx的基本功能介绍Nginx几个常用的基本功能：正向代理、反向代理、负载均衡、动静分离和高可用，并且使用一个简单案例进行演示。">
-<meta name="twitter:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.jpg">
+<meta name="twitter:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat配置优化研究学习/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.jpg">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -232,35 +232,35 @@
 
 <ul>
 <li><p><strong>正向代理</strong>：架设在客户机与目标主机之间，只用于代理内部网络对Internet的连接请求，客户机必须指定代理服务器,并将本来要直接发送到Web服务器上的http请求发送到代理服务器中。</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.jpg" alt="正向代理"></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86.jpg" alt="正向代理"></p>
 </li>
 <li><p><strong>反向代理</strong>：指以代理服务器来接受Internet上的连接请求，然后将请求转发给内部网络上的服务器；并将从服务器上得到的结果返回给Internet上请求连接的客户端。在这个过程中，对于客户端它扮演着 HTTP 服务器端的角色，而对于真正的服务器端 又扮演着 HTTP 客户端的角色。</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.jpg" alt="反向代理"></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.jpg" alt="反向代理"></p>
 </li>
 <li><p><strong>负载均衡</strong>：是由多台服务器以对称的方式组成一个服务器集合，每台服务器都具有等价的地位，都可以单独对外供应效力而无需其他服务器的辅助。经过某种负载分管技术，将外部发送来的央求均匀分配到对称结构中的某一台服务器上，而接收到央求的服务器读登时回应客户的央求。均衡负载可以平均分配客户央求到服务器列阵，借此供应快速获取重要数据，解决很多并发访问效力问题。这种群集技术可以用最少的出资取得接近于大型主机的性能。</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.jpg" alt="负载均衡"></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.jpg" alt="负载均衡"></p>
 </li>
 <li><p><strong>动静分离</strong>：为了加快网站的解析速度，可以把静态页面和动态页面由不同的服务器来解析，加快解析速度，降低原来单个服务器的压力。</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB.jpg" alt="动静分离"></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB.jpg" alt="动静分离"></p>
 </li>
 <li><p><strong>高可用</strong>：为了提高系统的可用性和容错能力，可以增加nginx服务器的数量，当主服务器发生故障或宕机，备份服务器可以立即充当主服务器进行不间断工作。</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E9%AB%98%E5%8F%AF%E7%94%A8.jpg" alt="高可用"></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E9%AB%98%E5%8F%AF%E7%94%A8.jpg" alt="高可用"></p>
 </li>
 <li><p>模拟一个基本的反向代理和负载均衡实现，使用以下几个步骤：</p>
 <p>1.创建两个tomcat服务器，修改每个tomcat运行在不同的端口号上，分别为8080、8081，修改tomcat启动主页内容，启动tomcat服务器，浏览tomcat启动主页如下两图：</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C8080.png" alt></p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C8081.png" alt></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/8080.png" alt></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/8081.png" alt></p>
 <p>2.配置nginx的配置文件，进行反向代理</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AE%BE%E7%BD%AE.png" alt></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AE%BE%E7%BD%AE.png" alt></p>
 <p>3.最后不断访问nginx启动主页，发现两台tomcat成功运行的页面都有出现，比例大致1:1。</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A11.png" alt></p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A12.png" alt></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A11.png" alt></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A12.png" alt></p>
 <p>4.以上便是简单反向代理和负载均衡的实现。</p>
 </li>
 </ul>
 <h4 id="Nginx的配置说明"><a href="#Nginx的配置说明" class="headerlink" title="Nginx的配置说明"></a>Nginx的配置说明</h4><p>Nginx配置文件主要分为4部分：main（全局设置）、server（主机设置）、upstream（负载均衡服务器设置）和 location（URL匹配特定位置的设置）。这四者之间的关系如下：server继承main，location继承server，upstream既不会继承其他设置也不会被继承。</p>
 <p>在这4个部分当中，每个部分都包含若干指令，这些指令主要包含Nginx的主模块指令、事件模块指令、HTTP核心模块指令。同时每个部分还可以使用其他HTTP模块指令，例如Http SSL模块、Http Gzip Static模块和Http Addition模块等。</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5Cnginx%E9%85%8D%E7%BD%AE.png" alt></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/nginx%E9%85%8D%E7%BD%AE.png" alt></p>
 <p><strong>1.nginx全局配置文件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">user  nginx;  # 为了安全使用Nginx用户启动Nginx的子进程</span><br><span class="line">worker_processes  auto; # 配置子进程数量根据当前服务器的CPU自动适应</span><br><span class="line">daemon on;   </span><br><span class="line">error_log  logs/error.log; # 错误日志位置</span><br><span class="line">pid        /usr/local/nginx/nginx.pid;</span><br><span class="line">events &#123;</span><br><span class="line">        worker_connections  65535; </span><br><span class="line">&#125;</span><br><span class="line">worker_rlimit_nofile 65535;</span><br></pre></td></tr></table></figure>
 
@@ -353,7 +353,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 在 http 和 server 块中加入如下信息</span><br><span class="line">http &#123;</span><br><span class="line">    vhost_traffic_status_zone;</span><br><span class="line">    ...</span><br><span class="line">    server &#123;</span><br><span class="line">        ...</span><br><span class="line">        location /xxx &#123;</span><br><span class="line">            vhost_traffic_status_display;</span><br><span class="line">            vhost_traffic_status_display_format html;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>监控页面如下图所示：</p>
-<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/Nginx%E3%80%81Tomcat%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E7%A0%94%E7%A9%B6%E5%AD%A6%E4%B9%A0%5Cnginx%E7%9B%91%E6%8E%A7.png" alt></p>
+<p><img src="/2020/11/12/Nginx、Tomcat配置优化研究学习/nginx%E7%9B%91%E6%8E%A7.png" alt></p>
 <h4 id="Nginx支持Keepalive长连接"><a href="#Nginx支持Keepalive长连接" class="headerlink" title="Nginx支持Keepalive长连接"></a>Nginx支持Keepalive长连接</h4><p>当使用 Nginx作为反向代理时，为了支持长连接，需要做到两点：<strong>1. 从 Client 到 Nginx 的连接是长连接；2. 从 Nginx 到 Server 的连接是长连接。</strong></p>
 <ul>
 <li><p>保持和Client的长连接</p>
@@ -860,15 +860,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
               </li>
              
               <li class="article-tag-list-item">

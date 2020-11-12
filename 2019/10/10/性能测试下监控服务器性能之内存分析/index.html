@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/2.png">
 <meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/1.png">
 <meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/4.png">
-<meta property="og:updated_time" content="2020-11-12T07:28:03.101Z">
+<meta property="og:updated_time" content="2020-11-12T07:29:19.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="性能测试下监控服务器性能之内存分析">
 <meta name="twitter:description" content="性能测试下监控服务器性能之内存分析（根据百度百科）物理内存：物理内存（Physical memory）是相对于虚拟内存而言的。物理内存指通过物理内存条而获得的内存空间，而虚拟内存则是指将硬盘的一块区域划分来作为内存。内存主要作用是在计算机运行时为操作系统和各种程序提供临时储存。常见的物理内存规格有256M、512M、1G、2G等，现如今随着计算机硬件的发展，已经出现4G、8G甚至更高容量的内存规格">
@@ -229,6 +229,8 @@
       
         <h4 id="性能测试下监控服务器性能之内存分析（根据百度百科）"><a href="#性能测试下监控服务器性能之内存分析（根据百度百科）" class="headerlink" title="性能测试下监控服务器性能之内存分析（根据百度百科）"></a>性能测试下监控服务器性能之内存分析（根据百度百科）</h4><p><strong>物理内存</strong>：物理内存（Physical memory）是相对于虚拟内存而言的。物理内存指通过物理内存条而获得的内存空间，而虚拟内存则是指将硬盘的一块区域划分来作为内存。内存主要作用是在计算机运行时为操作系统和各种程序提供临时储存。常见的物理内存规格有256M、512M、1G、2G等，现如今随着计算机硬件的发展，已经出现4G、8G甚至更高容量的内存规格。当物理内存不足时，可以用虚拟内存代替。在应用中，自然是顾名思义，物理上，真实存在的插在主板内存槽上的内存条的容量的大小。看计算机配置的时候，主要看的就是这个物理内存。</p>
 <p><strong>虚拟内存</strong>：虚拟内存是计算机系统内存管理的一种技术。它使得应用程序认为它拥有连续的可用的内存（一个连续完整的地址空间），而实际上，它通常是被分隔成多个物理内存碎片，还有部分暂时存储在外部磁盘存储器上，在需要时进行数据交换。目前，大多数操作系统都使用了虚拟内存，如Windows家族的“虚拟内存”；Linux的“交换空间”等。</p>
+<a id="more"></a>
+
 <h4 id="内存与CPU、硬盘的关系"><a href="#内存与CPU、硬盘的关系" class="headerlink" title="内存与CPU、硬盘的关系"></a>内存与CPU、硬盘的关系</h4><ul>
 <li><strong>内存与cpu的关系</strong>：cpu（中央处理器）就像人类的大脑一样，负责解释计算机指令以及处理计算机软件中的数据。由于cpu需要处理数据，如果直接从硬盘中读取写入数据，以现在的机械寻址的硬盘和固态SSD硬盘的速度来比较，两者差距太大。所以内存作为CPU和硬盘 两者的桥梁存在，另外CPU与内存之间为了缩小读写差距，CPU技术加入了高速缓存概念（L1、L2、L3，三种级别的Cache），一般在CPU产品型号技术参数列表中都会具体的介绍。</li>
 <li><strong>内存与硬盘的关系</strong>：程序是在内存上运行的，为了加快读速度，内存会将读取过的数据在自身中进行缓存。直到cache已满，会释放最先缓存的数据，将其写入磁盘，并腾出一定空间来满足当前正在读取的新数据。硬盘是为了持久化存储程序运行的数据，保证数据在机器断电后不被丢失。</li>
@@ -737,7 +739,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
+                <a href="javascript:void(0)" class="js-tag color5">脚本录制</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -749,7 +751,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">脚本录制</a>
+                <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
               </li>
              
               <li class="article-tag-list-item">

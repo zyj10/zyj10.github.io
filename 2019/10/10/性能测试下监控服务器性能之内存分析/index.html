@@ -16,24 +16,24 @@
 <meta property="og:site_name" content="静静的博客">
 <meta property="og:description" content="性能测试下监控服务器性能之内存分析（根据百度百科）物理内存：物理内存（Physical memory）是相对于虚拟内存而言的。物理内存指通过物理内存条而获得的内存空间，而虚拟内存则是指将硬盘的一块区域划分来作为内存。内存主要作用是在计算机运行时为操作系统和各种程序提供临时储存。常见的物理内存规格有256M、512M、1G、2G等，现如今随着计算机硬件的发展，已经出现4G、8G甚至更高容量的内存规格">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/Win%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/Win%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/Win%E5%86%85%E5%AD%98.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E5%86%85%E5%AD%98.png">
 <meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8.png">
 <meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/free.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/free-g.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/free-h.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/free-s.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/top.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/2.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/1.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/3.png">
-<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/4.png">
-<meta property="og:updated_time" content="2019-10-17T00:11:17.596Z">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/free-g.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/free-h.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/free-s.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/top.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/2.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/1.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/3.png">
+<meta property="og:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/4.png">
+<meta property="og:updated_time" content="2020-11-12T01:59:50.853Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="性能测试下监控服务器性能之内存分析">
 <meta name="twitter:description" content="性能测试下监控服务器性能之内存分析（根据百度百科）物理内存：物理内存（Physical memory）是相对于虚拟内存而言的。物理内存指通过物理内存条而获得的内存空间，而虚拟内存则是指将硬盘的一块区域划分来作为内存。内存主要作用是在计算机运行时为操作系统和各种程序提供临时储存。常见的物理内存规格有256M、512M、1G、2G等，现如今随着计算机硬件的发展，已经出现4G、8G甚至更高容量的内存规格">
-<meta name="twitter:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/Win%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98.png">
+<meta name="twitter:image" content="http://per-zyj.xyz/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -244,15 +244,15 @@
 </ul>
 <h4 id="Windows服务器内存监控"><a href="#Windows服务器内存监控" class="headerlink" title="Windows服务器内存监控"></a>Windows服务器内存监控</h4><ul>
 <li><p>物理内存大小所指的就是主板上所插的可以看到的内存条大小，如下图红框显示。</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/Win%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98.png" alt="Win物理内存"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98.png" alt="Win物理内存"></p>
 <p>内存在计算机中的作用很大，电脑中所有运行的程序都需要经过内存来执行，如果执行的程序很大或很多，就会导致内存消耗殆尽。为了解决这个问题，<a href="https://www.baidu.com/s?wd=Windows&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">Windows</a>中运用了虚拟内存技术，即拿出一部分硬盘空间来充当内存使用，当内存占用完时，电脑就会自动调用硬盘来充当内存，以缓解内存的紧张，虚拟内存大小查看如下图。</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/Win%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98.png" alt="Win虚拟内存"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98.png" alt="Win虚拟内存"></p>
 <ul>
 <li>举一个例子来说，如果电脑只有128MB物理内存的话，当读取一个容量为200MB的文件时，就必须要用到比较大的虚拟内存，文件被内存读取之后就会先储存到虚拟内存，等待内存把文件全部储存到虚拟内存之后，跟着就会把虚拟内存储存的文件释放到原来的安装目录里了。</li>
 </ul>
 </li>
 <li><p>打开CMD，使用命令systeminfo查看物理内存与虚拟内存大小</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/Win%E5%86%85%E5%AD%98.png" alt="Win内存"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E5%86%85%E5%AD%98.png" alt="Win内存"></p>
 </li>
 <li><p>打开任务管理器，在“性能”菜单栏下查看物理内存与虚拟内存大小</p>
 <p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/Win%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8.png" alt="Win内存"></p>
@@ -281,18 +281,18 @@
 <li><p><strong>内存占用率  =  (1- avaliable  /  total) * 100%</strong> </p>
 </li>
 <li><p><strong>free -g</strong>：以G为单位来显示内存的信息</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/free-g.png" alt="free命令"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/free-g.png" alt="free命令"></p>
 </li>
 <li><p><strong>free -h</strong>：以适于人类可读方式显示内存信息。-h与其他命令最大不同是<strong>-h</strong>选项会在数字后面加上适于人类可读的单位</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/free-h.png" alt="free命令"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/free-h.png" alt="free命令"></p>
 </li>
 <li><p><strong>free -s N</strong>：表示每隔N秒打印一次内存信息，直到用ctrl+c结束</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/free-s.png" alt="free命令"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/free-s.png" alt="free命令"></p>
 </li>
 </ul>
 </li>
 <li><p><strong>2、Top命令</strong>：top命令经常用来监控linux的系统状况，是常用的性能分析工具，能够实时显示系统中各个进程的资源占用情况</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/top.png" alt="top命令"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/top.png" alt="top命令"></p>
 <ul>
 <li>第四行（内存状态）<ul>
 <li>7471560k total — 物理内存总量（7.4GB）</li>
@@ -316,10 +316,10 @@
 <li><p>1、查阅日志，若日志中报OutOfMemoryError错误，则说明存在内存问题</p>
 </li>
 <li><p>2、Tomcat启动后，通过访问<a href="http://ip:port/manager/status/" target="_blank" rel="noopener">http://ip:port/manager/status/</a> （<a href="http://localhost:8080/manager/status/），账号密码请查看`tomcat-users.xml`，查看old区内存，**若old区一直保持在99%，说明存在内存问题；多次刷新页面，若old区内存长时间不断上涨，也说明存在内存问题" target="_blank" rel="noopener">http://localhost:8080/manager/status/），账号密码请查看`tomcat-users.xml`，查看old区内存，**若old区一直保持在99%，说明存在内存问题；多次刷新页面，若old区内存长时间不断上涨，也说明存在内存问题</a>**</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/2.png" alt="Tomcat"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/2.png" alt="Tomcat"></p>
 </li>
 <li><p><a href="https://www.cnblogs.com/ymerge/p/9366274.html" target="_blank" rel="noopener">JVM</a>（Java虚拟机）内存基本概念</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/1.png" alt="JVM内存"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/1.png" alt="JVM内存"></p>
 <p>1）JVM内存划分分为年轻代（Young Generation）、老年代（Old Generation）、永久代（Permanent Generation）。</p>
 <p>2）年轻代又分为Eden和Survivor区。Survivor区由FromSpace和ToSpace组成。Eden区占大容量，Survivor两个区占小容量，默认比例大概是8:2。</p>
 <p>3）年轻代：新生成的对象首先放到年轻代的Eden区中，当Eden满时，经过GC后，还存活的对象被复制到Survivor区的FromSpace中，如果Survivor区满时，会再被复制到Survivor区的ToSpace区。如果还有存活对象，会再被复制到老年代。</p>
@@ -330,7 +330,7 @@
 <li><p>实际案例：<a href="https://fdoc.epoint.com.cn/onlinedoc/docshow/docshow?columnguid=031&menuguid=031009&nodeguid=dc45f366-e7f3-42c0-a0e7-27209d322518" target="_blank" rel="noopener">南京政务服务内存泄露问题排查报告</a>、<a href="https://fdoc.epoint.com.cn/onlinedoc/docshow/docshow?columnguid=031&menuguid=031009&nodeguid=c7d15588-5541-4b9a-89df-bada5a1090d5" target="_blank" rel="noopener">中海油oom ：PermGen space内存溢出问题</a></p>
 </li>
 <li><p><a href="https://fdoc.epoint.com.cn/onlinedoc/docshow/docshow?columnguid=031&menuguid=031009&nodeguid=0d3bc771-96b8-4fc5-b467-11723e4cea27" target="_blank" rel="noopener">系统崩溃问题处理手册</a></p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/3.png" alt="内存溢出问题"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/3.png" alt="内存溢出问题"></p>
 </li>
 </ul>
 <h4 id="Nginx内存监控"><a href="#Nginx内存监控" class="headerlink" title="Nginx内存监控"></a>Nginx内存监控</h4><ul>
@@ -343,27 +343,29 @@
 <li><p>连接Redis命令：redis-cli.exe -h 127.0.0.1 -p 6379</p>
 </li>
 <li><p>监控Redis内存命令：info memory</p>
-<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/zblog/source/_posts/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E4%B8%8B%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/4.png" alt="监控Redis内存"></p>
+<p><img src="/2019/10/10/性能测试下监控服务器性能之内存分析/4.png" alt="监控Redis内存"></p>
+<ul>
+<li><p>used_memoryRedis 分配器分配的内存总量，也就是内部存储的所有数据内存占用量、</p>
 </li>
-<li><p>used_memory    Redis 分配器分配的内存总量，也就是内部存储的所有数据内存占用量、</p>
+<li><p>used_memory_human以可读的格式返回 used_memory</p>
 </li>
-<li><p>used_memory_human    以可读的格式返回 used_memory</p>
+<li><p>used_memory_rss从操作系统的角度显示 Redis 进程占用的物理内存总量</p>
 </li>
-<li><p>used_memory_rss    从操作系统的角度显示 Redis 进程占用的物理内存总量</p>
+<li><p>used_memory_rss_humanused_memory_rss 的用户宜读格式的显示</p>
 </li>
-<li><p>used_memory_rss_human    used_memory_rss 的用户宜读格式的显示</p>
+<li><p>used_memory_peak内存使用的最大值，表示 used_memory 的峰值</p>
 </li>
-<li><p>used_memory_peak    内存使用的最大值，表示 used_memory 的峰值</p>
+<li><p>used_memory_peak_human以可读的格式返回 used_memory_peak的值</p>
 </li>
-<li><p>used_memory_peak_human    以可读的格式返回 used_memory_peak的值</p>
+<li><p>used_memory_luaLua 引擎所消耗的内存大小。</p>
 </li>
-<li><p>used_memory_lua    Lua 引擎所消耗的内存大小。</p>
+<li><p>mem_fragmentation_ratioused_memory_rss / used_memory 的比值，可以代表内存碎片率</p>
 </li>
-<li><p>mem_fragmentation_ratio    used_memory_rss / used_memory 的比值，可以代表内存碎片率</p>
+<li><p>maxmemoryRedis 能够使用的最大内存上限，0表示没有限制，以字节为单位。</p>
 </li>
-<li><p>maxmemory    Redis 能够使用的最大内存上限，0表示没有限制，以字节为单位。</p>
+<li><p>maxmemory_policyRedis 使用的内存回收策略，可以是 noeviction、allkeys-lru、volatile-lru、allkeys-random、</p>
 </li>
-<li><p>maxmemory_policy    Redis 使用的内存回收策略，可以是 noeviction、allkeys-lru、volatile-lru、allkeys-random、</p>
+</ul>
 </li>
 <li><p>volatile-random 或者 volatile-ttl。默认是noeviction，也就是不会回收。</p>
 </li>
@@ -702,10 +704,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
               </li>
              
@@ -714,11 +712,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
+                <a href="javascript:void(0)" class="js-tag color5">JSON</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JSON</a>
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HTTPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -746,15 +748,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
               </li>
              
               <li class="article-tag-list-item">

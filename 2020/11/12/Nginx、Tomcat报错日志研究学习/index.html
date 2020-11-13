@@ -6,15 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://per-zyj.xyz">
-  <title>Archives: 2019/8 | 静静的博客</title>
+  <title>Nginx、Tomcat报错日志研究学习 | 静静的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="静静的博客">
-<meta property="og:url" content="http://per-zyj.xyz/archives/2019/08/page/2/index.html">
+  <meta name="description" content="一、Nginx、Tomcat、Redis、Mysql介绍1.Nginx简介  Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。">
+<meta name="keywords" content="Nginx,Tomcat,Redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx、Tomcat报错日志研究学习">
+<meta property="og:url" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/index.html">
 <meta property="og:site_name" content="静静的博客">
+<meta property="og:description" content="一、Nginx、Tomcat、Redis、Mysql介绍1.Nginx简介  Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/nginx%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/redis%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/mysql%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/nginx%E5%90%AF%E5%8A%A8.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E5%90%AF%E5%8A%A8.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/redis%E5%90%AF%E5%8A%A8.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/%E9%AA%8C%E8%AF%81.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/nginx%E6%97%A5%E5%BF%97.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E6%97%A5%E5%BF%971.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E6%97%A5%E5%BF%972.png">
+<meta property="og:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E6%97%A5%E5%BF%97.png">
+<meta property="og:updated_time" content="2020-11-13T13:37:37.208Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="静静的博客">
+<meta name="twitter:title" content="Nginx、Tomcat报错日志研究学习">
+<meta name="twitter:description" content="一、Nginx、Tomcat、Redis、Mysql介绍1.Nginx简介  Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。">
+<meta name="twitter:image" content="http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/nginx%E5%AE%89%E8%A3%85.png">
   
   
     <link rel="icon" href="/img/head.jpg">
@@ -164,129 +182,505 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Nginx、Tomcat报错日志研究学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/Hexo搭建个人博客/" class="archive-article-date">
-  	<time datetime="2019-08-23T02:36:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/Hexo搭建个人博客/">Hexo搭建博客案例详解（使用Yilia主题）</a>
+    <h1 class="article-title" itemprop="name">
+      Nginx、Tomcat报错日志研究学习
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        
+    <!-- 不蒜子统计 -->
+    <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+    <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次</span>
+
+<a href="/2020/11/12/Nginx、Tomcat报错日志研究学习/" class="archive-article-date">
+  	<time datetime="2020-11-12T02:29:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-12</time>
+</a>
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">2.2k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">8分</span>
+      </span>
+    </span>
+</div>
           
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、Nginx、Tomcat、Redis、Mysql介绍"><a href="#一、Nginx、Tomcat、Redis、Mysql介绍" class="headerlink" title="一、Nginx、Tomcat、Redis、Mysql介绍"></a>一、Nginx、Tomcat、Redis、Mysql介绍</h3><p>1.Nginx简介</p>
+<blockquote>
+<p>Nginx是一款轻量级的<strong>Web 服务器</strong>/<strong>反向代理服务器</strong>及<strong>电子邮件（IMAP/POP3）代理服务器</strong>，在BSD-like 协议下发行。其特点是占有<strong>内存少，并发能力强</strong>，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>
+</blockquote>
+<a id="more"></a>
+
+<p>2.Tomcat简介</p>
+<blockquote>
+<p>Tomcat 服务器是一个免费的开放源代码的<strong>Web 应用服务器</strong>，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache 服务器，可利用它响应HTML（标准通用标记语言下的一个应用）页面的访问请求。实际上Tomcat是Apache 服务器的扩展，但运行时它是独立运行的，所以当你运行tomcat 时，它实际上作为一个与<strong>Apache 独立的进程</strong>单独运行的。</p>
+</blockquote>
+<p>3.Redis简介</p>
+<blockquote>
+<p>Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用ANSIC语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。从2010年3月15日起，Redis的开发工作由VMware主持。从2013年5月开始，Redis的开发由Pivotal赞助。</p>
+</blockquote>
+<p>4.Mysql简介</p>
+<blockquote>
+<p>MySQL是一个<strong>关系型数据库管理系统</strong>，由瑞典MySQL AB 公司开发，属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。</p>
+<p>MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</p>
+<p>MySQL所使用的 SQL 语言是用于访问数据库的最常用标准化语言。MySQL 软件采用了双授权政策，分为社区版和商业版，由于其体积小、速度快、总体拥有成本低，尤其是<strong>开放源码</strong>这一特点，一般中小型网站的开发都选择 MySQL 作为网站数据库。</p>
+</blockquote>
+<h3 id="二、基础组件Nginx、Tomcat、Redis、Mysql安装及部署"><a href="#二、基础组件Nginx、Tomcat、Redis、Mysql安装及部署" class="headerlink" title="二、基础组件Nginx、Tomcat、Redis、Mysql安装及部署"></a>二、基础组件Nginx、Tomcat、Redis、Mysql安装及部署</h3><p>1.使用BIN包安装Nginx、Tomcat（也可使用源码编译安装，较麻烦）</p>
+<p>获取最新的安装包Nginx_INSTALL_20xx-xx-xx_xx-xx-xx.bin(以最新的文件为准)，<strong>确保操作系统是最小化安装</strong>,使用winscp或者lrzsz软件上传至服务器，使用安装命令 sh Nginx_INSTALL_20xx-xx-xx_xx-xx-xx.bin 执行安装操作。</p>
+<p>Nginx安装成功截图如下：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/nginx%E5%AE%89%E8%A3%85.png" alt="Nginx"></p>
+<p>Tomcat安装成功截图如下：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E5%AE%89%E8%A3%85.png" alt="Tomcat"></p>
+<p>Redis安装成功截图如下：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/redis%E5%AE%89%E8%A3%85.png" alt="Redis"></p>
+<p>Mysql安装成功截图如下：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/mysql%E5%AE%89%E8%A3%85.png" alt="Mysql"></p>
+<p>2.开启关闭Nginx、Tomcat服务</p>
+<p>输入以下命令，启动与停止Nginx、Tomcat服务，以nginx为例。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx start # 启动Nginx</span><br><span class="line">service nginx stop # 停止Nginx</span><br><span class="line">service nginx restart # 重新启动Nginx</span><br></pre></td></tr></table></figure>
+
+<p>Nginx启动成功截图如下：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/nginx%E5%90%AF%E5%8A%A8.png" alt="Nginx"></p>
+<p>Tomcat启动成功截图如下：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E5%90%AF%E5%8A%A8.png" alt="Tomcat"></p>
+<p>Redis启动成功截图如下：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/redis%E5%90%AF%E5%8A%A8.png" alt="Redis"></p>
+<p>为了检验Nginx、Tomcat是否安装成功，可以在浏览器端输入<a href="http://ip:port/epoint_base_status" target="_blank" rel="noopener">http://ip:port/epoint_base_status</a> ，跳出输入用户名和密码，如下图所示表示启动成功，nginx默认端口为80，tomcat默认端口为8080，都可在配置文件中更改。为了检验Redis、Mysql是否安装成功，可以使用linux连接数据命令进行检查，连接上即为成功。</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/%E9%AA%8C%E8%AF%81.png" alt></p>
+<p>注意，若是使用虚拟机运行centos7系统，在本地电脑上会访问不了地址，需要关闭防火墙或开启端口，如下命令所示</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">1</span>）关闭防火墙</span><br><span class="line">firewall-cmd --state # 查看默认防火墙状态（关闭后显示<span class="keyword">not</span> running，开启后显示running）</span><br><span class="line">systemctl stop firewalld.service # 关闭防火墙</span><br><span class="line">systemctl disable firewalld.service # 禁止防火墙自动启动</span><br><span class="line"></span><br><span class="line">（<span class="number">2</span>）开启端口</span><br><span class="line">firewall-cmd --permanent --zone=<span class="keyword">public</span> --<span class="built_in">list</span>-ports # 检查端口是否被防火墙开启</span><br><span class="line">firewall-cmd --zone=<span class="keyword">public</span> --add-port=<span class="number">8080</span>/tcp --permanent # 设置<span class="number">8080</span>端口越过防火墙的限制</span><br><span class="line">firewall-cmd --reload  # 重新载入配置，比如添加规则之后，需要执行此命令</span><br><span class="line"></span><br><span class="line">命令含义</span><br><span class="line">--zone # 作用域</span><br><span class="line">--add-port=<span class="number">8080</span>/tcp # 添加端口，格式为：端口/通讯协议</span><br><span class="line">--permanent # 永久生效，没有此参数重启后失效</span><br><span class="line"></span><br><span class="line">（<span class="number">3</span>）重启防火墙</span><br><span class="line">systemctl start firewalld # 开启防火墙服务</span><br><span class="line"></span><br><span class="line">更多命令，使用 firewall-cmd --help 查看帮助文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、基础组件Nginx、Tomcat运行日志查阅"><a href="#三、基础组件Nginx、Tomcat运行日志查阅" class="headerlink" title="三、基础组件Nginx、Tomcat运行日志查阅"></a>三、基础组件Nginx、Tomcat运行日志查阅</h3><h5 id="1-Nginx日志查询路径：-usr-local-nginx-logs"><a href="#1-Nginx日志查询路径：-usr-local-nginx-logs" class="headerlink" title="1.Nginx日志查询路径：/usr/local/nginx/logs"></a>1.Nginx日志查询路径：/usr/local/nginx/logs</h5><p><strong>access.log</strong> 记录Nginx的访问URL日志</p>
+<p><strong>error.log</strong> 记录Nginx的报错日志</p>
+<p>路径/usr/local/nginx/conf 下的 nginx.conf 为Nginx的配置文件，配置文件中记录日志格式如下图红框所示</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/nginx%E6%97%A5%E5%BF%97.png" alt></p>
+<p>示例：02/Jan/2020:11:03:02 +0800  192.168.80.1:14189  GET /  /index.html  0.000 200   396 CountryPrivate  ProvincePrivate  CityPrivate -  -  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36  -  -</p>
+<p>具体字段含义如下：</p>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$time_local</td>
+<td>服务器时间（LOG Format 格式）</td>
+</tr>
+<tr>
+<td>$remote_addr</td>
+<td>客户端地址</td>
+</tr>
+<tr>
+<td>$remote_port</td>
+<td>客户端端口</td>
+</tr>
+<tr>
+<td>$request_method</td>
+<td>HTTP请求方法，通常为”GET”或”POST”</td>
+</tr>
+<tr>
+<td>$request_url</td>
+<td>请求的<code>URL</code>，不带有请求的参数</td>
+</tr>
+<tr>
+<td>$uri</td>
+<td>请求的<code>URL</code>，带有请求的参数</td>
+</tr>
+<tr>
+<td>$request_time</td>
+<td>请求处理时间，即响应时间</td>
+</tr>
+<tr>
+<td>$status</td>
+<td>HTTP响应代码</td>
+</tr>
+<tr>
+<td>$body_bytes_sent</td>
+<td>发送<code>body</code>大小</td>
+</tr>
+<tr>
+<td>$geoip2_data_country_name</td>
+<td>请求所属的国家</td>
+</tr>
+<tr>
+<td>$geoip2_data_subdivisions_name</td>
+<td>请求所属的省份或地区</td>
+</tr>
+<tr>
+<td>$geoip2_data_city_name</td>
+<td>请求所属的城市</td>
+</tr>
+<tr>
+<td>$http_referer</td>
+<td>请求来自于何处，例如从百度跳转过来</td>
+</tr>
+<tr>
+<td>$upstream_addr</td>
+<td>请求转发的后端服务器地址</td>
+</tr>
+<tr>
+<td>$upstream_response_time</td>
+<td>后端服务器响应的时间</td>
+</tr>
+<tr>
+<td>$http_user_agent</td>
+<td>访问客户端信息，可以获取到请求浏览器版本信息等</td>
+</tr>
+<tr>
+<td>$http_x_forwarded_for</td>
+<td>请求经过的代理信息</td>
+</tr>
+<tr>
+<td>$content_length</td>
+<td><code>Content-Length</code>请求头字段</td>
+</tr>
+</tbody></table>
+<p><strong>注意字段</strong>：</p>
+<p><strong>$request_time</strong></p>
+<p>官网描述：request processing time in seconds with a milliseconds resolution; time elapsed between the first bytes were read from the client and the log write after the last bytes were sent to the client 。</p>
+<p>说明：就是指从接受用户的第一个字节到发送完响应数据的时间，即包括接收请求数据时间、程序响应时间、输出响应时间等</p>
+<p><strong>$upstream_response_time</strong>     </p>
+<p>官网描述：keeps times of responses obtained from upstream servers; times are kept in seconds with a milliseconds resolution. Several response times are separated by commas and colons like addresses in the $upstream_addr variable</p>
+<p>说明：是指从nginx向后端建立连接开始到后端处理完数据然后关闭连接为止的时间</p>
+<h5 id="2-Tomcat日志查询路径：-usr-local-tomcat-logs"><a href="#2-Tomcat日志查询路径：-usr-local-tomcat-logs" class="headerlink" title="2.Tomcat日志查询路径：/usr/local/tomcat/logs"></a>2.Tomcat日志查询路径：/usr/local/tomcat/logs</h5><p>（1）<strong>wrapper.yyyymmdd.log</strong>为当前最新的日志</p>
+<p>log4j,properties 为wrapper.yyyymmdd.log的配置文件，配置文件中记录日志格式如下图红框所示</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E6%97%A5%E5%BF%971.png" alt></p>
+<p>示例：#### 20200102 13:48:04,935 | INFO |  Initializing ProtocolHandler [“http-nio-8081”] </p>
+<p>具体字段含义如下：</p>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%d</td>
+<td>日期和时间，常用的格式有  %d{HH:mm:ss,SSS}, %d{ddMMyyyy HH:mm:ss,SSS} …</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>日志级别(FATAL,   ERROR,   WARN,   INFO,   DEBUG   or   CUSTOM)</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>日志内容</td>
+</tr>
+<tr>
+<td>%n</td>
+<td>换行</td>
+</tr>
+</tbody></table>
+<p>（2）<strong>localhost_access_log.yyyy-mm-dd.txt</strong> 日志文件记录所有http的get，post访问</p>
+<p>server.xml 为localhost_access_log.yyyy-mm-dd.txt 日志文件的配置文件，配置文件中记录日志格式如下图所示</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E6%97%A5%E5%BF%972.png" alt></p>
+<p>示例：[02/Jan/2020:10:14:37 +0800] 192.168.80.1 127.0.0.1 37925 HTTP/1.1 /epoint-test-tools-0.0.2/rest/epointencodeaction/getfile POST 200 0.008 http-nio-8081-exec-36</p>
+<p>具体字段含义如下：</p>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%t</td>
+<td>日期和时间，以通用日志格式</td>
+</tr>
+<tr>
+<td>%a</td>
+<td>远程IP地址</td>
+</tr>
+<tr>
+<td>%A</td>
+<td>本地IP地址</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>发送的字节，不包括HTTP标头，如果为零则为’-‘</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>请求协议</td>
+</tr>
+<tr>
+<td>%U</td>
+<td>请求的URL路径</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>请求方法（GET，POST等）</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>响应的HTTP状态代码</td>
+</tr>
+<tr>
+<td>%T</td>
+<td>处理请求所花费的时间，以秒为单位</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>当前请求线程名称（以后可以与stacktraces比较）</td>
+</tr>
+</tbody></table>
+<p><strong>注意字段</strong>：</p>
+<p><strong>%D</strong> - 官方解释：Time taken to process the request, in millis，处理请求的时间，以毫秒为单位</p>
+<p><strong>%T</strong> - 官方解释：Time taken to process the request, in seconds，处理请求的时间，以秒为单位</p>
+<p><strong>%F</strong> - 官方解释：Time taken to commit the response, in millis，提交响应的时间，以毫秒为单位</p>
+<h5 id="3-使用-awk-命令行快速分析-IBM-HTTP-Server-访问日志"><a href="#3-使用-awk-命令行快速分析-IBM-HTTP-Server-访问日志" class="headerlink" title="3.使用 awk 命令行快速分析 IBM HTTP Server 访问日志"></a>3.使用 awk 命令行快速分析 IBM HTTP Server 访问日志</h5><p>示例：统计请求响应时间超过10秒的记录</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk '($NF &gt; 10)&#123;print $0&#125;' ./access.log &gt; xx.log</span><br></pre></td></tr></table></figure>
+
+<p>学习网站：ibm.com/developerworks/cn/linux/l-cn-awk-httplog/</p>
+<p><strong>使用shell命令写成脚本</strong>，也可使用脚本统计访问日志中访问数量前<code>1000</code>的页面，以Tomcat日志访问统计为例，命令为 sh tomcat_access_statistics.sh /usr/local/tomcat/logs/localhost_access_log.2020-01-02.txt 如下图：</p>
+<p><img src="/2020/11/12/Nginx、Tomcat报错日志研究学习/tomcat%E6%97%A5%E5%BF%97.png" alt></p>
+
+      
+      
+      
+        <div class="declare">
+          <strong>本文作者：</strong>
+          
+            ZYJ
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+          进行许可。转载请注明出处！
+        </div>
+      
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Yilia</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        			<a href="/categories/性能调优//" class="article-tag-list-link color5">性能调优</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://per-zyj.xyz/2020/11/12/Nginx、Tomcat报错日志研究学习/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/Hexo基本操作/" class="archive-article-date">
-  	<time datetime="2019-08-23T02:30:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/11/12/Nginx、Tomcat配置优化研究学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Nginx、Tomcat配置优化研究学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/Hexo基本操作/">Hexo基本操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、Nginx、Tomcat、Redis、Mysql介绍"><span class="toc-number">1.</span> <span class="toc-text">一、Nginx、Tomcat、Redis、Mysql介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、基础组件Nginx、Tomcat、Redis、Mysql安装及部署"><span class="toc-number">2.</span> <span class="toc-text">二、基础组件Nginx、Tomcat、Redis、Mysql安装及部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、基础组件Nginx、Tomcat运行日志查阅"><span class="toc-number">3.</span> <span class="toc-text">三、基础组件Nginx、Tomcat运行日志查阅</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Nginx日志查询路径：-usr-local-nginx-logs"><span class="toc-number">3.0.1.</span> <span class="toc-text">1.Nginx日志查询路径：/usr/local/nginx/logs</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Tomcat日志查询路径：-usr-local-tomcat-logs"><span class="toc-number">3.0.2.</span> <span class="toc-text">2.Tomcat日志查询路径：/usr/local/tomcat/logs</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-使用-awk-命令行快速分析-IBM-HTTP-Server-访问日志"><span class="toc-number">3.0.3.</span> <span class="toc-text">3.使用 awk 命令行快速分析 IBM HTTP Server 访问日志</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+  
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "uMHRh4Gg16NGNqwp9PofJKbQ-gzGzoHsz",
+            app_key: "xXvlG7bwP1xfj3er6XDB9eXp",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/08/">&laquo; Prev</a><a class="page-number" href="/archives/2019/08/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -319,8 +713,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
